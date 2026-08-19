@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ข่าวประชาสัมพันธ์ | สาขาวิชาวิทยาการคอมพิวเตอร์ มรภ.ศรีสะเกษ{% endblock %}
+
+{% block content %}
+<section class="subpage-top-section">
+  <div class="container">
+    <!-- Breadcrumb & Back Navigation -->
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+      <div class="breadcrumb-nav-strip mb-0">
+        <a href="{% url 'home' %}"><i class="bi bi-house-door-fill me-1"></i> หน้าแรก</a>
+        <span class="breadcrumb-separator"><i class="bi bi-chevron-right"></i></span>
+        <span class="text-dark fw-semibold">ข่าวสารและกิจกรรมสาขาวิชาฯ</span>
+      </div>
+      <a href="javascript:void(0)" onclick="if(window.history.length > 1) { window.history.back(); } else { window.location.href='{% url 'home' %}#news'; }" class="btn-back-nav">
+        <i class="bi bi-arrow-left"></i> ย้อนกลับหน้าที่แล้ว
+      </a>
+    </div>
+
+    <div class="text-center mb-5">
+      <span class="section-eyebrow-tag">
+        <i class="bi bi-newspaper"></i> News &amp; Updates
+      </span>
+      <h1 class="section-hero-title">ข่าวสารและกิจกรรมสาขาวิชาฯ</h1>
+      <p class="section-sub-desc mx-auto">
+        ติดตามข่าวสารกิจกรรม ผลงานนักศึกษา การแข่งขัน และบรรยากาศการเรียนรู้ CS SSKRU
+      </p>
+    </div>
+
+    <!-- News List Grid (2x2 on Mobile, 3-Col on Desktop) -->
+    <div class="row g-3 g-md-4 mb-5">
+      {% for news in news_list %}
+      <div class="col-6 col-lg-4">
+        <div class="mission-grid-card modern-grid-card d-flex flex-column h-100 p-3">
+          {% if news.image %}
+          <div class="news-card-img-wrap" style="border-radius: 12px; overflow: hidden; aspect-ratio: 16/9; margin-bottom: 0.75rem;">
+            <img src="{{ news.image }}" alt="{{ news.title }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" class="hover-zoom-img">
+          </div>
+          {% else %}
+          <div class="mission-icon-box" style="background: var(--sapphire-50); color: var(--sapphire-700);">
+            <i class="bi bi-newspaper"></i>
+          </div>
+          {% endif %}
+          <div class="d-flex align-items-center flex-wrap gap-1 small text-muted mb-2 news-card-meta">
+            <span class="badge news-card-badge" style="background: var(--sapphire-50); color: var(--sapphire-700); border: 1px solid var(--border-sapphire); font-size: 0.72rem;">
+              {{ news.get_category_display|default:"ข่าวสาร" }}
+            </span>
+            <span class="small" style="font-size: 0.72rem;">📅 {{ news.published_at|date:"d M Y" }}</span>
+          </div>
+          <h5 class="fw-bold text-dark mb-2 news-card-title" style="font-size: 1.02rem; line-height: 1.45;">
+            {{ news.title }}
+          </h5>
+          <p class="text-muted small mb-3 flex-grow-1 news-card-desc" style="line-height: 1.65;">
+            {{ news.description|default:news.content|truncatewords:22 }}
+          </p>
+          <a href="{% url 'news_detail' slug=news.slug %}" class="small fw-bold mt-auto news-card-link" style="color: var(--sapphire-600);">
+            อ่านต่อ <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      {% empty %}
+      <div class="col-12 text-center py-5">
+        <i class="bi bi-inbox text-muted" style="font-size: 3rem;"></i>
+        <p class="text-muted mt-2">ยังไม่มีข่าวประชาสัมพันธ์ในขณะนี้</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Bottom Back to Home CTA -->
+    <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 pt-3 pb-5">
+      <a href="javascript:void(0)" onclick="if(window.history.length > 1) { window.history.back(); } else { window.location.href='{% url 'home' %}#news'; }" class="btn-back-primary" style="padding: 0.65rem 1.8rem; font-size: 0.95rem;">
+        <i class="bi bi-arrow-left me-1"></i> ย้อนกลับหน้าที่แล้ว
+      </a>
+      <a href="{% url 'home' %}" class="btn-back-nav" style="padding: 0.65rem 1.8rem; font-size: 0.95rem;">
+        <i class="bi bi-house-door me-1"></i> กลับสู่หน้าหลัก
+      </a>
+    </div>
+  </div>
+</section>
+{% endblock %}

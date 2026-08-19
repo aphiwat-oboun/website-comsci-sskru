@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ news_item.title }} | CS SSKRU{% endblock %}
+
+{% block content %}
+<section class="subpage-top-section" style="padding-bottom: 5rem;">
+  <div class="container" style="max-width: 920px;">
+    <!-- Top Breadcrumb & Back Actions -->
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+      <div class="breadcrumb-nav-strip mb-0">
+        <a href="{% url 'home' %}"><i class="bi bi-house-door-fill me-1"></i> หน้าแรก</a>
+        <span class="breadcrumb-separator"><i class="bi bi-chevron-right"></i></span>
+        <a href="{% url 'news' %}">ข่าวสารและกิจกรรม</a>
+        <span class="breadcrumb-separator"><i class="bi bi-chevron-right"></i></span>
+        <span class="text-muted text-truncate" style="max-width: 250px;">{{ news_item.title }}</span>
+      </div>
+      <a href="javascript:void(0)" onclick="if(window.history.length > 1) { window.history.back(); } else { window.location.href='{% url 'news' %}'; }" class="btn-back-nav">
+        <i class="bi bi-arrow-left"></i> ย้อนกลับหน้าที่แล้ว
+      </a>
+    </div>
+
+    <!-- Article Container Card -->
+    <div class="mission-grid-card p-4 p-md-5">
+      <!-- Article Meta Badge & Title -->
+      <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+        <span class="badge" style="background: var(--sapphire-50); color: var(--sapphire-700); border: 1px solid var(--border-sapphire); font-size: 0.82rem; padding: 0.4rem 0.85rem; border-radius: 50px;">
+          <i class="bi bi-tag-fill me-1"></i> {{ news_item.get_category_display|default:"ข่าวสารและกิจกรรม" }}
+        </span>
+        <span class="text-muted small">
+          <i class="bi bi-calendar3 me-1"></i> เผยแพร่เมื่อ: {{ news_item.published_at|date:"d F Y" }}
+        </span>
+      </div>
+
+      <h1 class="fw-bold text-dark mb-4" style="font-size: 1.85rem; line-height: 1.45;">
+        {{ news_item.title }}
+      </h1>
+
+      {% if news_item.image %}
+      <div style="border-radius: 16px; overflow: hidden; margin-bottom: 2.25rem; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);">
+        <img src="{{ news_item.image }}" alt="{{ news_item.title }}" style="width: 100%; max-height: 480px; object-fit: cover; display: block;">
+      </div>
+      {% endif %}
+
+      <!-- Article Description / Content -->
+      {% if news_item.description %}
+      <div class="p-3 mb-4 rounded" style="background: var(--canvas-subtle); border-left: 4px solid var(--sapphire-600); font-size: 1.05rem; line-height: 1.8; color: var(--text-main); font-weight: 500;">
+        {{ news_item.description }}
+      </div>
+      {% endif %}
+
+      <div class="article-content text-dark" style="font-size: 1.05rem; line-height: 1.95; white-space: pre-line;">
+        {{ news_item.content }}
+      </div>
+
+      <!-- Bottom Navigation Action Bar -->
+      <div class="article-bottom-actions">
+        <div class="d-flex flex-wrap gap-2">
+          <a href="javascript:void(0)" onclick="if(window.history.length > 1) { window.history.back(); } else { window.location.href='{% url 'news' %}'; }" class="btn-back-primary">
+            <i class="bi bi-arrow-left"></i> ย้อนกลับหน้าที่แล้ว
+          </a>
+          <a href="{% url 'news' %}" class="btn-back-nav">
+            <i class="bi bi-newspaper"></i> หน้ารวมข่าวสาร
+          </a>
+          <a href="{% url 'home' %}" class="btn-back-nav">
+            <i class="bi bi-house-door"></i> หน้าหลัก
+          </a>
+        </div>
+        <div>
+          <a href="https://www.facebook.com/comsci.sskru" target="_blank" rel="noopener noreferrer" class="btn-back-nav" style="border-color: #1877f2; color: #1877f2 !important;">
+            <i class="bi bi-facebook"></i> ติดตามบน Facebook
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

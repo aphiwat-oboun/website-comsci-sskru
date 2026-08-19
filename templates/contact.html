@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ติดต่อเรา | สาขาวิชาวิทยาการคอมพิวเตอร์ มรภ.ศรีสะเกษ{% endblock %}
+
+{% block content %}
+<section class="futuristic-section" style="padding-top: 8.5rem;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-eyebrow-tag">
+        <i class="bi bi-geo-alt"></i> Contact Us
+      </span>
+      <h1 class="section-hero-title">ติดต่อสาขาวิชาวิทยาการคอมพิวเตอร์</h1>
+      <p class="section-sub-desc mx-auto">
+        มีข้อสงสัยเกี่ยวกับหลักสูตร โควตารับสมัคร หรือสอบถามรายละเอียดเพิ่มเติม ได้ตลอดเวลา
+      </p>
+    </div>
+
+    <!-- Social Action Panels -->
+    <div class="row g-4 mb-5">
+      <!-- LINE Card -->
+      <div class="col-12">
+        <div class="community-action-card panel-gemini-line">
+          <div class="d-flex align-items-center gap-3">
+            <i class="bi bi-line" style="font-size: 3rem; color: #fff;"></i>
+            <div>
+              <h4 class="fw-bold mb-1 text-white" style="font-size: 1.4rem;">LINE AI Chatbot (Gemini Assistant)</h4>
+              <p class="mb-0" style="color: rgba(255,255,255,0.9); font-size: 0.95rem;">
+                ระบบตอบรับอัจฉริยะ 24 ชม. ถามข้อมูลหลักสูตร ทุนการศึกษา และรอบการรับสมัครได้ทันที
+              </p>
+            </div>
+          </div>
+          <a href="https://line.me/R/ti/p/@793ozxpi?oat_content=url&ts=05271601" target="_blank" rel="noopener noreferrer" class="btn-cyber-ghost text-dark">
+            <i class="bi bi-plus-circle-fill text-success"></i> เพิ่มเพื่อนใน LINE
+          </a>
+        </div>
+      </div>
+
+      <!-- Facebook Card -->
+      <div class="col-12 col-lg-6">
+        <div class="community-action-card panel-cyber-fb">
+          <div class="d-flex align-items-center gap-3">
+            <i class="bi bi-facebook" style="font-size: 2.5rem; color: #fff;"></i>
+            <div>
+              <h5 class="fw-bold mb-1 text-white">Facebook Fanpage</h5>
+              <p class="mb-0 small" style="color: rgba(255,255,255,0.85);">
+                ติดตามข่าวสาร กิจกรรมสาขาฯ และผลงานนักศึกษา
+              </p>
+            </div>
+          </div>
+          <a href="https://www.facebook.com/comsci.sskru" target="_blank" rel="noopener noreferrer" class="btn-cyber-ghost text-dark">
+            <i class="bi bi-hand-thumbs-up-fill text-primary"></i> ติดตามแฟนเพจ
+          </a>
+        </div>
+      </div>
+
+      <!-- TikTok Card -->
+      <div class="col-12 col-lg-6">
+        <div class="community-action-card panel-cyber-tiktok">
+          <div class="d-flex align-items-center gap-3">
+            <i class="bi bi-tiktok" style="font-size: 2.5rem; color: #fe2c55;"></i>
+            <div>
+              <h5 class="fw-bold mb-1 text-white">TikTok Official</h5>
+              <p class="mb-0 small" style="color: rgba(255,255,255,0.85);">
+                ชมคลิปสั้น แนะนำบรรยากาศและไลฟ์สไตล์เด็กวิทย์คอม
+              </p>
+            </div>
+          </div>
+          <a href="https://www.tiktok.com/@comsciencesskru" target="_blank" rel="noopener noreferrer" class="btn-cyber-ghost text-dark">
+            <i class="bi bi-play-fill text-danger"></i> ชมวิดีโอบน TikTok
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Details & Map -->
+    <div class="row g-4">
+      <div class="col-12 col-lg-5">
+        <div class="d-flex flex-column gap-3">
+          <div class="course-quest-item p-3">
+            <div class="mission-icon-box mb-0" style="background: var(--sapphire-50); color: var(--sapphire-700);">
+              <i class="bi bi-telephone-fill"></i>
+            </div>
+            <div class="ms-3 flex-grow-1">
+              <h6 class="fw-bold text-dark mb-1">เบอร์โทรศัพท์สาขาวิชาฯ</h6>
+              <p class="text-secondary small mb-0">043-009700 ต่อ 50528</p>
+              <small class="fw-bold" style="color: var(--sapphire-700);">สายด่วน: 084-298-2456</small>
+            </div>
+          </div>
+
+          <div class="course-quest-item p-3">
+            <div class="mission-icon-box mb-0" style="background: var(--sapphire-50); color: var(--sapphire-700);">
+              <i class="bi bi-envelope-fill"></i>
+            </div>
+            <div class="ms-3 flex-grow-1">
+              <h6 class="fw-bold text-dark mb-1">อีเมลติดต่อ</h6>
+              <p class="text-secondary small mb-0">
+                <a href="mailto:phisan.s@sskru.ac.th" class="text-secondary">phisan.s@sskru.ac.th</a>
+              </p>
+              <small class="text-muted">ผศ.ดร.กนิษฐา อินธิชิต (หัวหน้าสาขาวิชาฯ)</small>
+            </div>
+          </div>
+
+          <div class="course-quest-item p-3">
+            <div class="mission-icon-box mb-0" style="background: var(--sapphire-50); color: var(--sapphire-700);">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="ms-3 flex-grow-1">
+              <h6 class="fw-bold text-dark mb-1">ที่ตั้งอาคารเรียน</h6>
+              <p class="text-secondary small mb-0">
+                ชั้น 5 อาคารสำนักงานคณบดี คณะศิลปศาสตร์และวิทยาศาสตร์ (LASC) มรภ.ศรีสะเกษ ถ.ไทยพันทา อ.เมือง จ.ศรีสะเกษ 33000
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-7">
+        <div class="faculty-dossier-card p-2 h-100" style="min-height: 340px;">
+          <iframe src="https://maps.google.com/maps?q=%E0%B8%95%E0%B8%B6%E0%B8%814%E0%B8%84%E0%B8%93%E0%B8%B0%E0%B8%A8%E0%B8%B4%E0%B8%A5%E0%B8%9B%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8Call%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C%20%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%A0%E0%B8%B1%E0%B8%8F%E0%B8%A8%E0%B8%B5%E0%B8%AA%E0%B8%B0%E0%B9%80%E0%B8%81%E0%B8%A9&t=&z=17&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0; border-radius: var(--radius-lg); min-height: 320px; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Map of Sisaket Rajabhat University"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,1869 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}สาขาวิชาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยราชภัฏศรีสะเกษ | CS SSKRU{% endblock %}
+
+{% block content %}
+<!-- ==========================================
+     HERO SECTION: CLEAN MINIMALIST ACADEMIC SHOWCASE
+     ========================================== -->
+<section id="hero" class="hero-clean-showcase-section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <!-- Left Column: Editorial Headline & Actions -->
+      <div class="col-12 col-xl-6 order-2 order-xl-1 text-center text-xl-start">
+        <div class="d-flex flex-column align-items-center align-items-xl-start">
+          <div class="hero-status-pill">
+            <i class="bi bi-mortarboard-fill" style="color: var(--sapphire-600); font-size: 0.95rem"></i>
+            <span>มุ่งสู่วิชาชีพไอทีและผู้นำนวัตกรรมเทคโนโลยี</span>
+          </div>
+
+          <h1 class="hero-clean-title-main">
+            สาขาวิชาวิทยาการ <br />
+            คอมพิวเตอร์ <br />
+            <span class="gradient-title-ocean">มรภ.ศรีสะเกษ</span>
+          </h1>
+
+          <p class="hero-editorial-lead">
+            &quot;ก้าวสู่อนาคตทางเทคโนโลยี สร้างสรรค์ซอฟต์แวร์แห่งนวัตกรรม&quot; หลักสูตรที่มุ่งผลิตนักวิทยาศาสตร์คอมพิวเตอร์ โปรแกรมเมอร์ และนักวิเคราะห์ข้อมูล เพื่อเข้าสู่ตลาดงานยุคดิจิทัลระดับโลก
+          </p>
+
+          <div class="hero-actions-deck">
+            <a
+              href="https://www.oass.sskru.ac.th/std.sskru/s1.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-clean-primary"
+            >
+              <i class="bi bi-mortarboard-fill"></i> สมัครเข้าศึกษาต่อ
+            </a>
+            <a href="#schedule" class="btn-clean-outline">
+              <i class="bi bi-book"></i> ข้อมูลวิชาหลักสูตร
+            </a>
+          </div>
+
+          <!-- Clean Minimalist Stats (4 Pillars) -->
+          <div class="hero-minimal-stats-row">
+            <div class="minimal-stat-item">
+              <div class="minimal-stat-num">4 <span class="unit">ปี</span></div>
+              <div class="minimal-stat-label">ระยะเวลาหลักสูตร</div>
+            </div>
+
+            <div class="minimal-stat-item">
+              <div class="minimal-stat-num">133</div>
+              <div class="minimal-stat-label">หน่วยกิตขั้นต่ำ</div>
+            </div>
+
+            <div class="minimal-stat-item">
+              <div class="minimal-stat-num">100%</div>
+              <div class="minimal-stat-label">โอกาสมีงานทำ</div>
+            </div>
+
+            <div class="minimal-stat-item">
+              <div class="minimal-stat-num">500+</div>
+              <div class="minimal-stat-label">จำนวนศิษย์เก่า</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Department Emblem in Clean Tilted Showcase Card (Top on Mobile) -->
+      <div class="col-12 col-xl-6 order-1 order-xl-2">
+        <div class="hero-emblem-showcase-wrapper">
+          <!-- Floating Feature Card: Software Dev (Top Left) -->
+          <div class="hero-floating-pill pill-top-left">
+            <i class="bi bi-code-slash text-teal"></i>
+            <span>Software Dev</span>
+          </div>
+
+          <!-- Central Clean Card with Department Emblem -->
+          <div class="hero-emblem-clean-card">
+            <img src="{% static 'images/hero-logo.png' %}" alt="ตราสาขาวิชาวิทยาการคอมพิวเตอร์ มรภ.ศรีสะเกษ" class="hero-emblem-img">
+          </div>
+
+          <!-- Floating Feature Card: Data Science (Middle Right) -->
+          <div class="hero-floating-pill pill-mid-right">
+            <i class="bi bi-bar-chart-line-fill text-blue"></i>
+            <span>Data Science</span>
+          </div>
+
+          <!-- Floating Feature Card: Artificial Intelligence (Bottom Left) -->
+          <div class="hero-floating-pill pill-bottom-left">
+            <i class="bi bi-cpu-fill text-amber"></i>
+            <span>Artificial Intelligence</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     STRATEGIC BENTO MATRIX (ABOUT)
+     ========================================== -->
+<section id="about" class="futuristic-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-eyebrow-tag">
+        <i class="bi bi-compass"></i> Strategic Overview
+      </span>
+      <h2 class="section-hero-title">
+        ทิศทางยุทธศาสตร์ &amp; ผลลัพธ์การเรียนรู้
+      </h2>
+      <p class="section-sub-desc mx-auto">
+        มุ่งเน้นการสร้างผลลัพธ์การเรียนรู้เชิงทักษะ คุณธรรมจริยธรรม
+        และการพัฒนานวัตกรรมดิจิทัลเพื่อพัฒนาท้องถิ่นสู่ระดับสากล
+      </p>
+    </div>
+
+    <!-- Perfectly Proportioned Segmented Nav Switcher -->
+    <div class="cyber-segmented-nav-wrapper">
+      <div class="cyber-segmented-nav">
+        <button class="segmented-pill-trigger active" data-tab="philosophy">
+          <i class="bi bi-quote me-1"></i> ปรัชญาหลักสูตร
+        </button>
+        <button class="segmented-pill-trigger" data-tab="vision">
+          <i class="bi bi-bullseye me-1"></i> วิสัยทัศน์ &amp; พันธกิจ 4 ด้าน
+        </button>
+        <button class="segmented-pill-trigger" data-tab="objectives">
+          <i class="bi bi-list-check me-1"></i> วัตถุประสงค์ 4 ข้อ
+        </button>
+        <button class="segmented-pill-trigger" data-tab="plos">
+          <i class="bi bi-award me-1"></i> ผลลัพธ์การเรียนรู้ (PLOs)
+        </button>
+      </div>
+    </div>
+
+    <!-- PANE 1: PHILOSOPHY -->
+    <div class="strategic-pane-item" id="strategic-pane-philosophy">
+      <div class="strategic-bento-hero-card">
+        <div
+          class="d-flex align-items-center gap-2 mb-3"
+          style="color: var(--sapphire-500)"
+        >
+          <i class="bi bi-quote" style="font-size: 2.2rem; line-height: 1"></i>
+          <span
+            style="
+              font-family: var(--font-heading);
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.1em;
+              font-size: 0.9rem;
+            "
+          >
+            PROGRAM PHILOSOPHY
+          </span>
+        </div>
+        <h3 class="philosophy-banner-title">
+          &quot;เชี่ยวชาญด้านวิทยาการคอมพิวเตอร์ มีคุณธรรม
+          นำนวัตกรรมเพื่อพัฒนาท้องถิ่น&quot;
+        </h3>
+        <p
+          class="mb-0"
+          style="
+            font-size: 1.08rem;
+            line-height: 1.85;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 960px;
+          "
+        >
+          ปรัชญาของหลักสูตรสะท้อนอัตลักษณ์สำคัญ 3 ด้าน ได้แก่
+          <strong>ความเชี่ยวชาญในวิชาชีพคอมพิวเตอร์</strong> ·
+          <strong>การมีคุณธรรมจริยธรรมวิชาชีพ</strong> · และ
+          <strong
+            >การนำนวัตกรรมไปประยุกต์ใช้เพื่อการพัฒนาท้องถิ่นอย่างยั่งยืน</strong
+          >
+          สอดรับกับเป้าหมายของมหาวิทยาลัยราชภัฏศรีสะเกษในการเป็นสถาบันอุดมศึกษาแห่งการเรียนรู้ตลอดชีวิต
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="mission-grid-card">
+            <div
+              class="mission-icon-box"
+              style="
+                background: var(--sapphire-100);
+                color: var(--sapphire-700);
+              "
+            >
+              <i class="bi bi-laptop"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-2">เรียนรู้จากการปฏิบัติจริง</h5>
+            <p
+              class="text-muted small mb-0"
+              style="line-height: 1.7; font-size: 0.95rem"
+            >
+              ฝึกพัฒนาแอปพลิเคชัน โค้ดดิ้ง
+              และโครงงานนวัตกรรมในห้องปฏิบัติการคอมพิวเตอร์มาตรฐานสูง
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="mission-grid-card">
+            <div
+              class="mission-icon-box"
+              style="background: var(--emerald-100); color: var(--emerald-600)"
+            >
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-2">คณาจารย์ดูแลใกล้ชิด</h5>
+            <p
+              class="text-muted small mb-0"
+              style="line-height: 1.7; font-size: 0.95rem"
+            >
+              อาจารย์ผู้เชี่ยวชาญเฉพาะทางคอยให้คำแนะนำและการบ่มเพาะองค์ความรู้อย่างทั่วถึง
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="mission-grid-card">
+            <div
+              class="mission-icon-box"
+              style="background: var(--amber-100); color: var(--amber-500)"
+            >
+              <i class="bi bi-briefcase-fill"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-2">เครือข่ายสหกิจศึกษา</h5>
+            <p
+              class="text-muted small mb-0"
+              style="line-height: 1.7; font-size: 0.95rem"
+            >
+              โอกาสฝึกงานและทำงานร่วมกับองค์กรชั้นนำและบริษัทซอฟต์แวร์ระดับประเทศ
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANE 2: VISION & MISSION -->
+    <div
+      class="strategic-pane-item"
+      id="strategic-pane-vision"
+      style="display: none"
+    >
+      <div
+        class="strategic-bento-hero-card mb-4"
+        style="background: linear-gradient(135deg, #034b75 0%, #0c2d48 100%)"
+      >
+        <div
+          class="d-flex align-items-center gap-2 mb-2"
+          style="color: #38bdf8"
+        >
+          <i class="bi bi-eye" style="font-size: 1.5rem"></i>
+          <span
+            style="
+              font-family: var(--font-heading);
+              font-weight: 700;
+              font-size: 0.95rem;
+            "
+            >วิสัยทัศน์ที่เกี่ยวข้อง (Vision)</span
+          >
+        </div>
+        <p class="mb-0 text-white" style="font-size: 1.1rem; line-height: 1.85">
+          มุ่งร่วมเป็นกำลังสำคัญขับเคลื่อนมหาวิทยาลัยให้เป็น
+          <strong
+            >&quot;สถาบันอุดมศึกษาแห่งการเรียนรู้ตลอดชีวิต&quot; (Lifelong
+            Learning Institute)</strong
+          >
+          โดยการผสานจัดกระบวนการศึกษาและวิจัยเพื่อสร้างสรรค์นวัตกรรม
+          บูรณาการเรียนการสอนเข้ากับการลงมือทำงานจริงเพื่อความเจริญเติบโตอย่างยั่งยืนของท้องถิ่น
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-6">
+          <div class="mission-grid-card">
+            <div
+              class="mission-icon-box"
+              style="background: var(--amber-100); color: var(--amber-500)"
+            >
+              <i class="bi bi-mortarboard-fill"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-1">1. ผลิตบัณฑิตคุณภาพ</h5>
+            <p
+              class="text-muted small mb-0"
+              style="line-height: 1.7; font-size: 0.95rem"
+            >
+              สร้างสรรค์บัณฑิตที่มีทักษะความรู้ด้านวิทยาการคอมพิวเตอร์และเทคโนโลยีขั้นสูง
+              พร้อมตอบโจทย์การปฏิบัติงานจริงในทุกองค์กรยุคใหม่ได้อย่างมืออาชีพ
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="mission-grid-card">
+            <div
+              class="mission-icon-box"
+              style="background: var(--emerald-100); color: var(--emerald-600)"
+            >
+              <i class="bi bi-lightbulb-fill"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-1">2. วิจัยและนวัตกรรม</h5>
+            <p
+              class="text-muted small mb-0"
+              style="line-height: 1.7; font-size: 0.95rem"
+            >
+              ส่งเสริมวิชาการ ค้นคว้าวิจัยประยุกต์
+              และพัฒนานวัตกรรมผลิตภัณฑ์ทางด้านคอมพิวเตอร์ที่สอดคล้องกับแนวทางการแก้ปัญหาทางเทคโนโลยีของท้องถิ่น
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="mission-grid-card">
+            <div
+              class="mission-icon-box"
+              style="background: var(--purple-100); color: var(--purple-500)"
+            >
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-1">3. บริการวิชาการท้องถิ่น</h5>
+            <p
+              class="text-muted small mb-0"
+              style="line-height: 1.7; font-size: 0.95rem"
+            >
+              พัฒนาสมรรถนะนักศึกษาในการเรียนรู้ร่วมกับสังคม
+              ก้าวสู่การเป็นนักพัฒนาเทคโนโลยีและวิศวกรสังคมที่มีหัวใจมุ่งรับใช้และช่วยเหลือชุมชน
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="mission-grid-card">
+            <div
+              class="mission-icon-box"
+              style="background: var(--rose-100); color: var(--rose-500)"
+            >
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-1">4. คุณธรรมและกฎหมาย</h5>
+            <p
+              class="text-muted small mb-0"
+              style="line-height: 1.7; font-size: 0.95rem"
+            >
+              หล่อหลอมความซื่อสัตย์สุจริต การเคารพในกฎหมายทรัพย์สินทางปัญญา
+              ลิขสิทธิ์ซอฟต์แวร์ และปฏิบัติตามจรรยาบรรณวิชาชีพนักไอทีอย่างมั่นคง
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANE 3: OBJECTIVES (Balanced 2-Column Cards) -->
+    <div
+      class="strategic-pane-item"
+      id="strategic-pane-objectives"
+      style="display: none"
+    >
+      <div class="row g-3">
+        <div class="col-12 col-md-6">
+          <div class="course-quest-item p-4">
+            <span class="course-code-tag mb-2 d-inline-block">OBJ 1</span>
+            <p
+              class="text-dark mb-0 ms-3"
+              style="line-height: 1.75; font-size: 1rem"
+            >
+              มีความรู้ความเชี่ยวชาญและทักษะเฉพาะด้านในสาขาวิทยาการคอมพิวเตอร์อย่างลึกซึ้ง
+              สามารถออกแบบ พัฒนา
+              และบำรุงรักษาระบบซอฟต์แวร์เชิงประยุกต์ทั้งรูปแบบออนไลน์และออฟไลน์ได้อย่างดีเลิศ
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="course-quest-item p-4">
+            <span class="course-code-tag mb-2 d-inline-block">OBJ 2</span>
+            <p
+              class="text-dark mb-0 ms-3"
+              style="line-height: 1.75; font-size: 1rem"
+            >
+              มีทักษะในการประยุกต์ใช้วิธีวิทยาและเทคโนโลยีในการพัฒนางานวิจัย
+              โครงงานนวัตกรรม
+              และแอปพลิเคชันรูปแบบใหม่ที่ช่วยเสริมสร้างศักยภาพและการเพิ่มมูลค่าทางเศรษฐกิจให้แก่ชุมชนท้องถิ่น
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="course-quest-item p-4">
+            <span class="course-code-tag mb-2 d-inline-block">OBJ 3</span>
+            <p
+              class="text-dark mb-0 ms-3"
+              style="line-height: 1.75; font-size: 1rem"
+            >
+              มีความเป็นเลิศในการวิเคราะห์และประมวลองค์ความรู้ทางเทคนิคแบบบูรณาการ
+              เพื่อการวางแผนจัดสรรกระบวนการทางคอมพิวเตอร์และสารสนเทศแก้ปัญหายากเชิงซ้อนภายในองค์กรได้อย่างมีขั้นตอน
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="course-quest-item p-4">
+            <span class="course-code-tag mb-2 d-inline-block">OBJ 4</span>
+            <p
+              class="text-dark mb-0 ms-3"
+              style="line-height: 1.75; font-size: 1rem"
+            >
+              ยึดมั่นในการประพฤติตนเป็นคนดีมีระเบียบวินัย
+              ปฏิบัติตามหลักจรรยาบรรณวิชาชีพนักวิทย์คอม
+              พร้อมทั้งมีมนุษยสัมพันธ์และทักษะการทำงานร่วมกับผู้อื่นได้อย่างสร้างสรรค์ประณีต
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANE 4: PLOS (Balanced 2-Column Responsive Matrix) -->
+    <div
+      class="strategic-pane-item"
+      id="strategic-pane-plos"
+      style="display: none"
+    >
+      <div class="row g-3">
+        <div class="col-12 col-lg-6">
+          <div class="course-quest-item p-3">
+            <span
+              class="course-code-tag"
+              style="
+                background-color: var(--sapphire-100);
+                color: var(--sapphire-800);
+                min-width: 110px;
+                text-align: center;
+              "
+              >PLO1 · K3</span
+            >
+            <p
+              class="text-dark mb-0 ms-3"
+              style="font-size: 0.98rem; line-height: 1.7"
+            >
+              ประยุกต์ใช้ความรู้ด้านวิทยาการคอมพิวเตอร์เพื่อแก้ปัญหาและสนับสนุนการทำงานด้วยระบบคอมพิวเตอร์ได้อย่างถูกต้องตามสถานการณ์ของปัญหา
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="course-quest-item p-3">
+            <span
+              class="course-code-tag"
+              style="
+                background-color: var(--emerald-100);
+                color: var(--emerald-600);
+                min-width: 110px;
+                text-align: center;
+              "
+              >PLO2 · K4,S3</span
+            >
+            <p
+              class="text-dark mb-0 ms-3"
+              style="font-size: 0.98rem; line-height: 1.7"
+            >
+              พัฒนาระบบด้วยโปรแกรมภาษาต่าง ๆ ในรูปแบบออฟไลน์และออนไลน์
+              ตามกระบวนการวิเคราะห์และออกแบบระบบได้อย่างถูกต้องตามเกณฑ์มาตรฐานสากล
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="course-quest-item p-3">
+            <span
+              class="course-code-tag"
+              style="
+                background-color: var(--emerald-100);
+                color: var(--emerald-600);
+                min-width: 110px;
+                text-align: center;
+              "
+              >PLO3 · K4,S3</span
+            >
+            <p
+              class="text-dark mb-0 ms-3"
+              style="font-size: 0.98rem; line-height: 1.7"
+            >
+              พัฒนาแอปพลิเคชันที่ทำงานบนโมบายอุปกรณ์พกพาได้ถูกต้องตรงตามความต้องการและเกิดประสบการณ์ที่ดีกับผู้ใช้งานจริง
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="course-quest-item p-3">
+            <span
+              class="course-code-tag"
+              style="
+                background-color: var(--emerald-100);
+                color: var(--emerald-600);
+                min-width: 110px;
+                text-align: center;
+              "
+              >PLO4 · K4,S3</span
+            >
+            <p
+              class="text-dark mb-0 ms-3"
+              style="font-size: 0.98rem; line-height: 1.7"
+            >
+              ทดสอบคุณภาพการทำงานของซอฟต์แวร์ตามกระบวนการตรวจสอบแบบ Black Box
+              Testing และ White Box Testing ได้อย่างถูกต้องและได้มาตรฐานเทคนิค
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="course-quest-item p-3">
+            <span
+              class="course-code-tag"
+              style="
+                background-color: var(--emerald-100);
+                color: var(--emerald-600);
+                min-width: 110px;
+                text-align: center;
+              "
+              >PLO5 · K4,S3</span
+            >
+            <p
+              class="text-dark mb-0 ms-3"
+              style="font-size: 0.98rem; line-height: 1.7"
+            >
+              พัฒนานวัตกรรมด้านเทคโนโลยีคอมพิวเตอร์ที่สอดคล้องกับความต้องการของชุมชนและหน่วยงานท้องถิ่นด้วยกระบวนการวิจัยและพัฒนาอย่างเป็นระบบ
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="course-quest-item p-3">
+            <span
+              class="course-code-tag"
+              style="
+                background-color: var(--purple-100);
+                color: var(--purple-500);
+                min-width: 110px;
+                text-align: center;
+              "
+              >PLO6 · A3</span
+            >
+            <p
+              class="text-dark mb-0 ms-3"
+              style="font-size: 0.98rem; line-height: 1.7"
+            >
+              แสดงออกถึงกระบวนการคิดเชิงระบบ ความเป็นมืออาชีพ มีความอดทน
+              มุ่งมั่น
+              และรับผิดชอบสูงต่ออุปสรรคและปัญหาในการดำเนินงานทางด้านเทคโนโลยี
+            </p>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="course-quest-item p-3">
+            <span
+              class="course-code-tag"
+              style="
+                background-color: var(--amber-100);
+                color: var(--amber-500);
+                min-width: 110px;
+                text-align: center;
+              "
+              >PLO7 · A2</span
+            >
+            <p
+              class="text-dark mb-0 ms-3"
+              style="font-size: 0.98rem; line-height: 1.7"
+            >
+              แสดงถึงการตระหนักและประยุกต์ใช้หลักจรรยาบรรณวิชาชีพ คุณธรรม
+              และจริยธรรมในการปฏิบัติงานตามข้อกฎหมายและ พ.ร.บ.
+              คอมพิวเตอร์อย่างสุจริต
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     4-YEAR INTERACTIVE SKILL-TREE ROADMAP
+     ========================================== -->
+<section
+  id="schedule"
+  class="futuristic-section"
+  style="background-color: var(--canvas-subtle)"
+>
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-eyebrow-tag">
+        <i class="bi bi-diagram-3-fill"></i> Skill-Tree Roadmap
+      </span>
+      <h2 class="section-hero-title">แผนการเรียนและเส้นทางพัฒนาทักษะ 4 ปี</h2>
+      <p class="section-sub-desc mx-auto">
+        โครงสร้างการเรียนรู้แบบเป็นลำดับขั้น (Skill-Tree Quest)
+        ตั้งแต่พื้นฐานจนถึงการเป็นนวัตกรระดับมืออาชีพ
+      </p>
+    </div>
+
+    <!-- Interactive Skill-Tree Stepper Track -->
+    <div class="skilltree-roadmap-card">
+      <div class="skilltree-stepper-track">
+        <button class="skilltree-node-btn active" data-year="1">
+          <span class="level-badge-chip">LV.1</span>
+          <span>ปีที่ 1 : Foundation Cadet</span>
+        </button>
+        <button class="skilltree-node-btn" data-year="2">
+          <span class="level-badge-chip">LV.2</span>
+          <span>ปีที่ 2 : System Architect</span>
+        </button>
+        <button class="skilltree-node-btn" data-year="3">
+          <span class="level-badge-chip">LV.3</span>
+          <span>ปีที่ 3 : AI &amp; Data Master</span>
+        </button>
+        <button class="skilltree-node-btn" data-year="4">
+          <span class="level-badge-chip">LV.4</span>
+          <span>ปีที่ 4 : Industry Innovator</span>
+        </button>
+      </div>
+
+      <!-- YEAR 1 QUEST PANE -->
+      <div class="skilltree-quest-pane" id="quest-pane-1">
+        <div class="row g-4">
+          <div class="col-12 col-lg-6">
+            <div class="semester-quest-card">
+              <div class="quest-card-header">
+                <i
+                  class="bi bi-code-square text-accent"
+                  style="color: var(--sapphire-600)"
+                ></i>
+                <span>ภาคเรียนที่ 1 · พื้นฐานการเขียนโปรแกรม</span>
+              </div>
+              <ul class="course-quest-list">
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >พื้นฐานวิทยาการคอมพิวเตอร์</strong
+                    >
+                    <small class="text-muted"
+                      >Introduction to Computer Science</small
+                    >
+                  </div>
+                  <span class="course-code-tag">CS101</span>
+                </li>
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >การเขียนโปรแกรมเบื้องต้น (Python)</strong
+                    >
+                    <small class="text-muted"
+                      >Fundamentals of Python Programming</small
+                    >
+                  </div>
+                  <span class="course-code-tag">CS102</span>
+                </li>
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark">คณิตศาสตร์ดิสครีต</strong>
+                    <small class="text-muted">Discrete Mathematics</small>
+                  </div>
+                  <span class="course-code-tag">MA111</span>
+                </li>
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >ภาษาอังกฤษเพื่อการสื่อสาร</strong
+                    >
+                    <small class="text-muted">English for Communication</small>
+                  </div>
+                  <span class="course-code-tag">GE101</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="semester-quest-card">
+              <div class="quest-card-header">
+                <i
+                  class="bi bi-braces text-accent"
+                  style="color: var(--sapphire-600)"
+                ></i>
+                <span>ภาคเรียนที่ 2 · โครงสร้างข้อมูลและ OOP</span>
+              </div>
+              <ul class="course-quest-list">
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >การเขียนโปรแกรมเชิงวัตถุ (Java)</strong
+                    >
+                    <small class="text-muted"
+                      >Object-Oriented Programming</small
+                    >
+                  </div>
+                  <span class="course-code-tag">CS103</span>
+                </li>
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >โครงสร้างข้อมูลและอัลกอริทึม</strong
+                    >
+                    <small class="text-muted"
+                      >Data Structures &amp; Algorithms</small
+                    >
+                  </div>
+                  <span class="course-code-tag">CS104</span>
+                </li>
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >สถิติและคณิตศาสตร์สัญกรณ์</strong
+                    >
+                    <small class="text-muted"
+                      >Statistics for Computer Science</small
+                    >
+                  </div>
+                  <span class="course-code-tag">MA112</span>
+                </li>
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >ทักษะชีวิตและความเป็นพลเมือง</strong
+                    >
+                    <small class="text-muted"
+                      >Life Skills and Citizenship</small
+                    >
+                  </div>
+                  <span class="course-code-tag">GE102</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- YEAR 2 QUEST PANE -->
+      <div class="skilltree-quest-pane" id="quest-pane-2" style="display: none">
+        <div class="row g-4">
+          <div class="col-12 col-lg-6">
+            <div class="semester-quest-card">
+              <div class="quest-card-header">
+                <i
+                  class="bi bi-cpu text-accent"
+                  style="color: var(--sapphire-600)"
+                ></i>
+                <span>ภาคเรียนที่ 1 · สถาปัตยกรรมระบบและฐานข้อมูล</span>
+              </div>
+              <ul class="course-quest-list">
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >สถาปัตยกรรมคอมพิวเตอร์และ OS</strong
+                    ><small class="text-muted"
+                      >Computer Architecture &amp; OS</small
+                    >
+                  </div>
+                  <span class="course-code-tag">CS201</span>
+                </li>
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >ระบบฐานข้อมูลและการออกแบบ</strong
+                    ><small class="text-muted"
+                      >Database Systems &amp; SQL</small
+                    >
+                  </div>
+                  <span class="course-code-tag">CS202</span>
+                </li>
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >วิศวกรรมซอฟต์แวร์เบื้องต้น</strong
+                    ><small class="text-muted">Software Engineering</small>
+                  </div>
+                  <span class="course-code-tag">CS203</span>
+                </li>
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >โครงข่ายคอมพิวเตอร์และการสื่อสาร</strong
+                    ><small class="text-muted">Computer Networks</small>
+                  </div>
+                  <span class="course-code-tag">CS204</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="semester-quest-card">
+              <div class="quest-card-header">
+                <i
+                  class="bi bi-globe text-accent"
+                  style="color: var(--sapphire-600)"
+                ></i>
+                <span>ภาคเรียนที่ 2 · เว็บแอปพลิเคชันและความปลอดภัย</span>
+              </div>
+              <ul class="course-quest-list">
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >การพัฒนาเว็บแอปพลิเคชันสมัยใหม่</strong
+                    ><small class="text-muted"
+                      >Modern Web Application Development</small
+                    >
+                  </div>
+                  <span class="course-code-tag">CS205</span>
+                </li>
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >การวิเคราะห์และออกแบบระบบเชิงวัตถุ</strong
+                    ><small class="text-muted"
+                      >OO Analysis &amp; System Design</small
+                    >
+                  </div>
+                  <span class="course-code-tag">CS206</span>
+                </li>
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >ความมั่นคงปลอดภัยสารสนเทศ</strong
+                    ><small class="text-muted">Information Security</small
+                    >
+                  </div>
+                  <span class="course-code-tag">CS207</span>
+                </li>
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >คณิตศาสตร์และสถิติสำหรับ AI</strong
+                    ><small class="text-muted"
+                      >Math &amp; Stats for Machine Learning</small
+                    >
+                  </div>
+                  <span class="course-code-tag">CS208</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- YEAR 3 QUEST PANE -->
+      <div class="skilltree-quest-pane" id="quest-pane-3" style="display: none">
+        <div class="row g-4">
+          <div class="col-12 col-lg-6">
+            <div class="semester-quest-card">
+              <div class="quest-card-header">
+                <i
+                  class="bi bi-robot text-accent"
+                  style="color: var(--sapphire-600)"
+                ></i>
+                <span>ภาคเรียนที่ 1 · ปัญญาประดิษฐ์และ Big Data</span>
+              </div>
+              <ul class="course-quest-list">
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >ภูมิปัญญาประดิษฐ์เชิงประยุกต์</strong
+                    ><small class="text-muted"
+                      >Applied Artificial Intelligence</small
+                    >
+                  </div>
+                  <span class="course-code-tag">CS301</span>
+                </li>
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >วิทยาการข้อมูลและการวิเคราะห์ Big Data</strong
+                    ><small class="text-muted"
+                      >Data Science &amp; Analytics</small
+                    >
+                  </div>
+                  <span class="course-code-tag">CS302</span>
+                </li>
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >ภูมิสารสนเทศศาสตร์เบื้องต้น</strong
+                    ><small class="text-muted"
+                      >Geographic Information Systems</small
+                    >
+                  </div>
+                  <span class="course-code-tag">CS303</span>
+                </li>
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >วิชาเลือกเฉพาะทางสาขาวิชา (1)</strong
+                    ><small class="text-muted"
+                      >Specialized Track Elective I</small
+                    >
+                  </div>
+                  <span class="course-code-tag">CS3XX</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="semester-quest-card">
+              <div class="quest-card-header">
+                <i
+                  class="bi bi-kanban text-accent"
+                  style="color: var(--sapphire-600)"
+                ></i>
+                <span>ภาคเรียนที่ 2 · โครงงานนวัตกรรมและฝึกทักษะ</span>
+              </div>
+              <ul class="course-quest-list">
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >การเตรียมพร้อมฝึกประสบการณ์วิชาชีพ</strong
+                    ><small class="text-muted"
+                      >Professional Internship Prep</small
+                    >
+                  </div>
+                  <span class="course-code-tag">CS304</span>
+                </li>
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >โครงงานวิทยาการคอมพิวเตอร์ 1</strong
+                    ><small class="text-muted"
+                      >Computer Science Project I</small
+                    >
+                  </div>
+                  <span class="course-code-tag">CS305</span>
+                </li>
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >วิชาเลือกเฉพาะทางสาขาวิชา (2)</strong
+                    ><small class="text-muted"
+                      >Specialized Track Elective II</small
+                    >
+                  </div>
+                  <span class="course-code-tag">CS3XX</span>
+                </li>
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >วิชาเลือกเสรีองค์กรไอที</strong
+                    ><small class="text-muted">Free Elective</small
+                    >
+                  </div>
+                  <span class="course-code-tag">CS3XX</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- YEAR 4 QUEST PANE -->
+      <div class="skilltree-quest-pane" id="quest-pane-4" style="display: none">
+        <div class="row g-4">
+          <div class="col-12 col-lg-6">
+            <div class="semester-quest-card">
+              <div class="quest-card-header">
+                <i
+                  class="bi bi-buildings text-accent"
+                  style="color: var(--sapphire-600)"
+                ></i>
+                <span>ภาคเรียนที่ 1 · สหกิจศึกษาและฝึกงานจริง</span>
+              </div>
+              <ul class="course-quest-list">
+                <li class="course-quest-item p-3">
+                  <div>
+                    <strong class="d-block text-dark" style="font-size: 1.05rem"
+                      >สหกิจศึกษาทางวิทยาการคอมพิวเตอร์ /
+                      การฝึกประสบการณ์วิชาชีพ</strong
+                    >
+                    <small class="text-muted"
+                      >Co-operative Education in Leading Tech Companies
+                      (ปฏิบัติงานจริงเต็มเวลา 1 ภาคเรียน)</small
+                    >
+                  </div>
+                  <span class="course-code-tag">CS401</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="semester-quest-card">
+              <div class="quest-card-header">
+                <i
+                  class="bi bi-mortarboard text-accent"
+                  style="color: var(--sapphire-600)"
+                ></i>
+                <span>ภาคเรียนที่ 2 · สัมมนาและโครงงานจบการศึกษา</span>
+              </div>
+              <ul class="course-quest-list">
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >สัมมนาและเทคโนโลยีไอทีเกิดใหม่</strong
+                    ><small class="text-muted"
+                      >Emerging Technology Seminar</small
+                    >
+                  </div>
+                  <span class="course-code-tag">CS402</span>
+                </li>
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark"
+                      >โครงงานวิทยาการคอมพิวเตอร์ 2 (สำเร็จการศึกษา)</strong
+                    ><small class="text-muted"
+                      >Computer Science Capstone Project II</small
+                    >
+                  </div>
+                  <span class="course-code-tag">CS403</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     CURRICULUM SPECIALIZATION TRACKS (3 เสาหลักความเชี่ยวชาญ)
+     ========================================== -->
+<section id="features" class="futuristic-section tracks-clean-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-eyebrow-tag">
+        <i class="bi bi-diagram-3"></i> CURRICULUM TRACKS
+      </span>
+      <h2 class="section-hero-title">3 เสาหลักความเชี่ยวชาญเฉพาะทาง</h2>
+      <p class="section-sub-desc mx-auto">
+        รายวิชาเข้มข้นที่ออกแบบตามมาตรฐานสากลเพื่อสร้างบัณฑิตที่พร้อมทำงานทันทีหลังสำเร็จการศึกษา
+      </p>
+    </div>
+
+    <!-- Segmented Track Switcher (Matching Screenshot) -->
+    <div class="tracks-segmented-nav-wrapper">
+      <div class="tracks-segmented-group">
+        <button class="track-tab-btn active" data-track="core">
+          <i class="bi bi-display"></i>
+          <span>วิทยาการคอมพิวเตอร์หลัก (Core CS)</span>
+        </button>
+        <button class="track-tab-btn" data-track="software">
+          <i class="bi bi-code-slash"></i>
+          <span>เทคโนโลยีซอฟต์แวร์ (Software Tech)</span>
+        </button>
+        <button class="track-tab-btn" data-track="ai">
+          <i class="bi bi-cpu"></i>
+          <span>ปัญญาประดิษฐ์ &amp; วิทยาการข้อมูล (AI &amp; Data)</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- TRACK 1: CORE CS -->
+    <div class="track-display-box" id="track-box-core">
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="track-course-clean-card">
+            <div class="track-course-icon-disc blue">
+              <i class="bi bi-hdd-network"></i>
+            </div>
+            <h4 class="track-course-title">โครงข่ายคอมพิวเตอร์</h4>
+            <p class="track-course-desc">
+              การออกแบบ ติดตั้ง และบำรุงรักษาระบบเครือข่าย ทั้งแบบสายและไร้สายเพื่อการสื่อสารในองค์กร
+            </p>
+            <div class="track-course-tag blue">
+              3 หน่วยกิต · มีแล็ป
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="track-course-clean-card">
+            <div class="track-course-icon-disc red">
+              <i class="bi bi-shield-lock-fill"></i>
+            </div>
+            <h4 class="track-course-title">ความปลอดภัยข้อมูล</h4>
+            <p class="track-course-desc">
+              การป้องกันและควบคุมความปลอดภัยของข้อมูล การเข้ารหัสลับ และการตรวจจับภัยคุกคามไซเบอร์
+            </p>
+            <div class="track-course-tag blue">
+              3 หน่วยกิต · บรรยาย
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="track-course-clean-card">
+            <div class="track-course-icon-disc purple">
+              <i class="bi bi-braces-asterisk"></i>
+            </div>
+            <h4 class="track-course-title">นิติวิทยาศาสตร์ดิจิทัล</h4>
+            <p class="track-course-desc">
+              การตรวจสอบวิเคราะห์ข้อมูลจากการโจมตีทางไซเบอร์ พยานหลักฐานดิจิทัล และกฎหมายคอมพิวเตอร์
+            </p>
+            <div class="track-course-tag blue">
+              3 หน่วยกิต · มีแล็ป
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="track-course-clean-card">
+            <div class="track-course-icon-disc green">
+              <i class="bi bi-database-fill"></i>
+            </div>
+            <h4 class="track-course-title">ระบบฐานข้อมูล</h4>
+            <p class="track-course-desc">
+              การออกแบบและจัดการระบบฐานข้อมูลเชิงสัมพันธ์ การเขียนคำสั่ง SQL และการจัดการธุรกรรมข้อมูล
+            </p>
+            <div class="track-course-tag blue">
+              3 หน่วยกิต · มีแล็ป
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRACK 2: SOFTWARE TECH -->
+    <div class="track-display-box" id="track-box-software" style="display: none">
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="track-course-clean-card">
+            <div class="track-course-icon-disc blue">
+              <i class="bi bi-layers-half"></i>
+            </div>
+            <h4 class="track-course-title">วิศวกรรมซอฟต์แวร์</h4>
+            <p class="track-course-desc">
+              กระบวนการวิเคราะห์และออกแบบระบบซอฟต์แวร์ การทดสอบ Black/White Box และการบำรุงรักษา
+            </p>
+            <div class="track-course-tag blue">
+              3 หน่วยกิต · บรรยาย
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="track-course-clean-card">
+            <div class="track-course-icon-disc green">
+              <i class="bi bi-file-earmark-code-fill"></i>
+            </div>
+            <h4 class="track-course-title">พัฒนาเว็บแอปพลิเคชัน</h4>
+            <p class="track-course-desc">
+              ปฏิบัติการสร้างเว็บด้วยโมเดิร์นเฟรมเวิร์กยอดนิยม React, Next.js, Node.js และ RESTful API
+            </p>
+            <div class="track-course-tag blue">
+              3 หน่วยกิต · มีแล็ป
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="track-course-clean-card">
+            <div class="track-course-icon-disc red">
+              <i class="bi bi-image-fill"></i>
+            </div>
+            <h4 class="track-course-title">ประมวลผลภาพดิจิทัล</h4>
+            <p class="track-course-desc">
+              การปรับแต่งภาพดิจิทัล การสกัดคุณลักษณะของภาพ และการตรวจจับวัตถุด้วย Computer Vision
+            </p>
+            <div class="track-course-tag blue">
+              3 หน่วยกิต · มีแล็ป
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="track-course-clean-card">
+            <div class="track-course-icon-disc purple">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <h4 class="track-course-title">สารสนเทศภูมิศาสตร์</h4>
+            <p class="track-course-desc">
+              การประยุกต์ใช้เทคโนโลยีสารสนเทศในการวิเคราะห์และแสดงผลข้อมูลแผนที่พิกัดทางภูมิศาสตร์
+            </p>
+            <div class="track-course-tag blue">
+              3 หน่วยกิต · มีแล็ป
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRACK 3: AI & DATA -->
+    <div class="track-display-box" id="track-box-ai" style="display: none">
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="track-course-clean-card">
+            <div class="track-course-icon-disc red">
+              <i class="bi bi-robot"></i>
+            </div>
+            <h4 class="track-course-title">ภูมิปัญญาประดิษฐ์</h4>
+            <p class="track-course-desc">
+              ทฤษฎีและอัลกอริทึมปัญญาประดิษฐ์ การค้นหา การประมวลผลภาษาธรรมชาติ (NLP) และระบบอัตโนมัติ
+            </p>
+            <div class="track-course-tag blue">
+              3 หน่วยกิต · บรรยาย
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="track-course-clean-card">
+            <div class="track-course-icon-disc blue">
+              <i class="bi bi-bar-chart-line-fill"></i>
+            </div>
+            <h4 class="track-course-title">วิทยาการข้อมูล</h4>
+            <p class="track-course-desc">
+              กระบวนการ Data Pipeline, Exploratory Data Analysis (EDA) และการสกัดคุณค่าจาก Big Data
+            </p>
+            <div class="track-course-tag blue">
+              3 หน่วยกิต · มีแล็ป
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="track-course-clean-card">
+            <div class="track-course-icon-disc purple">
+              <i class="bi bi-cpu-fill"></i>
+            </div>
+            <h4 class="track-course-title">การเรียนรู้ของเครื่อง</h4>
+            <p class="track-course-desc">
+              โมเดล Machine Learning แบบ Supervised, Unsupervised และการสร้าง Predictive Model
+            </p>
+            <div class="track-course-tag blue">
+              3 หน่วยกิต · มีแล็ป
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="track-course-clean-card">
+            <div class="track-course-icon-disc green">
+              <i class="bi bi-diagram-3-fill"></i>
+            </div>
+            <h4 class="track-course-title">การทำเหมืองข้อมูล</h4>
+            <p class="track-course-desc">
+              เทคนิค Classification, Association Rules, Clustering และการค้นพบองค์ความรู้ใหม่
+            </p>
+            <div class="track-course-tag blue">
+              3 หน่วยกิต · มีแล็ป
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     FACULTY LEADERSHIP SECTION (HEAD AT TOP)
+     ========================================== -->
+<section
+  id="lecturers"
+  class="futuristic-section"
+  style="background-color: var(--canvas-subtle)"
+>
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-eyebrow-tag">
+        <i class="bi bi-person-workspace"></i> Faculty Members
+      </span>
+      <h2 class="section-hero-title">คณาจารย์ประจำหลักสูตร</h2>
+      <p class="section-sub-desc mx-auto">
+        คณาจารย์ผู้ทรงคุณวุฒิและเชี่ยวชาญเฉพาะทาง ร่วมขับเคลื่อนการเรียนการสอน
+        งานวิจัย และนวัตกรรมดิจิทัล
+      </p>
+    </div>
+
+    <!-- 1. HEAD OF DEPARTMENT CLEAN FEATURE CARD -->
+    <div class="faculty-lead-card mb-4">
+      <div class="row align-items-center g-4">
+        <div class="col-12 col-md-auto text-center">
+          <div class="faculty-avatar-wrap lead-avatar">
+            <img
+              src="{% static 'images/kanittha.jpg' %}"
+              alt="ผศ.ดร.กนิษฐา อินธิชิต"
+            />
+          </div>
+        </div>
+        <div class="col-12 col-md">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+            <span class="faculty-role-badge">
+              <i class="bi bi-patch-check-fill me-1"></i> หัวหน้าสาขาวิชาฯ &amp; อาจารย์ผู้รับผิดชอบหลักสูตร
+            </span>
+            <span class="faculty-spec-badge">
+              ความเชี่ยวชาญ: เทคโนโลยีสารสนเทศ (IT)
+            </span>
+          </div>
+
+          <h3 class="faculty-name-main mb-1">
+            ผู้ช่วยศาสตราจารย์ ดร.กนิษฐา อินธิชิต
+          </h3>
+          <p class="faculty-name-sub mb-2">
+            Asst. Prof. Dr. Kanittha Inthichit · 
+            <a href="mailto:kanittha.i@sskru.ac.th" class="faculty-email-text">
+              <i class="bi bi-envelope me-1"></i>kanittha.i@sskru.ac.th
+            </a>
+          </p>
+
+          <p class="faculty-bio-desc mb-3">
+            บริหารงานสาขาวิชาฯ มุ่งเน้นการจัดการเรียนการสอนเชิงปฏิบัติการ การวิเคราะห์และออกแบบระบบเชิงวัตถุ และการพัฒนานวัตกรรมสารสนเทศเพื่อชุมชน
+          </p>
+
+          <div>
+            <button type="button" class="btn-faculty-action" data-faculty-id="5">
+              <i class="bi bi-file-earmark-person me-1"></i> ดูประวัติและผลงานวิชาการ
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. FOUR PROFESSORS CLEAN UNIFORM GRID -->
+    <div class="row g-4 justify-content-center">
+      <!-- Lecturer 1: Jessada P. -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="faculty-member-card">
+          <div class="faculty-avatar-wrap">
+            <img
+              src="{% static 'images/jessada_p.jpg' %}"
+              alt="ผศ.ดร.เจษฎา โพนแก้ว"
+            />
+          </div>
+          <h5 class="faculty-member-name">ผศ.ดร.เจษฎา โพนแก้ว</h5>
+          <div class="faculty-member-en">Jessada Phonkaew</div>
+          <div class="faculty-spec-badge mb-3">
+            วิทยาการคอมพิวเตอร์
+          </div>
+          <button type="button" class="btn-faculty-action btn-sm-action" data-faculty-id="1">
+            ดูประวัติ &amp; ผลงาน
+          </button>
+        </div>
+      </div>
+
+      <!-- Lecturer 2: Jessada C. -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="faculty-member-card">
+          <div class="faculty-avatar-wrap">
+            <img
+              src="{% static 'images/jessada_c.jpg' %}"
+              alt="ดร.เจษฎา ชาตรี"
+            />
+          </div>
+          <h5 class="faculty-member-name">ดร.เจษฎา ชาตรี</h5>
+          <div class="faculty-member-en">Jessada Chatree</div>
+          <div class="faculty-spec-badge mb-3">
+            Computer Science &amp; Eng
+          </div>
+          <button type="button" class="btn-faculty-action btn-sm-action" data-faculty-id="2">
+            ดูประวัติ &amp; ผลงาน
+          </button>
+        </div>
+      </div>
+
+      <!-- Lecturer 3: Krichbodin P. -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="faculty-member-card">
+          <div class="faculty-avatar-wrap">
+            <img
+              src="{% static 'images/krichbodin.jpg' %}"
+              alt="ดร.กริชบดินทร์ ผิวหอม"
+            />
+          </div>
+          <h5 class="faculty-member-name">ดร.กริชบดินทร์ ผิวหอม</h5>
+          <div class="faculty-member-en">Krichbodin Phewhom</div>
+          <div class="faculty-spec-badge mb-3">
+            วิศวกรรมคอมพิวเตอร์
+          </div>
+          <button type="button" class="btn-faculty-action btn-sm-action" data-faculty-id="3">
+            ดูประวัติ &amp; ผลงาน
+          </button>
+        </div>
+      </div>
+
+      <!-- Lecturer 4: Phisan S. -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="faculty-member-card">
+          <div class="faculty-avatar-wrap">
+            <img src="{% static 'images/phisan.jpg' %}" alt="ผศ.พิศาล สุขขี" />
+          </div>
+          <h5 class="faculty-member-name">ผศ.พิศาล สุขขี</h5>
+          <div class="faculty-member-en">Phisan Sukkee</div>
+          <div class="faculty-spec-badge mb-3">
+            วิทยาการคอมพิวเตอร์
+          </div>
+          <button type="button" class="btn-faculty-action btn-sm-action" data-faculty-id="4">
+            ดูประวัติ &amp; ผลงาน
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     NEWS & ACTIVITIES SECTION (ANCHOR #news)
+     ========================================== -->
+<section id="news" class="futuristic-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-eyebrow-tag">
+        <i class="bi bi-newspaper"></i> News &amp; Activities
+      </span>
+      <h2 class="section-hero-title">ข่าวสารและกิจกรรมสาขาวิชาฯ</h2>
+      <p class="section-sub-desc mx-auto">
+        ติดตามข่าวสารกิจกรรม ผลงานนักศึกษา ทุนการศึกษา และการอบรมเชิงปฏิบัติการ
+      </p>
+    </div>
+
+    <!-- News Responsive Grid (2x2 on Mobile, 4-Col on Desktop) -->
+    <div class="row g-3 g-md-4 mb-4">
+      {% for news in latest_news %}
+      <div class="col-6 col-lg-3">
+        <div class="mission-grid-card modern-grid-card d-flex flex-column h-100 p-3">
+          {% if news.image %}
+          <div class="news-card-img-wrap" style="border-radius: 12px; overflow: hidden; aspect-ratio: 16/9; margin-bottom: 0.75rem;">
+            <img src="{{ news.image }}" alt="{{ news.title }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" class="hover-zoom-img">
+          </div>
+          {% else %}
+          <div class="mission-icon-box" style="background: var(--sapphire-50); color: var(--sapphire-700);">
+            <i class="bi bi-newspaper"></i>
+          </div>
+          {% endif %}
+          <div class="d-flex align-items-center flex-wrap gap-1 small text-muted mb-2 news-card-meta">
+            <span class="badge news-card-badge" style="background: var(--sapphire-50); color: var(--sapphire-700); border: 1px solid var(--border-sapphire); font-size: 0.72rem;">
+              {{ news.get_category_display|default:"ข่าวสาร" }}
+            </span>
+            <span class="small" style="font-size: 0.72rem;">📅 {{ news.published_at|date:"d M Y" }}</span>
+          </div>
+          <h5 class="fw-bold text-dark mb-2 news-card-title" style="font-size: 1.02rem; line-height: 1.45;">
+            {{ news.title }}
+          </h5>
+          <p class="text-muted small mb-3 flex-grow-1 news-card-desc" style="line-height: 1.65;">
+            {{ news.description|truncatewords:20 }}
+          </p>
+          <a href="{% url 'news_detail' slug=news.slug %}" class="small fw-bold mt-auto news-card-link" style="color: var(--sapphire-600);">
+            อ่านต่อ <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      {% empty %}
+      <div class="col-12 text-center py-4">
+        <i class="bi bi-inbox text-muted" style="font-size: 2.5rem;"></i>
+        <p class="text-muted mt-2 small">ยังไม่มีข่าวประชาสัมพันธ์ในขณะนี้</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="text-center">
+      <a href="{% url 'news' %}" class="btn-clean-primary" style="padding: 0.65rem 1.8rem; display: inline-flex; align-items: center; text-decoration: none;">
+        <i class="bi bi-grid me-2"></i> ดูข่าวสารและกิจกรรมทั้งหมด
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     QUALITY & HONORS (AUN-QA & ROBOTICS)
+     ========================================== -->
+<section class="futuristic-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-eyebrow-tag">
+        <i class="bi bi-trophy"></i> Quality &amp; Highlights
+      </span>
+      <h2 class="section-hero-title">รายงานความสำเร็จและคุณภาพหลักสูตร</h2>
+      <p class="section-sub-desc mx-auto">
+        การรับรองมาตรฐานคุณภาพการศึกษาระดับสากล
+        และกิจกรรมพัฒนาศักยภาพเยาวชนสู่ระดับประเทศ
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1: AUN-QA -->
+      <div class="col-12 col-lg-6">
+        <div
+          class="strategic-bento-hero-card h-100"
+          style="background: linear-gradient(135deg, #0c2d48 0%, #034b75 100%)"
+        >
+          <div
+            class="d-inline-flex align-items-center gap-2 mb-3"
+            style="
+              background: rgba(56, 189, 248, 0.2);
+              padding: 0.35rem 0.85rem;
+              border-radius: 50px;
+              font-size: 0.82rem;
+              color: #38bdf8;
+              font-weight: 600;
+            "
+          >
+            <i class="bi bi-patch-check-fill"></i> การรับรองมาตรฐาน AUN-QA
+          </div>
+          <h3 class="fw-bold mb-2 text-white" style="font-size: 1.45rem">
+            ผลการประเมินคุณภาพสาขาวิชาฯ ปี 2568
+          </h3>
+          <p
+            class="mb-3"
+            style="
+              color: rgba(255, 255, 255, 0.85);
+              font-size: 1rem;
+              line-height: 1.65;
+            "
+          >
+            ระดับคะแนนความพึงพอใจดีเยี่ยม
+            ได้รับการประเมินคุณภาพครบทุกเกณฑ์มาตรฐานการศึกษา
+          </p>
+          <div class="small mb-4" style="color: rgba(255, 255, 255, 0.6)">
+            📅 วันที่ประเมิน: 16 – 17 สิงหาคม 2568 · คณะศิลปศาสตร์และวิทยาศาสตร์
+            มรภ.ศรีสะเกษ
+          </div>
+          <div class="mt-auto">
+            <a
+              href="https://drive.google.com/file/d/1BuiJjZFFHtpzS3WPo8TUzGbaD4i9_WPS/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-cyber-primary"
+              style="padding: 0.6rem 1.4rem; font-size: 0.92rem"
+            >
+              <i class="bi bi-file-earmark-pdf-fill"></i> อ่านรายงานฉบับเต็ม
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Robotics -->
+      <div class="col-12 col-lg-6">
+        <div
+          class="strategic-bento-hero-card h-100"
+          style="
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+          "
+        >
+          <div
+            class="d-inline-flex align-items-center gap-2 mb-3"
+            style="
+              background: rgba(16, 185, 129, 0.2);
+              padding: 0.35rem 0.85rem;
+              border-radius: 50px;
+              font-size: 0.82rem;
+              color: #34d399;
+              font-weight: 600;
+            "
+          >
+            <i class="bi bi-robot"></i> กิจกรรมเด่นระดับประเทศ
+          </div>
+          <h3 class="fw-bold mb-2 text-white" style="font-size: 1.45rem">
+            การแข่งขันหุ่นยนต์ศรีสะเกษโรโบติกส์
+          </h3>
+          <p
+            class="mb-3"
+            style="
+              color: rgba(255, 255, 255, 0.85);
+              font-size: 1rem;
+              line-height: 1.65;
+            "
+          >
+            จัดการแข่งขันหุ่นยนต์เยาวชนชิงถ้วยเกียรติยศสูงสุด รวมทั้งสิ้น 33
+            รายการ สำหรับทุกระดับการศึกษาทั่วประเทศ
+          </p>
+          <div class="small mb-4" style="color: rgba(255, 255, 255, 0.6)">
+            📅 วันที่จัดงาน: 27 – 28 มิถุนายน 2569 · มหาวิทยาลัยราชภัฏศรีสะเกษ
+          </div>
+          <div class="mt-auto d-flex flex-wrap gap-2">
+            <a
+              href="https://1drv.ms/a/c/60d253dc06c08d13/IgATjcAG3FPSIIBgij8AAAAAAakSNidVqov40xFLsba2oxg"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-cyber-primary"
+              style="padding: 0.6rem 1.4rem; font-size: 0.92rem"
+            >
+              <i class="bi bi-images"></i> ภาพกิจกรรม
+            </a>
+            <a
+              href="https://www.ssk-robotics.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-cyber-ghost"
+              style="padding: 0.6rem 1.4rem; font-size: 0.92rem"
+            >
+              <i class="bi bi-globe"></i> เว็บไซต์กิจกรรม
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     DOCUMENT DOWNLOADS & RESOURCE HUB
+     ========================================== -->
+<section
+  id="download"
+  class="futuristic-section"
+  style="background-color: var(--canvas-subtle)"
+>
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-eyebrow-tag">
+        <i class="bi bi-folder2-open"></i> Resource Hub
+      </span>
+      <h2 class="section-hero-title">ดาวน์โหลดเอกสารสาขาวิชาฯ</h2>
+      <p class="section-sub-desc mx-auto">
+        รวบรวมเอกสารเล่มหลักสูตร คู่มือการขึ้นทะเบียนนักศึกษา และแบบฟอร์มสำคัญ
+      </p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <!-- Doc 1: มคอ.2 -->
+      <div class="col-12 col-lg-6">
+        <div class="course-quest-item p-4">
+          <div class="d-flex align-items-center gap-3">
+            <div
+              class="mission-icon-box mb-0"
+              style="
+                background: #fee2e2;
+                color: #ef4444;
+                width: 50px;
+                height: 50px;
+              "
+            >
+              <i
+                class="bi bi-file-earmark-pdf-fill"
+                style="font-size: 1.5rem"
+              ></i>
+            </div>
+            <div>
+              <h5 class="fw-bold text-dark mb-1" style="font-size: 1.15rem">
+                เล่มหลักสูตร วท.บ. (มคอ.2)
+              </h5>
+              <p class="text-muted small mb-0">
+                หลักสูตรปรับปรุง พ.ศ. 2568 ฉบับสมบูรณ์
+              </p>
+            </div>
+          </div>
+          <a
+            href="https://drive.google.com/file/d/1VjG1c3__p96kEBRSGuFNJtZXXD9A3SjB/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-cyber-primary"
+            style="padding: 0.55rem 1.25rem; font-size: 0.88rem"
+          >
+            <i class="bi bi-download"></i> ดาวน์โหลด
+          </a>
+        </div>
+      </div>
+
+      <!-- Doc 2: Student Handbook -->
+      <div class="col-12 col-lg-6">
+        <div class="course-quest-item p-4">
+          <div class="d-flex align-items-center gap-3">
+            <div
+              class="mission-icon-box mb-0"
+              style="
+                background: var(--sapphire-100);
+                color: var(--sapphire-700);
+                width: 50px;
+                height: 50px;
+              "
+            >
+              <i
+                class="bi bi-journal-bookmark-fill"
+                style="font-size: 1.5rem"
+              ></i>
+            </div>
+            <div>
+              <h5 class="fw-bold text-dark mb-1" style="font-size: 1.15rem">
+                คู่มือการขึ้นทะเบียนนักศึกษาใหม่
+              </h5>
+              <p class="text-muted small mb-0">
+                ระบบสำนักส่งเสริมวิชาการและงานทะเบียน (OASS)
+              </p>
+            </div>
+          </div>
+          <a
+            href="https://www.oass.sskru.ac.th/std.sskru/s17.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-cyber-ghost"
+            style="padding: 0.55rem 1.25rem; font-size: 0.88rem"
+          >
+            <i class="bi bi-box-arrow-up-right"></i> เปิดดูคู่มือ
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     COMMUNITY, AI ASSISTANT & CONTACT
+     ========================================== -->
+<section id="contact" class="futuristic-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-eyebrow-tag">
+        <i class="bi bi-geo-alt"></i> Contact &amp; Connect
+      </span>
+      <h2 class="section-hero-title">
+        ช่องทางการติดต่อ &amp; ที่ตั้งสาขาวิชาฯ
+      </h2>
+      <p class="section-sub-desc mx-auto">
+        มีข้อสงสัยเกี่ยวกับหลักสูตร โควตารับสมัคร หรือสอบถามรายละเอียดเพิ่มเติม
+        ได้ตลอดเวลา
+      </p>
+    </div>
+
+    <!-- Social Action Panels -->
+    <div class="row g-4 mb-5">
+      <!-- LINE Card -->
+      <div class="col-12">
+        <div class="community-action-card panel-gemini-line">
+          <div class="d-flex align-items-center gap-3">
+            <i class="bi bi-line" style="font-size: 3rem; color: #fff"></i>
+            <div>
+              <h4 class="fw-bold mb-1 text-white" style="font-size: 1.4rem">
+                LINE AI Chatbot (Gemini Assistant)
+              </h4>
+              <p
+                class="mb-0"
+                style="color: rgba(255, 255, 255, 0.9); font-size: 0.95rem"
+              >
+                ระบบตอบรับอัจฉริยะ 24 ชม. ถามข้อมูลหลักสูตร ทุนการศึกษา
+                และรอบการรับสมัครได้ทันที
+              </p>
+            </div>
+          </div>
+          <a
+            href="https://line.me/R/ti/p/@793ozxpi?oat_content=url&ts=05271601"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-cyber-ghost text-dark"
+          >
+            <i class="bi bi-plus-circle-fill text-success"></i> เพิ่มเพื่อนใน
+            LINE
+          </a>
+        </div>
+      </div>
+
+      <!-- Facebook Card -->
+      <div class="col-12 col-lg-6">
+        <div class="community-action-card panel-cyber-fb">
+          <div class="d-flex align-items-center gap-3">
+            <i
+              class="bi bi-facebook"
+              style="font-size: 2.5rem; color: #fff"
+            ></i>
+            <div>
+              <h5 class="fw-bold mb-1 text-white">Facebook Fanpage</h5>
+              <p class="mb-0 small" style="color: rgba(255, 255, 255, 0.85)">
+                ติดตามข่าวสาร กิจกรรมสาขาฯ และผลงานนักศึกษา
+              </p>
+            </div>
+          </div>
+          <a
+            href="https://www.facebook.com/comsci.sskru"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-cyber-ghost text-dark"
+          >
+            <i class="bi bi-hand-thumbs-up-fill text-primary"></i> ติดตามแฟนเพจ
+          </a>
+        </div>
+      </div>
+
+      <!-- TikTok Card -->
+      <div class="col-12 col-lg-6">
+        <div class="community-action-card panel-cyber-tiktok">
+          <div class="d-flex align-items-center gap-3">
+            <i
+              class="bi bi-tiktok"
+              style="font-size: 2.5rem; color: #fe2c55"
+            ></i>
+            <div>
+              <h5 class="fw-bold mb-1 text-white">TikTok Official</h5>
+              <p class="mb-0 small" style="color: rgba(255, 255, 255, 0.85)">
+                ชมคลิปสั้น แนะนำบรรยากาศและไลฟ์สไตล์เด็กวิทย์คอม
+              </p>
+            </div>
+          </div>
+          <a
+            href="https://www.tiktok.com/@comsciencesskru"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-cyber-ghost text-dark"
+          >
+            <i class="bi bi-play-fill text-danger"></i> ชมวิดีโอบน TikTok
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Details & Map -->
+    <div class="row g-4">
+      <div class="col-12 col-lg-5">
+        <div class="d-flex flex-column gap-3">
+          <div class="course-quest-item p-3">
+            <div
+              class="mission-icon-box mb-0"
+              style="background: var(--sapphire-50); color: var(--sapphire-700)"
+            >
+              <i class="bi bi-telephone-fill"></i>
+            </div>
+            <div class="ms-3 flex-grow-1">
+              <h6 class="fw-bold text-dark mb-1">เบอร์โทรศัพท์สาขาวิชาฯ</h6>
+              <p class="text-secondary small mb-0">043-009700 ต่อ 50528</p>
+              <small class="fw-bold" style="color: var(--sapphire-700)"
+                >สายด่วน: 084-298-2456</small
+              >
+            </div>
+          </div>
+
+          <div class="course-quest-item p-3">
+            <div
+              class="mission-icon-box mb-0"
+              style="background: var(--sapphire-50); color: var(--sapphire-700)"
+            >
+              <i class="bi bi-envelope-fill"></i>
+            </div>
+            <div class="ms-3 flex-grow-1">
+              <h6 class="fw-bold text-dark mb-1">อีเมลติดต่อ</h6>
+              <p class="text-secondary small mb-0">
+                <a href="mailto:phisan.s@sskru.ac.th" class="text-secondary"
+                  >phisan.s@sskru.ac.th</a
+                >
+              </p>
+              <small class="text-muted"
+                >ผศ.ดร.กนิษฐา อินธิชิต (หัวหน้าสาขาวิชาฯ)</small
+              >
+            </div>
+          </div>
+
+          <div class="course-quest-item p-3">
+            <div
+              class="mission-icon-box mb-0"
+              style="background: var(--sapphire-50); color: var(--sapphire-700)"
+            >
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="ms-3 flex-grow-1">
+              <h6 class="fw-bold text-dark mb-1">ที่ตั้งอาคารเรียน</h6>
+              <p class="text-secondary small mb-0">
+                ชั้น 5 อาคารสำนักงานคณบดี คณะศิลปศาสตร์และวิทยาศาสตร์ (LASC)
+                มรภ.ศรีสะเกษ ถ.ไทยพันทา อ.เมือง จ.ศรีสะเกษ 33000
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-7">
+        <div class="faculty-dossier-card p-2 h-100" style="min-height: 340px">
+          <iframe
+            src="https://maps.google.com/maps?q=%E0%B8%95%E0%B8%B6%E0%B8%814%E0%B8%84%E0%B8%93%E0%B8%B0%E0%B8%A8%E0%B8%B4%E0%B8%A5%E0%B8%9B%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8Call%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C%20%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%A0%E0%B8%B1%E0%B8%8F%E0%B8%A8%E0%B8%B5%E0%B8%AA%E0%B8%B0%E0%B9%80%E0%B8%81%E0%B8%A9&t=&z=17&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="100%"
+            style="
+              border: 0;
+              border-radius: var(--radius-lg);
+              min-height: 320px;
+              display: block;
+            "
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Google Map of Sisaket Rajabhat University"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

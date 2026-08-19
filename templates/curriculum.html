@@ -1,0 +1,232 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}หลักสูตรและแผนการเรียน | สาขาวิชาวิทยาการคอมพิวเตอร์ มรภ.ศรีสะเกษ{% endblock %}
+
+{% block content %}
+<section class="futuristic-section" style="padding-top: 8.5rem;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-eyebrow-tag">
+        <i class="bi bi-mortarboard"></i> Curriculum Structure
+      </span>
+      <h1 class="section-hero-title">โครงสร้างหลักสูตรและแผนการเรียน 4 ปี</h1>
+      <p class="section-sub-desc mx-auto">
+        หลักสูตรวิทยาศาสตรบัณฑิต (วท.บ.) ปรับปรุง พ.ศ. 2568 รวม 133 หน่วยกิต ออกแบบรองรับการพัฒนาซอฟต์แวร์ AI และ Data Science
+      </p>
+    </div>
+
+    <!-- 4-Year Interactive Skill Tree Card -->
+    <div class="skilltree-roadmap-card mb-5">
+      <div class="skilltree-stepper-track">
+        <button class="skilltree-node-btn active" data-year="1">
+          <span class="level-badge-chip">LV.1</span>
+          <span>ปีที่ 1 : Foundation Cadet</span>
+        </button>
+        <button class="skilltree-node-btn" data-year="2">
+          <span class="level-badge-chip">LV.2</span>
+          <span>ปีที่ 2 : System Architect</span>
+        </button>
+        <button class="skilltree-node-btn" data-year="3">
+          <span class="level-badge-chip">LV.3</span>
+          <span>ปีที่ 3 : AI &amp; Data Master</span>
+        </button>
+        <button class="skilltree-node-btn" data-year="4">
+          <span class="level-badge-chip">LV.4</span>
+          <span>ปีที่ 4 : Industry Innovator</span>
+        </button>
+      </div>
+
+      <!-- YEAR 1 QUEST PANE -->
+      <div class="skilltree-quest-pane" id="quest-pane-1">
+        <div class="row g-4">
+          <div class="col-12 col-lg-6">
+            <div class="semester-quest-card">
+              <div class="quest-card-header">
+                <i class="bi bi-code-square text-accent" style="color: var(--sapphire-600);"></i>
+                <span>ภาคเรียนที่ 1 · พื้นฐานการเขียนโปรแกรม</span>
+              </div>
+              <ul class="course-quest-list">
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark">พื้นฐานวิทยาการคอมพิวเตอร์</strong>
+                    <small class="text-muted">Introduction to Computer Science</small>
+                  </div>
+                  <span class="course-code-tag">CS101</span>
+                </li>
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark">การเขียนโปรแกรมเบื้องต้น (Python)</strong>
+                    <small class="text-muted">Fundamentals of Python Programming</small>
+                  </div>
+                  <span class="course-code-tag">CS102</span>
+                </li>
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark">คณิตศาสตร์ดิสครีต</strong>
+                    <small class="text-muted">Discrete Mathematics</small>
+                  </div>
+                  <span class="course-code-tag">MA111</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="semester-quest-card">
+              <div class="quest-card-header">
+                <i class="bi bi-braces text-accent" style="color: var(--sapphire-600);"></i>
+                <span>ภาคเรียนที่ 2 · โครงสร้างข้อมูลและ OOP</span>
+              </div>
+              <ul class="course-quest-list">
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark">การเขียนโปรแกรมเชิงวัตถุ (Java)</strong>
+                    <small class="text-muted">Object-Oriented Programming</small>
+                  </div>
+                  <span class="course-code-tag">CS103</span>
+                </li>
+                <li class="course-quest-item">
+                  <div>
+                    <strong class="d-block text-dark">โครงสร้างข้อมูลและอัลกอริทึม</strong>
+                    <small class="text-muted">Data Structures &amp; Algorithms</small>
+                  </div>
+                  <span class="course-code-tag">CS104</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- YEAR 2 QUEST PANE -->
+      <div class="skilltree-quest-pane" id="quest-pane-2" style="display: none;">
+        <div class="row g-4">
+          <div class="col-12 col-lg-6">
+            <div class="semester-quest-card">
+              <div class="quest-card-header">
+                <i class="bi bi-cpu text-accent" style="color: var(--sapphire-600);"></i>
+                <span>ภาคเรียนที่ 1 · สถาปัตยกรรมระบบและฐานข้อมูล</span>
+              </div>
+              <ul class="course-quest-list">
+                <li class="course-quest-item">
+                  <div><strong class="d-block text-dark">สถาปัตยกรรมคอมพิวเตอร์และ OS</strong><small class="text-muted">Computer Architecture &amp; OS</small></div>
+                  <span class="course-code-tag">CS201</span>
+                </li>
+                <li class="course-quest-item">
+                  <div><strong class="d-block text-dark">ระบบฐานข้อมูลและการออกแบบ</strong><small class="text-muted">Database Systems &amp; SQL</small></div>
+                  <span class="course-code-tag">CS202</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="semester-quest-card">
+              <div class="quest-card-header">
+                <i class="bi bi-globe text-accent" style="color: var(--sapphire-600);"></i>
+                <span>ภาคเรียนที่ 2 · เว็บแอปพลิเคชันและความปลอดภัย</span>
+              </div>
+              <ul class="course-quest-list">
+                <li class="course-quest-item">
+                  <div><strong class="d-block text-dark">การพัฒนาเว็บแอปพลิเคชันสมัยใหม่</strong><small class="text-muted">Modern Web Application Development</small></div>
+                  <span class="course-code-tag">CS205</span>
+                </li>
+                <li class="course-quest-item">
+                  <div><strong class="d-block text-dark">ความมั่นคงปลอดภัยสารสนเทศ</strong><small class="text-muted">Information Security</small></div>
+                  <span class="course-code-tag">CS207</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- YEAR 3 QUEST PANE -->
+      <div class="skilltree-quest-pane" id="quest-pane-3" style="display: none;">
+        <div class="row g-4">
+          <div class="col-12 col-lg-6">
+            <div class="semester-quest-card">
+              <div class="quest-card-header">
+                <i class="bi bi-robot text-accent" style="color: var(--sapphire-600);"></i>
+                <span>ภาคเรียนที่ 1 · ปัญญาประดิษฐ์และ Big Data</span>
+              </div>
+              <ul class="course-quest-list">
+                <li class="course-quest-item">
+                  <div><strong class="d-block text-dark">ภูมิปัญญาประดิษฐ์เชิงประยุกต์</strong><small class="text-muted">Applied Artificial Intelligence</small></div>
+                  <span class="course-code-tag">CS301</span>
+                </li>
+                <li class="course-quest-item">
+                  <div><strong class="d-block text-dark">วิทยาการข้อมูลและการวิเคราะห์ Big Data</strong><small class="text-muted">Data Science &amp; Analytics</small></div>
+                  <span class="course-code-tag">CS302</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="semester-quest-card">
+              <div class="quest-card-header">
+                <i class="bi bi-kanban text-accent" style="color: var(--sapphire-600);"></i>
+                <span>ภาคเรียนที่ 2 · โครงงานนวัตกรรมและฝึกทักษะ</span>
+              </div>
+              <ul class="course-quest-list">
+                <li class="course-quest-item">
+                  <div><strong class="d-block text-dark">การเตรียมพร้อมฝึกประสบการณ์วิชาชีพ</strong><small class="text-muted">Professional Internship Prep</small></div>
+                  <span class="course-code-tag">CS304</span>
+                </li>
+                <li class="course-quest-item">
+                  <div><strong class="d-block text-dark">โครงงานวิทยาการคอมพิวเตอร์ 1</strong><small class="text-muted">Computer Science Project I</small></div>
+                  <span class="course-code-tag">CS305</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- YEAR 4 QUEST PANE -->
+      <div class="skilltree-quest-pane" id="quest-pane-4" style="display: none;">
+        <div class="row g-4">
+          <div class="col-12 col-lg-6">
+            <div class="semester-quest-card">
+              <div class="quest-card-header">
+                <i class="bi bi-buildings text-accent" style="color: var(--sapphire-600);"></i>
+                <span>ภาคเรียนที่ 1 · สหกิจศึกษา</span>
+              </div>
+              <ul class="course-quest-list">
+                <li class="course-quest-item p-3">
+                  <div>
+                    <strong class="d-block text-dark">สหกิจศึกษาทางวิทยาการคอมพิวเตอร์</strong>
+                    <small class="text-muted">ปฏิบัติงานจริงเต็มเวลา 1 ภาคเรียน</small>
+                  </div>
+                  <span class="course-code-tag">CS401</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="semester-quest-card">
+              <div class="quest-card-header">
+                <i class="bi bi-mortarboard text-accent" style="color: var(--sapphire-600);"></i>
+                <span>ภาคเรียนที่ 2 · โครงงานจบการศึกษา</span>
+              </div>
+              <ul class="course-quest-list">
+                <li class="course-quest-item">
+                  <div><strong class="d-block text-dark">สัมมนาและเทคโนโลยีไอทีเกิดใหม่</strong><small class="text-muted">Emerging Technology Seminar</small></div>
+                  <span class="course-code-tag">CS402</span>
+                </li>
+                <li class="course-quest-item">
+                  <div><strong class="d-block text-dark">โครงงานวิทยาการคอมพิวเตอร์ 2</strong><small class="text-muted">Capstone Project II</small></div>
+                  <span class="course-code-tag">CS403</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

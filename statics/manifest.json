@@ -1,0 +1,44 @@
+{
+  "name": "สาขาวิชาวิทยาการคอมพิวเตอร์ มรภ.ศรีสะเกษ",
+  "short_name": "CS SSKRU",
+  "description": "หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยราชภัฏศรีสะเกษ",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0284c7",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/static/images/icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/static/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "หลักสูตรและแผนการเรียน",
+      "short_name": "หลักสูตร",
+      "url": "/#about",
+      "icons": [{ "src": "/static/images/icon.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "ข่าวสารและกิจกรรม",
+      "short_name": "ข่าวสาร",
+      "url": "/news/",
+      "icons": [{ "src": "/static/images/icon.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "สมัครเข้าศึกษาต่อ",
+      "short_name": "สมัครเรียน",
+      "url": "https://www.oass.sskru.ac.th/std.sskru/s1.html",
+      "icons": [{ "src": "/static/images/icon.png", "sizes": "192x192" }]
+    }
+  ]
+}

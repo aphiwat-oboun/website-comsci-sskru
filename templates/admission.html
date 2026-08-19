@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}การรับสมัครเข้าศึกษาต่อ | สาขาวิชาวิทยาการคอมพิวเตอร์ มรภ.ศรีสะเกษ{% endblock %}
+
+{% block content %}
+<section class="futuristic-section" style="padding-top: 8.5rem;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-eyebrow-tag">
+        <i class="bi bi-person-plus-fill"></i> Admissions 2026
+      </span>
+      <h1 class="section-hero-title">การรับสมัครเข้าศึกษาต่อ วท.บ. วิทยาการคอมพิวเตอร์</h1>
+      <p class="section-sub-desc mx-auto">
+        เปิดรับสมัครนักศึกษาใหม่ ประจำปีการศึกษา 2568 - 2569 ทุกรอบการคัดเลือก TCAS และโควตาพิเศษ
+      </p>
+    </div>
+
+    <!-- Admissions Cards Grid -->
+    <div class="row g-4 mb-5">
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="faculty-dossier-card">
+          <div class="mission-icon-box" style="background: var(--sapphire-50); color: var(--sapphire-700);">
+            <i class="bi bi-file-earmark-person"></i>
+          </div>
+          <h5 class="fw-bold text-dark mb-1">รอบที่ 1 : Portfolio</h5>
+          <p class="text-muted small mb-3">คัดเลือกจากแฟ้มสะสมผลงาน กิจกรรมด้านคอมพิวเตอร์ และโครงงานเทคโนโลยี</p>
+          <span class="badge mb-3" style="background: var(--sapphire-50); color: var(--sapphire-800); border: 1px solid var(--border-sapphire);">เปิดรับสมัคร</span>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="faculty-dossier-card">
+          <div class="mission-icon-box" style="background: var(--emerald-50); color: var(--emerald-600);">
+            <i class="bi bi-award"></i>
+          </div>
+          <h5 class="fw-bold text-dark mb-1">รอบที่ 2 : โควตาภาคฯ</h5>
+          <p class="text-muted small mb-3">โควตานักเรียนโรงเรียนในเขตพื้นที่ภาคตะวันออกเฉียงเหนือและพื้นที่ใกล้เคียง</p>
+          <span class="badge mb-3" style="background: var(--emerald-50); color: var(--emerald-700); border: 1px solid var(--border-emerald);">เปิดรับสมัคร</span>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="faculty-dossier-card">
+          <div class="mission-icon-box" style="background: var(--purple-100); color: var(--purple-500);">
+            <i class="bi bi-card-checklist"></i>
+          </div>
+          <h5 class="fw-bold text-dark mb-1">รอบที่ 3 : Admission</h5>
+          <p class="text-muted small mb-3">คัดเลือกผ่านระบบกลาง TCAS ของ ทปอ. ตามเกณฑ์คะแนนสอบระดับชาติ</p>
+          <span class="badge mb-3" style="background: var(--sapphire-50); color: var(--sapphire-800); border: 1px solid var(--border-sapphire);">เร็วๆ นี้</span>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="faculty-dossier-card">
+          <div class="mission-icon-box" style="background: var(--amber-100); color: var(--amber-500);">
+            <i class="bi bi-door-open"></i>
+          </div>
+          <h5 class="fw-bold text-dark mb-1">รอบที่ 4 : Direct รับตรง</h5>
+          <p class="text-muted small mb-3">รับตรงอิสระโดยมหาวิทยาลัยราชภัฏศรีสะเกษ (สำนักส่งเสริมวิชาการ OASS)</p>
+          <span class="badge mb-3" style="background: var(--sapphire-50); color: var(--sapphire-800); border: 1px solid var(--border-sapphire);">เปิดรับสมัคร</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Apply Link Banner -->
+    <div class="strategic-bento-hero-card text-center" style="background: linear-gradient(135deg, #0c2d48 0%, #034b75 100%);">
+      <h3 class="fw-bold mb-3 text-white">พร้อมก้าวสู่เส้นทางสายเทคโนโลยีแล้วหรือยัง?</h3>
+      <p class="mb-4 text-white" style="font-size: 1.05rem;">สมัครเรียนออนไลน์ผ่านระบบสำนักส่งเสริมวิชาการและงานทะเบียน มหาวิทยาลัยราชภัฏศรีสะเกษ</p>
+      <a href="https://www.oass.sskru.ac.th/std.sskru/s1.html" target="_blank" rel="noopener noreferrer" class="btn-cyber-primary" style="padding: 0.85rem 2.5rem; font-size: 1.05rem;">
+        <i class="bi bi-mortarboard-fill"></i> กรอกใบสมัครออนไลน์ทันที
+      </a>
+    </div>
+  </div>
+</section>
+{% endblock %}

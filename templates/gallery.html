@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ภาพกิจกรรมสาขาวิชาฯ | สาขาวิชาวิทยาการคอมพิวเตอร์ มรภ.ศรีสะเกษ{% endblock %}
+
+{% block content %}
+<section class="subpage-top-section">
+  <div class="container">
+    <!-- Breadcrumb & Back Navigation -->
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+      <div class="breadcrumb-nav-strip mb-0">
+        <a href="{% url 'home' %}"><i class="bi bi-house-door-fill me-1"></i> หน้าแรก</a>
+        <span class="breadcrumb-separator"><i class="bi bi-chevron-right"></i></span>
+        <span class="text-dark fw-semibold">ภาพกิจกรรมสาขาวิชาฯ</span>
+      </div>
+      <a href="javascript:void(0)" onclick="if(window.history.length > 1) { window.history.back(); } else { window.location.href='{% url 'home' %}#news'; }" class="btn-back-nav">
+        <i class="bi bi-arrow-left"></i> ย้อนกลับหน้าที่แล้ว
+      </a>
+    </div>
+
+    <div class="text-center mb-5">
+      <span class="section-eyebrow-tag">
+        <i class="bi bi-images"></i> Photo Gallery
+      </span>
+      <h1 class="section-hero-title">ภาพกิจกรรมและบรรยากาศการเรียนรู้</h1>
+      <p class="section-sub-desc mx-auto">
+        ประมวลภาพกิจกรรมการแข่งขันหุ่นยนต์ ศรีสะเกษโรโบติกส์ การอบรมค่ายโค้ดดิ้ง และชีวิตนักศึกษา CS SSKRU
+      </p>
+    </div>
+
+    <!-- Gallery Grid (2-Column Grid Cards on Mobile) -->
+    <div class="row g-3 g-md-4 mb-5">
+      {% for item in gallery_items %}
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="mission-grid-card modern-grid-card d-flex flex-column h-100 p-2 p-md-3">
+          {% if item.image %}
+          <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; margin-bottom: 0.65rem;">
+            <img src="{{ item.image }}" alt="{{ item.title }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" class="hover-zoom-img">
+          </div>
+          {% endif %}
+          <div class="small text-muted mb-1">
+            <span class="badge" style="background: var(--sapphire-50); color: var(--sapphire-700); border: 1px solid var(--border-sapphire); font-size: 0.72rem;">
+              {{ item.get_category_display|default:"กิจกรรม" }}
+            </span>
+          </div>
+          <h5 class="fw-bold text-dark mb-0" style="font-size: 0.88rem; line-height: 1.35;">{{ item.title }}</h5>
+        </div>
+      </div>
+      {% empty %}
+      <div class="col-12 text-center py-5">
+        <i class="bi bi-images text-muted" style="font-size: 3rem;"></i>
+        <p class="text-muted mt-2">ยังไม่มีรูปภาพในแกลเลอรี</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

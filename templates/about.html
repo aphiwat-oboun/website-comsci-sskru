@@ -1,0 +1,239 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}เกี่ยวกับหลักสูตร | สาขาวิชาวิทยาการคอมพิวเตอร์ มรภ.ศรีสะเกษ{% endblock %}
+
+{% block content %}
+<section class="futuristic-section" style="padding-top: 8.5rem;">
+  <div class="container">
+    <!-- Breadcrumb & Eyebrow -->
+    <div class="text-center mb-5">
+      <span class="section-eyebrow-tag">
+        <i class="bi bi-compass"></i> About CS SSKRU
+      </span>
+      <h1 class="section-hero-title">เกี่ยวกับสาขาวิชาวิทยาการคอมพิวเตอร์</h1>
+      <p class="section-sub-desc mx-auto">
+        มุ่งมั่นผลิตบัณฑิตนักปฏิบัติที่มีความเชี่ยวชาญด้านวิทยาการคอมพิวเตอร์ ปัญญาประดิษฐ์ และมีคุณธรรมจริยธรรมเพื่อพัฒนาท้องถิ่นสู่สากล
+      </p>
+    </div>
+
+    <!-- Segmented Nav Switcher -->
+    <div class="cyber-segmented-nav-wrapper">
+      <div class="cyber-segmented-nav">
+        <button class="segmented-pill-trigger active" data-tab="philosophy">
+          <i class="bi bi-quote me-1"></i> ปรัชญาหลักสูตร
+        </button>
+        <button class="segmented-pill-trigger" data-tab="vision">
+          <i class="bi bi-bullseye me-1"></i> วิสัยทัศน์ &amp; พันธกิจ 4 ด้าน
+        </button>
+        <button class="segmented-pill-trigger" data-tab="objectives">
+          <i class="bi bi-list-check me-1"></i> วัตถุประสงค์ 4 ข้อ
+        </button>
+        <button class="segmented-pill-trigger" data-tab="plos">
+          <i class="bi bi-award me-1"></i> ผลลัพธ์การเรียนรู้ (PLOs)
+        </button>
+      </div>
+    </div>
+
+    <!-- PANE 1: PHILOSOPHY -->
+    <div class="strategic-pane-item" id="strategic-pane-philosophy">
+      <div class="strategic-bento-hero-card">
+        <div class="d-flex align-items-center gap-2 mb-3" style="color: var(--sapphire-500);">
+          <i class="bi bi-quote" style="font-size: 2.2rem; line-height: 1;"></i>
+          <span style="font-family: var(--font-heading); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.9rem;">
+            PROGRAM PHILOSOPHY
+          </span>
+        </div>
+        <h2 class="philosophy-banner-title">
+          &quot;เชี่ยวชาญด้านวิทยาการคอมพิวเตอร์ มีคุณธรรม นำนวัตกรรมเพื่อพัฒนาท้องถิ่น&quot;
+        </h2>
+        <p class="mb-0" style="font-size: 1.08rem; line-height: 1.85; color: rgba(255,255,255,0.9); max-width: 960px;">
+          ปรัชญาของหลักสูตรสะท้อนอัตลักษณ์สำคัญ 3 ด้าน ได้แก่ <strong>ความเชี่ยวชาญในวิชาชีพคอมพิวเตอร์</strong> · <strong>การมีคุณธรรมจริยธรรมวิชาชีพ</strong> · และ <strong>การนำนวัตกรรมไปประยุกต์ใช้เพื่อการพัฒนาท้องถิ่นอย่างยั่งยืน</strong>
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="mission-grid-card">
+            <div class="mission-icon-box" style="background: var(--sapphire-100); color: var(--sapphire-700);">
+              <i class="bi bi-laptop"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-2">เรียนรู้จากการปฏิบัติจริง</h5>
+            <p class="text-muted small mb-0" style="line-height: 1.7;">
+              ฝึกพัฒนาแอปพลิเคชัน โค้ดดิ้ง และโครงงานนวัตกรรมในห้องปฏิบัติการคอมพิวเตอร์มาตรฐานสูง
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="mission-grid-card">
+            <div class="mission-icon-box" style="background: var(--emerald-100); color: var(--emerald-600);">
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-2">คณาจารย์ดูแลใกล้ชิด</h5>
+            <p class="text-muted small mb-0" style="line-height: 1.7;">
+              อาจารย์ผู้เชี่ยวชาญเฉพาะทางคอยให้คำแนะนำและการบ่มเพาะองค์ความรู้อย่างทั่วถึง
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="mission-grid-card">
+            <div class="mission-icon-box" style="background: var(--amber-100); color: var(--amber-500);">
+              <i class="bi bi-briefcase-fill"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-2">เครือข่ายสหกิจศึกษา</h5>
+            <p class="text-muted small mb-0" style="line-height: 1.7;">
+              โอกาสฝึกงานและทำงานร่วมกับองค์กรชั้นนำและบริษัทซอฟต์แวร์ระดับประเทศ
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANE 2: VISION & MISSION -->
+    <div class="strategic-pane-item" id="strategic-pane-vision" style="display: none;">
+      <div class="strategic-bento-hero-card mb-4" style="background: linear-gradient(135deg, #034b75 0%, #0c2d48 100%);">
+        <div class="d-flex align-items-center gap-2 mb-2" style="color: #38bdf8;">
+          <i class="bi bi-eye" style="font-size: 1.5rem;"></i>
+          <span style="font-family: var(--font-heading); font-weight: 700; font-size: 0.95rem;">วิสัยทัศน์ที่เกี่ยวข้อง (Vision)</span>
+        </div>
+        <p class="mb-0 text-white" style="font-size: 1.1rem; line-height: 1.85;">
+          มุ่งร่วมเป็นกำลังสำคัญขับเคลื่อนมหาวิทยาลัยให้เป็น <strong>&quot;สถาบันอุดมศึกษาแห่งการเรียนรู้ตลอดชีวิต&quot; (Lifelong Learning Institute)</strong> บูรณาการเรียนการสอนเข้ากับการลงมือทำงานจริงเพื่อความเจริญเติบโตอย่างยั่งยืน
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-6">
+          <div class="mission-grid-card">
+            <div class="mission-icon-box" style="background: var(--amber-100); color: var(--amber-500);">
+              <i class="bi bi-mortarboard-fill"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-1">1. ผลิตบัณฑิตคุณภาพ</h5>
+            <p class="text-muted small mb-0" style="line-height: 1.7;">
+              สร้างสรรค์บัณฑิตที่มีทักษะความรู้ด้านวิทยาการคอมพิวเตอร์และเทคโนโลยีขั้นสูง พร้อมตอบโจทย์การปฏิบัติงานจริงในทุกองค์กรยุคใหม่
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="mission-grid-card">
+            <div class="mission-icon-box" style="background: var(--emerald-100); color: var(--emerald-600);">
+              <i class="bi bi-lightbulb-fill"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-1">2. วิจัยและนวัตกรรม</h5>
+            <p class="text-muted small mb-0" style="line-height: 1.7;">
+              ส่งเสริมวิชาการ ค้นคว้าวิจัยประยุกต์ และพัฒนานวัตกรรมผลิตภัณฑ์ทางด้านคอมพิวเตอร์ที่สอดคล้องกับแนวทางการแก้ปัญหาทางเทคโนโลยี
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="mission-grid-card">
+            <div class="mission-icon-box" style="background: var(--purple-100); color: var(--purple-500);">
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-1">3. บริการวิชาการท้องถิ่น</h5>
+            <p class="text-muted small mb-0" style="line-height: 1.7;">
+              พัฒนาสมรรถนะนักศึกษาในการเรียนรู้ร่วมกับสังคม ก้าวสู่การเป็นนักพัฒนาเทคโนโลยีและวิศวกรสังคมที่มีหัวใจมุ่งรับใช้ชุมชน
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="mission-grid-card">
+            <div class="mission-icon-box" style="background: var(--rose-100); color: var(--rose-500);">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-1">4. คุณธรรมและกฎหมาย</h5>
+            <p class="text-muted small mb-0" style="line-height: 1.7;">
+              หล่อหลอมความซื่อสัตย์สุจริต การเคารพในกฎหมายทรัพย์สินทางปัญญา ลิขสิทธิ์ซอฟต์แวร์ และปฏิบัติตามจรรยาบรรณวิชาชีพ
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANE 3: OBJECTIVES -->
+    <div class="strategic-pane-item" id="strategic-pane-objectives" style="display: none;">
+      <div class="row g-3">
+        <div class="col-12 col-md-6">
+          <div class="course-quest-item p-4">
+            <span class="course-code-tag mb-2 d-inline-block">OBJ 1</span>
+            <p class="text-dark mb-0 ms-3" style="line-height: 1.75; font-size: 1rem;">
+              มีความรู้ความเชี่ยวชาญและทักษะเฉพาะด้านในสาขาวิทยาการคอมพิวเตอร์อย่างลึกซึ้ง สามารถออกแบบ พัฒนา และบำรุงรักษาระบบซอฟต์แวร์เชิงประยุกต์ได้อย่างดีเลิศ
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="course-quest-item p-4">
+            <span class="course-code-tag mb-2 d-inline-block">OBJ 2</span>
+            <p class="text-dark mb-0 ms-3" style="line-height: 1.75; font-size: 1rem;">
+              มีทักษะในการประยุกต์ใช้วิธีวิทยาและเทคโนโลยีในการพัฒนางานวิจัย โครงงานนวัตกรรม และแอปพลิเคชันรูปแบบใหม่ที่ช่วยเสริมสร้างศักยภาพของท้องถิ่น
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="course-quest-item p-4">
+            <span class="course-code-tag mb-2 d-inline-block">OBJ 3</span>
+            <p class="text-dark mb-0 ms-3" style="line-height: 1.75; font-size: 1rem;">
+              มีความเป็นเลิศในการวิเคราะห์และประมวลองค์ความรู้ทางเทคนิคแบบบูรณาการ เพื่อการวางแผนจัดสรรกระบวนการทางคอมพิวเตอร์แก้ปัญหายากเชิงซ้อน
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="course-quest-item p-4">
+            <span class="course-code-tag mb-2 d-inline-block">OBJ 4</span>
+            <p class="text-dark mb-0 ms-3" style="line-height: 1.75; font-size: 1rem;">
+              ยึดมั่นในการประพฤติตนเป็นคนดีมีระเบียบวินัย ปฏิบัติตามหลักจรรยาบรรณวิชาชีพ พร้อมมีมนุษยสัมพันธ์และทักษะการทำงานร่วมกับผู้อื่นได้อย่างสร้างสรรค์
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANE 4: PLOS -->
+    <div class="strategic-pane-item" id="strategic-pane-plos" style="display: none;">
+      <div class="row g-3">
+        <div class="col-12 col-lg-6">
+          <div class="course-quest-item p-3">
+            <span class="course-code-tag" style="background-color: var(--sapphire-100); color: var(--sapphire-800); min-width: 110px; text-align: center;">PLO1 · K3</span>
+            <p class="text-dark mb-0 ms-3" style="font-size: 0.98rem; line-height: 1.7;">ประยุกต์ใช้ความรู้ด้านวิทยาการคอมพิวเตอร์เพื่อแก้ปัญหาและสนับสนุนการทำงานด้วยระบบคอมพิวเตอร์ได้อย่างถูกต้อง</p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="course-quest-item p-3">
+            <span class="course-code-tag" style="background-color: var(--emerald-100); color: var(--emerald-600); min-width: 110px; text-align: center;">PLO2 · K4,S3</span>
+            <p class="text-dark mb-0 ms-3" style="font-size: 0.98rem; line-height: 1.7;">พัฒนาระบบด้วยโปรแกรมภาษาต่าง ๆ ในรูปแบบออฟไลน์และออนไลน์ ตามกระบวนการวิเคราะห์และออกแบบระบบได้มาตรฐานสากล</p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="course-quest-item p-3">
+            <span class="course-code-tag" style="background-color: var(--emerald-100); color: var(--emerald-600); min-width: 110px; text-align: center;">PLO3 · K4,S3</span>
+            <p class="text-dark mb-0 ms-3" style="font-size: 0.98rem; line-height: 1.7;">พัฒนาแอปพลิเคชันที่ทำงานบนโมบายอุปกรณ์พกพาได้ถูกต้องตรงตามความต้องการและเกิด UX ที่ดี</p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="course-quest-item p-3">
+            <span class="course-code-tag" style="background-color: var(--emerald-100); color: var(--emerald-600); min-width: 110px; text-align: center;">PLO4 · K4,S3</span>
+            <p class="text-dark mb-0 ms-3" style="font-size: 0.98rem; line-height: 1.7;">ทดสอบคุณภาพการทำงานของซอฟต์แวร์ตามเกณฑ์ Black Box Testing และ White Box Testing ได้อย่างถูกต้อง</p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="course-quest-item p-3">
+            <span class="course-code-tag" style="background-color: var(--emerald-100); color: var(--emerald-600); min-width: 110px; text-align: center;">PLO5 · K4,S3</span>
+            <p class="text-dark mb-0 ms-3" style="font-size: 0.98rem; line-height: 1.7;">พัฒนานวัตกรรมด้านเทคโนโลยีคอมพิวเตอร์ที่สอดคล้องกับความต้องการของชุมชนท้องถิ่นด้วยกระบวนการวิจัย</p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="course-quest-item p-3">
+            <span class="course-code-tag" style="background-color: var(--purple-100); color: var(--purple-500); min-width: 110px; text-align: center;">PLO6 · A3</span>
+            <p class="text-dark mb-0 ms-3" style="font-size: 0.98rem; line-height: 1.7;">แสดงออกถึงกระบวนการคิดเชิงระบบ ความเป็นมืออาชีพ มีความอดทน มุ่งมั่น และรับผิดชอบสูงต่อปัญหาเทคโนโลยี</p>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="course-quest-item p-3">
+            <span class="course-code-tag" style="background-color: var(--amber-100); color: var(--amber-500); min-width: 110px; text-align: center;">PLO7 · A2</span>
+            <p class="text-dark mb-0 ms-3" style="font-size: 0.98rem; line-height: 1.7;">แสดงถึงการตระหนักและประยุกต์ใช้หลักจรรยาบรรณวิชาชีพ คุณธรรม และจริยธรรมในการปฏิบัติงานตามกฎหมายคอมพิวเตอร์</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
