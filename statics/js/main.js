@@ -494,7 +494,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   const PWA_CONFIG = {
     DELAY_BEFORE_SHOW_MS: 1000,   // เวลาหน่วงก่อนแสดงแบนเนอร์ (เช่น 2000 = 2 วินาที)
-    DISPLAY_DURATION_MS: 20000,   // เวลาที่แสดงค้างไว้ก่อนซ่อนอัตโนมัติ (เช่น 10000 = 10 วินาที)
+    DISPLAY_DURATION_MS: 10000,   // เวลาที่แสดงค้างไว้ก่อนซ่อนอัตโนมัติ (เช่น 10000 = 10 วินาที)
     ANIMATION_DURATION_MS: 400,   // เวลาแอนิเมชันตอนเลื่อนเก็บ (0.4 วินาที)
   };
 
@@ -515,13 +515,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  // ฟังก์ชันตรวจสอบว่าเป็นอุปกรณ์มือถือหรือไม่
+  const isMobileDevice = () => {
+    return window.innerWidth <= 768 || /Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  };
+
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
 
+    // แสดงเฉพาะบนโทรศัพท์มือถือเท่านั้น บน Desktop ไม่ต้องขึ้น
+    if (!isMobileDevice()) {
+      return;
+    }
+
     if (pwaInstallBanner && !sessionStorage.getItem('pwa_dismissed')) {
       // 1. รอตามเวลาใน Config ก่อนแสดง Banner
       setTimeout(() => {
+        if (!isMobileDevice()) return;
         pwaInstallBanner.classList.remove('hide-anim');
         pwaInstallBanner.style.display = 'flex';
 

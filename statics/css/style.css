@@ -2317,6 +2317,13 @@ html, body {
   }
 }
 
+/* ซ่อนแบนเนอร์ติดตั้งแอปบนหน้าจอ Desktop ทั้งหมด */
+@media (min-width: 769px) {
+  .pwa-install-banner {
+    display: none !important;
+  }
+}
+
 /* ==========================================================================
    MOBILE DOSSIER BOTTOM SHEET (PIXEL PERFECT MODAL)
    ========================================================================== */
