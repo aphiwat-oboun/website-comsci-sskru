@@ -1,8 +1,5 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block title %}สาขาวิชาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยราชภัฏศรีสะเกษ | CS SSKRU{% endblock %}
-
+{% extends 'base.html' %} {% load static %} {% block title
+%}สาขาวิชาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยราชภัฏศรีสะเกษ | CS SSKRU{% endblock %}
 {% block content %}
 <!-- ==========================================
      HERO SECTION: CLEAN MINIMALIST ACADEMIC SHOWCASE
@@ -14,7 +11,10 @@
       <div class="col-12 col-xl-6 order-2 order-xl-1 text-center text-xl-start">
         <div class="d-flex flex-column align-items-center align-items-xl-start">
           <div class="hero-status-pill">
-            <i class="bi bi-mortarboard-fill" style="color: var(--sapphire-600); font-size: 0.95rem"></i>
+            <i
+              class="bi bi-mortarboard-fill"
+              style="color: var(--sapphire-600); font-size: 0.95rem"
+            ></i>
             <span>มุ่งสู่วิชาชีพไอทีและผู้นำนวัตกรรมเทคโนโลยี</span>
           </div>
 
@@ -25,7 +25,9 @@
           </h1>
 
           <p class="hero-editorial-lead">
-            &quot;ก้าวสู่อนาคตทางเทคโนโลยี สร้างสรรค์ซอฟต์แวร์แห่งนวัตกรรม&quot; หลักสูตรที่มุ่งผลิตนักวิทยาศาสตร์คอมพิวเตอร์ โปรแกรมเมอร์ และนักวิเคราะห์ข้อมูล เพื่อเข้าสู่ตลาดงานยุคดิจิทัลระดับโลก
+            &quot;ก้าวสู่อนาคตทางเทคโนโลยี สร้างสรรค์ซอฟต์แวร์แห่งนวัตกรรม&quot;
+            หลักสูตรที่มุ่งผลิตนักวิทยาศาสตร์คอมพิวเตอร์ โปรแกรมเมอร์
+            และนักวิเคราะห์ข้อมูล เพื่อเข้าสู่ตลาดงานยุคดิจิทัลระดับโลก
           </p>
 
           <div class="hero-actions-deck">
@@ -78,7 +80,11 @@
 
           <!-- Central Clean Card with Department Emblem -->
           <div class="hero-emblem-clean-card">
-            <img src="{% static 'images/logo.png' %}" alt="ตราสาขาวิชาวิทยาการคอมพิวเตอร์ มรภ.ศรีสะเกษ" class="hero-emblem-img">
+            <img
+              src="{% static 'images/logo.png' %}"
+              alt="ตราสาขาวิชาวิทยาการคอมพิวเตอร์ มรภ.ศรีสะเกษ"
+              class="hero-emblem-img"
+            />
           </div>
 
           <!-- Floating Feature Card: Data Science (Middle Right) -->
@@ -591,19 +597,23 @@
       <div class="skilltree-stepper-track">
         <button class="skilltree-node-btn active" data-year="1">
           <span class="level-badge-chip">LV.1</span>
-          <span>ปีที่ 1 : Foundation Cadet</span>
+          <span>ปีที่ 1 <span class="year-sub">: Foundation Cadet</span></span>
         </button>
         <button class="skilltree-node-btn" data-year="2">
           <span class="level-badge-chip">LV.2</span>
-          <span>ปีที่ 2 : System Architect</span>
+          <span>ปีที่ 2 <span class="year-sub">: System Architect</span></span>
         </button>
         <button class="skilltree-node-btn" data-year="3">
           <span class="level-badge-chip">LV.3</span>
-          <span>ปีที่ 3 : AI &amp; Data Master</span>
+          <span
+            >ปีที่ 3 <span class="year-sub">: AI &amp; Data Master</span></span
+          >
         </button>
         <button class="skilltree-node-btn" data-year="4">
           <span class="level-badge-chip">LV.4</span>
-          <span>ปีที่ 4 : Industry Innovator</span>
+          <span
+            >ปีที่ 4 <span class="year-sub">: Industry Innovator</span></span
+          >
         </button>
       </div>
 
@@ -809,8 +819,7 @@
                   <div>
                     <strong class="d-block text-dark"
                       >ความมั่นคงปลอดภัยสารสนเทศ</strong
-                    ><small class="text-muted">Information Security</small
-                    >
+                    ><small class="text-muted">Information Security</small>
                   </div>
                   <span class="course-code-tag">CS207</span>
                 </li>
@@ -931,8 +940,7 @@
                   <div>
                     <strong class="d-block text-dark"
                       >วิชาเลือกเสรีองค์กรไอที</strong
-                    ><small class="text-muted">Free Elective</small
-                    >
+                    ><small class="text-muted">Free Elective</small>
                   </div>
                   <span class="course-code-tag">CS3XX</span>
                 </li>
@@ -1008,6 +1016,117 @@
         </div>
       </div>
     </div>
+
+    <!-- Tuition & Estimated Expenses Card (Ultra-Premium Redesign) -->
+    <div class="tuition-estimate-card-wrapper">
+      <div class="tuition-estimate-card">
+        <div class="tuition-header-strip">
+          <div class="d-flex align-items-center gap-3">
+            <div class="tuition-icon-box">
+              <i class="bi bi-calculator-fill"></i>
+            </div>
+            <div>
+              <h3 class="tuition-title">ประมาณการค่าใช้จ่ายการเรียน</h3>
+              <p class="tuition-subtitle mb-0">
+                ค่าธรรมเนียมการศึกษาของ มรภ.ศรีสะเกษ เป็นมิตร ชัดเจน
+                มีทุนการศึกษา และ กยศ. รองรับ
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tuition-table-box">
+          <!-- Row 1: Year 1 Semester 1 -->
+          <div class="tuition-row-item">
+            <div class="tuition-row-left">
+              <div class="d-flex align-items-center gap-2">
+                <span class="tuition-tag-icon star"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="tuition-item-title"
+                  >ปี 1 เทอมแรกเข้า (เทอม 1)</span
+                >
+              </div>
+              <div class="tuition-item-desc">
+                รวมค่าแรกเข้าและขึ้นทะเบียนนักศึกษาใหม่
+              </div>
+            </div>
+            <div class="tuition-row-right">
+              <span class="tuition-price highlight-pink">12,280</span>
+              <span class="tuition-unit">บาท</span>
+            </div>
+          </div>
+
+          <!-- Row 2: Subsequent Semesters -->
+          <div class="tuition-row-item">
+            <div class="tuition-row-left">
+              <div class="d-flex align-items-center gap-2">
+                <span class="tuition-tag-icon calendar"
+                  ><i class="bi bi-calendar-check-fill"></i
+                ></span>
+                <span class="tuition-item-title"
+                  >เทอมถัดไปทุกชั้นปี (เทอม 2 - ปี 4)</span
+                >
+              </div>
+              <div class="tuition-item-desc">
+                ค่าธรรมเนียมการศึกษาปกติทุกเทอม
+              </div>
+            </div>
+            <div class="tuition-row-right">
+              <span class="tuition-price highlight-blue">9,000</span>
+              <span class="tuition-unit">บาท/เทอม</span>
+            </div>
+          </div>
+
+          <!-- Row 3: Total Duration -->
+          <div class="tuition-row-item">
+            <div class="tuition-row-left">
+              <div class="d-flex align-items-center gap-2">
+                <span class="tuition-tag-icon hourglass"
+                  ><i class="bi bi-hourglass-split"></i
+                ></span>
+                <span class="tuition-item-title text-muted"
+                  >ระยะเวลาเรียนตลอดหลักสูตร</span
+                >
+              </div>
+            </div>
+            <div class="tuition-row-right">
+              <span class="tuition-info-val">4 ปี (8 ภาคเรียน)</span>
+            </div>
+          </div>
+
+          <!-- Row 4: Student Loan Support -->
+          <div class="tuition-row-item border-0">
+            <div class="tuition-row-left">
+              <div class="d-flex align-items-center gap-2">
+                <span class="tuition-tag-icon shield"
+                  ><i class="bi bi-shield-fill-check"></i
+                ></span>
+                <span class="tuition-item-title text-muted"
+                  >สิทธิประโยชน์ กยศ. / กรอ.</span
+                >
+              </div>
+            </div>
+            <div class="tuition-row-right">
+              <span class="tuition-badge-green">
+                <i class="bi bi-check-circle-fill me-1"></i> กู้เรียนได้ 100%
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tuition-footer-action">
+          <a
+            href="https://www.oass.sskru.ac.th/std.sskru/s1.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="tuition-btn-apply"
+          >
+            <i class="bi bi-mortarboard-fill me-2"></i> ตรวจสอบโควตาและสมัครเลย
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1054,11 +1173,10 @@
             </div>
             <h4 class="track-course-title">โครงข่ายคอมพิวเตอร์</h4>
             <p class="track-course-desc">
-              การออกแบบ ติดตั้ง และบำรุงรักษาระบบเครือข่าย ทั้งแบบสายและไร้สายเพื่อการสื่อสารในองค์กร
+              การออกแบบ ติดตั้ง และบำรุงรักษาระบบเครือข่าย
+              ทั้งแบบสายและไร้สายเพื่อการสื่อสารในองค์กร
             </p>
-            <div class="track-course-tag blue">
-              3 หน่วยกิต · มีแล็ป
-            </div>
+            <div class="track-course-tag blue">3 หน่วยกิต · มีแล็ป</div>
           </div>
         </div>
 
@@ -1069,11 +1187,10 @@
             </div>
             <h4 class="track-course-title">ความปลอดภัยข้อมูล</h4>
             <p class="track-course-desc">
-              การป้องกันและควบคุมความปลอดภัยของข้อมูล การเข้ารหัสลับ และการตรวจจับภัยคุกคามไซเบอร์
+              การป้องกันและควบคุมความปลอดภัยของข้อมูล การเข้ารหัสลับ
+              และการตรวจจับภัยคุกคามไซเบอร์
             </p>
-            <div class="track-course-tag blue">
-              3 หน่วยกิต · บรรยาย
-            </div>
+            <div class="track-course-tag blue">3 หน่วยกิต · บรรยาย</div>
           </div>
         </div>
 
@@ -1084,11 +1201,10 @@
             </div>
             <h4 class="track-course-title">นิติวิทยาศาสตร์ดิจิทัล</h4>
             <p class="track-course-desc">
-              การตรวจสอบวิเคราะห์ข้อมูลจากการโจมตีทางไซเบอร์ พยานหลักฐานดิจิทัล และกฎหมายคอมพิวเตอร์
+              การตรวจสอบวิเคราะห์ข้อมูลจากการโจมตีทางไซเบอร์ พยานหลักฐานดิจิทัล
+              และกฎหมายคอมพิวเตอร์
             </p>
-            <div class="track-course-tag blue">
-              3 หน่วยกิต · มีแล็ป
-            </div>
+            <div class="track-course-tag blue">3 หน่วยกิต · มีแล็ป</div>
           </div>
         </div>
 
@@ -1099,18 +1215,21 @@
             </div>
             <h4 class="track-course-title">ระบบฐานข้อมูล</h4>
             <p class="track-course-desc">
-              การออกแบบและจัดการระบบฐานข้อมูลเชิงสัมพันธ์ การเขียนคำสั่ง SQL และการจัดการธุรกรรมข้อมูล
+              การออกแบบและจัดการระบบฐานข้อมูลเชิงสัมพันธ์ การเขียนคำสั่ง SQL
+              และการจัดการธุรกรรมข้อมูล
             </p>
-            <div class="track-course-tag blue">
-              3 หน่วยกิต · มีแล็ป
-            </div>
+            <div class="track-course-tag blue">3 หน่วยกิต · มีแล็ป</div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- TRACK 2: SOFTWARE TECH -->
-    <div class="track-display-box" id="track-box-software" style="display: none">
+    <div
+      class="track-display-box"
+      id="track-box-software"
+      style="display: none"
+    >
       <div class="row g-4">
         <div class="col-12 col-md-6 col-lg-3">
           <div class="track-course-clean-card">
@@ -1119,11 +1238,10 @@
             </div>
             <h4 class="track-course-title">วิศวกรรมซอฟต์แวร์</h4>
             <p class="track-course-desc">
-              กระบวนการวิเคราะห์และออกแบบระบบซอฟต์แวร์ การทดสอบ Black/White Box และการบำรุงรักษา
+              กระบวนการวิเคราะห์และออกแบบระบบซอฟต์แวร์ การทดสอบ Black/White Box
+              และการบำรุงรักษา
             </p>
-            <div class="track-course-tag blue">
-              3 หน่วยกิต · บรรยาย
-            </div>
+            <div class="track-course-tag blue">3 หน่วยกิต · บรรยาย</div>
           </div>
         </div>
 
@@ -1134,11 +1252,10 @@
             </div>
             <h4 class="track-course-title">พัฒนาเว็บแอปพลิเคชัน</h4>
             <p class="track-course-desc">
-              ปฏิบัติการสร้างเว็บด้วยโมเดิร์นเฟรมเวิร์กยอดนิยม React, Next.js, Node.js และ RESTful API
+              ปฏิบัติการสร้างเว็บด้วยโมเดิร์นเฟรมเวิร์กยอดนิยม React, Next.js,
+              Node.js และ RESTful API
             </p>
-            <div class="track-course-tag blue">
-              3 หน่วยกิต · มีแล็ป
-            </div>
+            <div class="track-course-tag blue">3 หน่วยกิต · มีแล็ป</div>
           </div>
         </div>
 
@@ -1149,11 +1266,10 @@
             </div>
             <h4 class="track-course-title">ประมวลผลภาพดิจิทัล</h4>
             <p class="track-course-desc">
-              การปรับแต่งภาพดิจิทัล การสกัดคุณลักษณะของภาพ และการตรวจจับวัตถุด้วย Computer Vision
+              การปรับแต่งภาพดิจิทัล การสกัดคุณลักษณะของภาพ
+              และการตรวจจับวัตถุด้วย Computer Vision
             </p>
-            <div class="track-course-tag blue">
-              3 หน่วยกิต · มีแล็ป
-            </div>
+            <div class="track-course-tag blue">3 หน่วยกิต · มีแล็ป</div>
           </div>
         </div>
 
@@ -1166,9 +1282,7 @@
             <p class="track-course-desc">
               การประยุกต์ใช้เทคโนโลยีสารสนเทศในการวิเคราะห์และแสดงผลข้อมูลแผนที่พิกัดทางภูมิศาสตร์
             </p>
-            <div class="track-course-tag blue">
-              3 หน่วยกิต · มีแล็ป
-            </div>
+            <div class="track-course-tag blue">3 หน่วยกิต · มีแล็ป</div>
           </div>
         </div>
       </div>
@@ -1184,11 +1298,10 @@
             </div>
             <h4 class="track-course-title">ภูมิปัญญาประดิษฐ์</h4>
             <p class="track-course-desc">
-              ทฤษฎีและอัลกอริทึมปัญญาประดิษฐ์ การค้นหา การประมวลผลภาษาธรรมชาติ (NLP) และระบบอัตโนมัติ
+              ทฤษฎีและอัลกอริทึมปัญญาประดิษฐ์ การค้นหา การประมวลผลภาษาธรรมชาติ
+              (NLP) และระบบอัตโนมัติ
             </p>
-            <div class="track-course-tag blue">
-              3 หน่วยกิต · บรรยาย
-            </div>
+            <div class="track-course-tag blue">3 หน่วยกิต · บรรยาย</div>
           </div>
         </div>
 
@@ -1199,11 +1312,10 @@
             </div>
             <h4 class="track-course-title">วิทยาการข้อมูล</h4>
             <p class="track-course-desc">
-              กระบวนการ Data Pipeline, Exploratory Data Analysis (EDA) และการสกัดคุณค่าจาก Big Data
+              กระบวนการ Data Pipeline, Exploratory Data Analysis (EDA)
+              และการสกัดคุณค่าจาก Big Data
             </p>
-            <div class="track-course-tag blue">
-              3 หน่วยกิต · มีแล็ป
-            </div>
+            <div class="track-course-tag blue">3 หน่วยกิต · มีแล็ป</div>
           </div>
         </div>
 
@@ -1214,11 +1326,10 @@
             </div>
             <h4 class="track-course-title">การเรียนรู้ของเครื่อง</h4>
             <p class="track-course-desc">
-              โมเดล Machine Learning แบบ Supervised, Unsupervised และการสร้าง Predictive Model
+              โมเดล Machine Learning แบบ Supervised, Unsupervised และการสร้าง
+              Predictive Model
             </p>
-            <div class="track-course-tag blue">
-              3 หน่วยกิต · มีแล็ป
-            </div>
+            <div class="track-course-tag blue">3 หน่วยกิต · มีแล็ป</div>
           </div>
         </div>
 
@@ -1229,11 +1340,10 @@
             </div>
             <h4 class="track-course-title">การทำเหมืองข้อมูล</h4>
             <p class="track-course-desc">
-              เทคนิค Classification, Association Rules, Clustering และการค้นพบองค์ความรู้ใหม่
+              เทคนิค Classification, Association Rules, Clustering
+              และการค้นพบองค์ความรู้ใหม่
             </p>
-            <div class="track-course-tag blue">
-              3 หน่วยกิต · มีแล็ป
-            </div>
+            <div class="track-course-tag blue">3 หน่วยกิต · มีแล็ป</div>
           </div>
         </div>
       </div>
@@ -1275,7 +1385,8 @@
         <div class="col-12 col-md">
           <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
             <span class="faculty-role-badge">
-              <i class="bi bi-patch-check-fill me-1"></i> หัวหน้าสาขาวิชาฯ &amp; อาจารย์ผู้รับผิดชอบหลักสูตร
+              <i class="bi bi-patch-check-fill me-1"></i> หัวหน้าสาขาวิชาฯ &amp;
+              อาจารย์ผู้รับผิดชอบหลักสูตร
             </span>
             <span class="faculty-spec-badge">
               ความเชี่ยวชาญ: เทคโนโลยีสารสนเทศ (IT)
@@ -1286,19 +1397,26 @@
             ผู้ช่วยศาสตราจารย์ ดร.กนิษฐา อินธิชิต
           </h3>
           <p class="faculty-name-sub mb-2">
-            Asst. Prof. Dr. Kanittha Inthichit · 
+            Asst. Prof. Dr. Kanittha Inthichit ·
             <a href="mailto:kanittha.i@sskru.ac.th" class="faculty-email-text">
               <i class="bi bi-envelope me-1"></i>kanittha.i@sskru.ac.th
             </a>
           </p>
 
           <p class="faculty-bio-desc mb-3">
-            บริหารงานสาขาวิชาฯ มุ่งเน้นการจัดการเรียนการสอนเชิงปฏิบัติการ การวิเคราะห์และออกแบบระบบเชิงวัตถุ และการพัฒนานวัตกรรมสารสนเทศเพื่อชุมชน
+            บริหารงานสาขาวิชาฯ มุ่งเน้นการจัดการเรียนการสอนเชิงปฏิบัติการ
+            การวิเคราะห์และออกแบบระบบเชิงวัตถุ
+            และการพัฒนานวัตกรรมสารสนเทศเพื่อชุมชน
           </p>
 
           <div>
-            <button type="button" class="btn-faculty-action" data-faculty-id="5">
-              <i class="bi bi-file-earmark-person me-1"></i> ดูประวัติและผลงานวิชาการ
+            <button
+              type="button"
+              class="btn-faculty-action"
+              data-faculty-id="5"
+            >
+              <i class="bi bi-file-earmark-person me-1"></i>
+              ดูประวัติและผลงานวิชาการ
             </button>
           </div>
         </div>
@@ -1318,10 +1436,12 @@
           </div>
           <h5 class="faculty-member-name">ผศ.ดร.เจษฎา โพนแก้ว</h5>
           <div class="faculty-member-en">Jessada Phonkaew</div>
-          <div class="faculty-spec-badge mb-3">
-            วิทยาการคอมพิวเตอร์
-          </div>
-          <button type="button" class="btn-faculty-action btn-sm-action" data-faculty-id="1">
+          <div class="faculty-spec-badge mb-3">วิทยาการคอมพิวเตอร์</div>
+          <button
+            type="button"
+            class="btn-faculty-action btn-sm-action"
+            data-faculty-id="1"
+          >
             ดูประวัติ &amp; ผลงาน
           </button>
         </div>
@@ -1338,10 +1458,12 @@
           </div>
           <h5 class="faculty-member-name">ดร.เจษฎา ชาตรี</h5>
           <div class="faculty-member-en">Jessada Chatree</div>
-          <div class="faculty-spec-badge mb-3">
-            Computer Science &amp; Eng
-          </div>
-          <button type="button" class="btn-faculty-action btn-sm-action" data-faculty-id="2">
+          <div class="faculty-spec-badge mb-3">Computer Science &amp; Eng</div>
+          <button
+            type="button"
+            class="btn-faculty-action btn-sm-action"
+            data-faculty-id="2"
+          >
             ดูประวัติ &amp; ผลงาน
           </button>
         </div>
@@ -1358,10 +1480,12 @@
           </div>
           <h5 class="faculty-member-name">ดร.กริชบดินทร์ ผิวหอม</h5>
           <div class="faculty-member-en">Krichbodin Phewhom</div>
-          <div class="faculty-spec-badge mb-3">
-            วิศวกรรมคอมพิวเตอร์
-          </div>
-          <button type="button" class="btn-faculty-action btn-sm-action" data-faculty-id="3">
+          <div class="faculty-spec-badge mb-3">วิศวกรรมคอมพิวเตอร์</div>
+          <button
+            type="button"
+            class="btn-faculty-action btn-sm-action"
+            data-faculty-id="3"
+          >
             ดูประวัติ &amp; ผลงาน
           </button>
         </div>
@@ -1375,10 +1499,12 @@
           </div>
           <h5 class="faculty-member-name">ผศ.พิศาล สุขขี</h5>
           <div class="faculty-member-en">Phisan Sukkee</div>
-          <div class="faculty-spec-badge mb-3">
-            วิทยาการคอมพิวเตอร์
-          </div>
-          <button type="button" class="btn-faculty-action btn-sm-action" data-faculty-id="4">
+          <div class="faculty-spec-badge mb-3">วิทยาการคอมพิวเตอร์</div>
+          <button
+            type="button"
+            class="btn-faculty-action btn-sm-action"
+            data-faculty-id="4"
+          >
             ดูประวัติ &amp; ผลงาน
           </button>
         </div>
@@ -1406,43 +1532,97 @@
     <div class="row g-3 g-md-4 mb-4">
       {% for news in latest_news %}
       <div class="col-6 col-lg-3">
-        <div class="mission-grid-card modern-grid-card d-flex flex-column h-100 p-3">
+        <div
+          class="mission-grid-card modern-grid-card d-flex flex-column h-100 p-3"
+        >
           {% if news.image %}
-          <div class="news-card-img-wrap" style="border-radius: 12px; overflow: hidden; aspect-ratio: 16/9; margin-bottom: 0.75rem;">
-            <img src="{{ news.image }}" alt="{{ news.title }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" class="hover-zoom-img">
+          <div
+            class="news-card-img-wrap"
+            style="
+              border-radius: 12px;
+              overflow: hidden;
+              aspect-ratio: 16/9;
+              margin-bottom: 0.75rem;
+            "
+          >
+            <img
+              src="{{ news.image }}"
+              alt="{{ news.title }}"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+              "
+              class="hover-zoom-img"
+            />
           </div>
           {% else %}
-          <div class="mission-icon-box" style="background: var(--sapphire-50); color: var(--sapphire-700);">
+          <div
+            class="mission-icon-box"
+            style="background: var(--sapphire-50); color: var(--sapphire-700)"
+          >
             <i class="bi bi-newspaper"></i>
           </div>
           {% endif %}
-          <div class="d-flex align-items-center flex-wrap gap-1 small text-muted mb-2 news-card-meta">
-            <span class="badge news-card-badge" style="background: var(--sapphire-50); color: var(--sapphire-700); border: 1px solid var(--border-sapphire); font-size: 0.72rem;">
+          <div
+            class="d-flex align-items-center flex-wrap gap-1 small text-muted mb-2 news-card-meta"
+          >
+            <span
+              class="badge news-card-badge"
+              style="
+                background: var(--sapphire-50);
+                color: var(--sapphire-700);
+                border: 1px solid var(--border-sapphire);
+                font-size: 0.72rem;
+              "
+            >
               {{ news.get_category_display|default:"ข่าวสาร" }}
             </span>
-            <span class="small" style="font-size: 0.72rem;">📅 {{ news.published_at|date:"d M Y" }}</span>
+            <span class="small" style="font-size: 0.72rem"
+              >📅 {{ news.published_at|date:"d M Y" }}</span
+            >
           </div>
-          <h5 class="fw-bold text-dark mb-2 news-card-title" style="font-size: 1.02rem; line-height: 1.45;">
+          <h5
+            class="fw-bold text-dark mb-2 news-card-title"
+            style="font-size: 1.02rem; line-height: 1.45"
+          >
             {{ news.title }}
           </h5>
-          <p class="text-muted small mb-3 flex-grow-1 news-card-desc" style="line-height: 1.65;">
+          <p
+            class="text-muted small mb-3 flex-grow-1 news-card-desc"
+            style="line-height: 1.65"
+          >
             {{ news.description|truncatewords:20 }}
           </p>
-          <a href="{% url 'news_detail' slug=news.slug %}" class="small fw-bold mt-auto news-card-link" style="color: var(--sapphire-600);">
+          <a
+            href="{% url 'news_detail' slug=news.slug %}"
+            class="small fw-bold mt-auto news-card-link"
+            style="color: var(--sapphire-600)"
+          >
             อ่านต่อ <i class="bi bi-arrow-right"></i>
           </a>
         </div>
       </div>
       {% empty %}
       <div class="col-12 text-center py-4">
-        <i class="bi bi-inbox text-muted" style="font-size: 2.5rem;"></i>
+        <i class="bi bi-inbox text-muted" style="font-size: 2.5rem"></i>
         <p class="text-muted mt-2 small">ยังไม่มีข่าวประชาสัมพันธ์ในขณะนี้</p>
       </div>
       {% endfor %}
     </div>
 
     <div class="text-center">
-      <a href="{% url 'news' %}" class="btn-clean-primary" style="padding: 0.65rem 1.8rem; display: inline-flex; align-items: center; text-decoration: none;">
+      <a
+        href="{% url 'news' %}"
+        class="btn-clean-primary"
+        style="
+          padding: 0.65rem 1.8rem;
+          display: inline-flex;
+          align-items: center;
+          text-decoration: none;
+        "
+      >
         <i class="bi bi-grid me-2"></i> ดูข่าวสารและกิจกรรมทั้งหมด
       </a>
     </div>

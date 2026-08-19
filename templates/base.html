@@ -179,6 +179,18 @@
       </div>
 
       <div class="mobile-drawer-body">
+        <!-- Prominent Apply CTA inside Mobile Drawer -->
+        <a
+          href="https://www.oass.sskru.ac.th/std.sskru/s1.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mobile-apply-highlight-btn"
+        >
+          <i class="bi bi-mortarboard-fill"></i>
+          <span>สมัครเรียนออนไลน์ (TCAS)</span>
+          <i class="bi bi-arrow-right-short ms-auto" style="font-size: 1.2rem;"></i>
+        </a>
+
         <a
           href="{% url 'home' %}"
           class="mobile-nav-link {% if active_page == 'home' %}active{% endif %}"
@@ -200,7 +212,7 @@
         </a>
         <a href="{% url 'home' %}#schedule" class="mobile-nav-link">
           <span
-            ><i class="bi bi-diagram-3 me-2 text-warning"></i>แผนการเรียน</span
+            ><i class="bi bi-diagram-3 me-2 text-warning"></i>แผนการเรียน 4 ปี</span
           >
           <i class="bi bi-chevron-right small opacity-50"></i>
         </a>
@@ -209,8 +221,8 @@
           <i class="bi bi-chevron-right small opacity-50"></i>
         </a>
         <a
-          href="{% url 'news' %}"
-          class="mobile-nav-link {% if active_page == 'news' %}active{% endif %}"
+          href="{% url 'home' %}#news"
+          class="mobile-nav-link"
         >
           <span
             ><i class="bi bi-newspaper me-2 text-primary"></i
@@ -231,7 +243,7 @@
         <a href="{% url 'home' %}#download" class="mobile-nav-link">
           <span
             ><i class="bi bi-file-earmark-arrow-down me-2 text-secondary"></i
-            >ดาวน์โหลด</span
+            >ดาวน์โหลดคู่มือ</span
           >
           <i class="bi bi-chevron-right small opacity-50"></i>
         </a>
@@ -491,7 +503,7 @@
         <span class="mobile-tab-label">แผน 4 ปี</span>
       </a>
       <a
-        href="{% url 'news' %}"
+        href="{% url 'home' %}#news"
         class="mobile-tab-item {% if active_page == 'news' %}active{% endif %}"
         data-tab="news"
       >
@@ -556,51 +568,36 @@
       </button>
     </div>
 
-    <!-- PWA Install Popup Banner -->
+    <!-- PWA Install Popup Banner (Mobile Only & Sleek) -->
     <div class="pwa-install-banner" id="pwaInstallBanner" style="display: none">
-      <div class="d-flex align-items-center gap-3">
-        <img
-          src="{% static 'images/logo.png' %}"
-          alt="CS SSKRU Icon"
-          class="pwa-app-icon"
-        />
-        <div>
-          <div class="fw-bold text-dark" style="font-size: 0.92rem">
-            CS SSKRU Mobile App
-          </div>
-          <small class="text-muted" style="font-size: 0.78rem"
-            >เพิ่มแอปลงบนหน้าจอมือถือเพื่อการเข้าถึงที่รวดเร็ว</small
-          >
+      <div class="pwa-banner-left">
+        <div class="pwa-icon-box">
+          <img
+            src="{% static 'images/logo.png' %}"
+            alt="CS SSKRU Icon"
+            class="pwa-app-icon"
+          />
+        </div>
+        <div class="pwa-text-box">
+          <div class="pwa-title">CS SSKRU Mobile App</div>
+          <div class="pwa-subtitle">เพิ่มแอปลงหน้าจอมือถือเพื่อการเข้าถึงที่รวดเร็ว</div>
         </div>
       </div>
-      <div class="d-flex align-items-center gap-2 mt-2 mt-sm-0">
+      <div class="pwa-banner-actions">
         <button
           type="button"
-          class="btn btn-sm btn-primary px-3 rounded-pill"
+          class="pwa-btn-install"
           id="btnPwaInstall"
-          style="
-            font-size: 0.8rem;
-            background: var(--sapphire-600);
-            border-color: var(--sapphire-600);
-          "
         >
           ติดตั้งแอป
         </button>
         <button
           type="button"
-          class="btn btn-sm btn-light rounded-circle"
+          class="pwa-btn-close"
           id="btnPwaDismiss"
           aria-label="ปิด"
-          style="
-            width: 28px;
-            height: 28px;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          "
         >
-          <i class="bi bi-x"></i>
+          <i class="bi bi-x-lg"></i>
         </button>
       </div>
     </div>

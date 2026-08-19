@@ -4,12 +4,18 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Sticky Island Header & Back-To-Top
+  // 1. Optimized Sticky Island Header & Back-To-Top
   const siteHeader = document.querySelector('.futuristic-header');
   const backToTopBtn = document.getElementById('backToTopBtn');
+  const navPills = document.querySelectorAll('.nav-pill-item');
+  const mobileTabs = document.querySelectorAll('.mobile-tab-item');
+  const sections = Array.from(document.querySelectorAll('section[id]'));
 
-  window.addEventListener('scroll', () => {
+  let ticking = false;
+
+  const updateScrollSpy = () => {
     const pos = window.scrollY;
+
     if (siteHeader) {
       if (pos > 35) siteHeader.classList.add('scrolled');
       else siteHeader.classList.remove('scrolled');
@@ -18,7 +24,59 @@ document.addEventListener('DOMContentLoaded', () => {
       if (pos > 400) backToTopBtn.classList.add('visible');
       else backToTopBtn.classList.remove('visible');
     }
+
+    if (sections.length === 0) return;
+
+    const scrollPosition = pos + 120;
+    let currentId = null;
+
+    if ((window.innerHeight + pos) >= document.body.offsetHeight - 60) {
+      currentId = sections[sections.length - 1].getAttribute('id');
+    } else {
+      for (let i = 0; i < sections.length; i++) {
+        const sec = sections[i];
+        const top = sec.offsetTop;
+        const height = sec.offsetHeight;
+        if (scrollPosition >= top && scrollPosition < top + height) {
+          currentId = sec.getAttribute('id');
+          break;
+        }
+      }
+    }
+
+    if (currentId) {
+      navPills.forEach(pill => {
+        const href = pill.getAttribute('href') || '';
+        if (href.endsWith(`#${currentId}`) || (currentId === 'hero' && (href === '/' || href.endsWith('/#hero')))) {
+          pill.classList.add('active');
+        } else {
+          pill.classList.remove('active');
+        }
+      });
+
+      mobileTabs.forEach(tab => {
+        const target = tab.getAttribute('data-tab');
+        const href = tab.getAttribute('href') || '';
+        if (target === currentId || href.endsWith(`#${currentId}`) || (currentId === 'hero' && (target === 'hero' || href === '/'))) {
+          tab.classList.add('active');
+        } else {
+          tab.classList.remove('active');
+        }
+      });
+    }
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateScrollSpy();
+        ticking = false;
+      });
+      ticking = true;
+    }
   }, { passive: true });
+
+  updateScrollSpy();
 
   if (backToTopBtn) {
     backToTopBtn.addEventListener('click', () => {
@@ -67,54 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileNavDrawer.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', closeMobileDrawer);
     });
-  }
-
-  // 3. Robust ScrollSpy Engine (Zero Mismatch) - Syncs Desktop & Mobile Bottom Bar
-  const navPills = document.querySelectorAll('.nav-pill-item');
-  const mobileTabs = document.querySelectorAll('.mobile-tab-item');
-  const sections = Array.from(document.querySelectorAll('section[id]'));
-
-  const updateScrollSpy = () => {
-    const scrollPosition = window.scrollY + 110;
-    let currentId = null;
-
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 60) {
-      if (sections.length > 0) currentId = sections[sections.length - 1].getAttribute('id');
-    } else {
-      sections.forEach(sec => {
-        const top = sec.offsetTop;
-        const height = sec.offsetHeight;
-        if (scrollPosition >= top && scrollPosition < top + height) {
-          currentId = sec.getAttribute('id');
-        }
-      });
-    }
-
-    if (currentId) {
-      navPills.forEach(pill => {
-        const href = pill.getAttribute('href') || '';
-        if (href.endsWith(`#${currentId}`) || (currentId === 'hero' && (href === '/' || href.endsWith('/#hero')))) {
-          pill.classList.add('active');
-        } else {
-          pill.classList.remove('active');
-        }
-      });
-
-      mobileTabs.forEach(tab => {
-        const target = tab.getAttribute('data-tab');
-        const href = tab.getAttribute('href') || '';
-        if (target === currentId || href.endsWith(`#${currentId}`) || (currentId === 'hero' && (target === 'hero' || href === '/'))) {
-          tab.classList.add('active');
-        } else {
-          tab.classList.remove('active');
-        }
-      });
-    }
-  };
-
-  if (sections.length > 0) {
-    window.addEventListener('scroll', updateScrollSpy, { passive: true });
-    updateScrollSpy();
   }
 
   // 4. Interactive 4-Year Skill-Tree Stepper

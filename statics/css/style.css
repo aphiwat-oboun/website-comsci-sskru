@@ -380,6 +380,30 @@ a {
   gap: 0.35rem;
 }
 
+.mobile-apply-highlight-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.15rem;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff !important;
+  border-radius: 14px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none !important;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+  margin-bottom: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.mobile-apply-highlight-btn:hover,
+.mobile-apply-highlight-btn:active {
+  background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
 .mobile-nav-link {
   padding: 0.75rem 1rem;
   font-family: var(--font-heading);
@@ -1115,6 +1139,207 @@ a {
   border-radius: var(--radius-xs);
   border: 1px solid var(--border-sapphire);
   flex-shrink: 0;
+}
+
+/* ==========================================================================
+   TUITION & ESTIMATED EXPENSES CARD (PREMIUM COMPONENT)
+   ========================================================================== */
+.tuition-estimate-card-wrapper {
+  max-width: 620px;
+  margin: 3.5rem auto 0 auto;
+}
+
+.tuition-estimate-card {
+  background: #ffffff;
+  border: 1.5px solid #e0e7ff;
+  border-radius: 26px;
+  padding: 2.25rem 2.25rem 2rem 2.25rem;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08), 0 2px 8px rgba(15, 23, 42, 0.04);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tuition-estimate-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.12), 0 4px 14px rgba(2, 132, 199, 0.08);
+}
+
+.tuition-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+  color: #db2777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(219, 39, 119, 0.15);
+}
+
+.tuition-title {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.2rem;
+}
+
+.tuition-subtitle {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.tuition-table-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 0.65rem 1.35rem;
+  margin: 1.5rem 0 1.75rem 0;
+}
+
+.tuition-row-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.05rem 0;
+  border-bottom: 1px solid #e2e8f0;
+  gap: 1rem;
+}
+
+.tuition-row-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.tuition-tag-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.tuition-tag-icon.star { background: #fdf2f8; color: #db2777; }
+.tuition-tag-icon.calendar { background: #eff6ff; color: #2563eb; }
+.tuition-tag-icon.hourglass { background: #fdf4ff; color: #c026d3; }
+.tuition-tag-icon.shield { background: #ecfdf5; color: #059669; }
+
+.tuition-item-title {
+  font-family: var(--font-heading);
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.tuition-item-desc {
+  font-size: 0.82rem;
+  color: #64748b;
+  padding-left: 2rem;
+}
+
+.tuition-row-right {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.tuition-price {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.tuition-price.highlight-pink {
+  color: #db2777;
+}
+
+.tuition-price.highlight-blue {
+  color: #0284c7;
+}
+
+.tuition-unit {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.tuition-info-val {
+  font-family: var(--font-heading);
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.tuition-badge-green {
+  background: #ecfdf5;
+  color: #059669;
+  border: 1px solid #a7f3d0;
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tuition-footer-action {
+  text-align: center;
+}
+
+.tuition-btn-apply {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.9rem 1.5rem;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff !important;
+  border-radius: 50px;
+  font-family: var(--font-heading);
+  font-size: 1.02rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.35);
+  transition: all 0.25s ease;
+}
+
+.tuition-btn-apply:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(2, 132, 199, 0.45);
+}
+
+@media (max-width: 576px) {
+  .tuition-estimate-card {
+    padding: 1.6rem 1.25rem;
+    border-radius: 20px;
+  }
+  .tuition-table-box {
+    padding: 0.5rem 0.85rem;
+  }
+  .tuition-title {
+    font-size: 1.15rem;
+  }
+  .tuition-item-title {
+    font-size: 0.9rem;
+  }
+  .tuition-item-desc {
+    padding-left: 0;
+  }
+  .tuition-price {
+    font-size: 1.15rem;
+  }
 }
 
 /* ==========================================================================
@@ -1919,8 +2144,6 @@ a {
   font-size: 0.9rem;
   color: #94a3b8;
 }
-  color: #64748b;
-}
 
 .back-to-top-btn {
   position: fixed;
@@ -1964,16 +2187,40 @@ a {
   .nav-mobile-toggle { display: block; }
   .metric-counter-strip { grid-template-columns: repeat(2, 1fr); }
   .metric-cell:nth-child(2) { border-right: none; }
-  .skilltree-stepper-track { grid-template-columns: repeat(2, 1fr); }
+  .skilltree-stepper-track { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
   .community-action-card { flex-direction: column; text-align: center; }
   .course-card-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .skilltree-stepper-track {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.5rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+  .skilltree-node-btn {
+    padding: 0.65rem 0.5rem !important;
+    font-size: 0.88rem !important;
+    border-radius: 12px !important;
+    gap: 0.4rem !important;
+  }
+  .year-sub {
+    display: none !important;
+  }
 }
 
 @media (max-width: 576px) {
   .metric-counter-strip { grid-template-columns: 1fr; }
   .metric-cell { border-right: none; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.75rem; }
   .metric-cell:last-child { border-bottom: none; }
-  .skilltree-stepper-track { grid-template-columns: 1fr; }
+  .skilltree-stepper-track {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.5rem !important;
+  }
+  .skilltree-node-btn {
+    padding: 0.6rem 0.4rem !important;
+    font-size: 0.84rem !important;
+  }
 }
 
 /* ==========================================================================
@@ -2128,11 +2375,9 @@ html, body {
   left: 0;
   right: 0;
   z-index: 1050;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(226, 232, 240, 0.85);
-  box-shadow: 0 -8px 25px rgba(15, 23, 42, 0.08);
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  box-shadow: 0 -4px 20px rgba(15, 23, 42, 0.08);
   padding: 0.35rem 0.6rem calc(0.35rem + env(safe-area-inset-bottom, 0px));
   justify-content: space-around;
   align-items: center;
@@ -2292,28 +2537,126 @@ html, body {
 .pwa-install-banner {
   position: fixed;
   top: 1rem;
-  left: 1rem;
-  right: 1rem;
-  max-width: 480px;
+  left: 0.85rem;
+  right: 0.85rem;
+  max-width: 440px;
   margin: 0 auto;
   z-index: 1100;
-  background: #ffffff;
-  border: 1px solid rgba(2, 132, 199, 0.3);
-  border-radius: var(--radius-lg);
-  padding: 0.75rem 1.25rem;
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.18);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(2, 132, 199, 0.2);
+  border-radius: 18px;
+  padding: 0.75rem 0.9rem;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.16), 0 2px 6px rgba(15, 23, 42, 0.06);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  animation: slideDownIn 0.4s var(--ease-spring);
+  gap: 0.75rem;
+  animation: slideDownIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pwa-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.pwa-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 3px;
 }
 
 .pwa-app-icon {
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.pwa-text-box {
+  min-width: 0;
+}
+
+.pwa-title {
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pwa-subtitle {
+  font-size: 0.76rem;
+  color: #64748b;
+  line-height: 1.35;
+  margin-top: 2px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.pwa-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-shrink: 0;
+}
+
+.pwa-btn-install {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  padding: 0.45rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: var(--font-heading);
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(2, 132, 199, 0.3);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.pwa-btn-install:active {
+  transform: scale(0.96);
+}
+
+.pwa-btn-close {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: #f1f5f9;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.pwa-btn-close:hover,
+.pwa-btn-close:active {
+  background: #e2e8f0;
+  color: #0f172a;
 }
 
 @keyframes slideDownIn {
