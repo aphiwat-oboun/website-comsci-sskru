@@ -1128,47 +1128,70 @@ a {
 .tracks-segmented-nav-wrapper {
   display: flex;
   justify-content: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2.75rem;
 }
 
 .tracks-segmented-group {
-  display: inline-flex;
-  background: #ffffff;
-  border: 1.5px solid #cbd5e1;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
 }
 
 .track-tab-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.55rem;
-  padding: 0.75rem 1.6rem;
+  padding: 0.65rem 1.65rem;
   background: #ffffff;
-  border: none;
-  border-right: 1px solid #e2e8f0;
+  border: 1px solid #cbd5e1;
+  border-radius: 50px;
   font-family: var(--font-heading);
-  font-size: 0.94rem;
-  font-weight: 600;
-  color: #475569;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #334155;
   cursor: pointer;
-  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
 }
 
-.track-tab-btn:last-child {
-  border-right: none;
+.track-tab-btn i {
+  font-size: 1.05rem;
+  color: #64748b;
+  transition: color 0.2s ease;
 }
 
 .track-tab-btn:hover {
   background: #f8fafc;
-  color: #0f172a;
+  border-color: #0284c7;
+  color: #0284c7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.track-tab-btn:hover i {
+  color: #0284c7;
 }
 
 .track-tab-btn.active {
-  background: #f1f5f9;
-  color: #0f172a;
-  font-weight: 700;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  border-color: #0284c7;
+  color: #ffffff !important;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+  transform: translateY(-2px);
+}
+
+.track-tab-btn.active i {
+  color: #ffffff !important;
 }
 
 /* 4-Columns Clean Course Cards */
@@ -1895,6 +1918,8 @@ a {
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   font-size: 0.9rem;
   color: #94a3b8;
+}
+  color: #64748b;
 }
 
 .back-to-top-btn {
@@ -2650,7 +2675,7 @@ html, body {
     box-shadow: 0 4px 15px rgba(2, 132, 199, 0.25) !important;
   }
 
-  /* 6. Curriculum Specialization Tracks Switcher: Column Tabs (Screenshot 4 Fix) */
+  /* 6. Curriculum Specialization Tracks Switcher: Mobile Pills */
   .tracks-segmented-nav-wrapper {
     margin-bottom: 2rem !important;
     width: 100% !important;
@@ -2658,23 +2683,25 @@ html, body {
   .tracks-segmented-group {
     display: flex !important;
     flex-direction: column !important;
+    gap: 0.65rem !important;
     width: 100% !important;
-    border-radius: 16px !important;
-    border: 1.5px solid #cbd5e1 !important;
-    overflow: hidden !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
   }
   .track-tab-btn {
     width: 100% !important;
-    border-right: none !important;
-    border-bottom: 1px solid #e2e8f0 !important;
-    padding: 0.85rem 1.25rem !important;
-    justify-content: flex-start !important;
+    border-radius: 50px !important;
+    padding: 0.75rem 1.25rem !important;
+    justify-content: center !important;
     font-size: 0.92rem !important;
     white-space: normal !important;
-    text-align: left !important;
+    text-align: center !important;
   }
-  .track-tab-btn:last-child {
-    border-bottom: none !important;
+  .track-tab-btn.active {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+    color: #ffffff !important;
+    border-color: #0284c7 !important;
   }
 
   /* 7. Hide Floating Back-to-Top Button on Mobile to avoid clutter & overlap */
