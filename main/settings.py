@@ -1,6 +1,8 @@
 import os
 from pathlib import Path
+# pyrefly: ignore [missing-import]
 import dj_database_url
+# pyrefly: ignore [missing-import]
 from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -71,8 +73,7 @@ WSGI_APPLICATION = 'main.wsgi.application'
 # Database - Neon PostgreSQL Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DEFAULT_NEON_DB_URL = 'postgresql://neondb_owner:npg_RO7UoG9NiPuy@ep-royal-wildflower-azk9cb9u-pooler.c-3.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require'
-DATABASE_URL = os.getenv('DATABASE_URL', DEFAULT_NEON_DB_URL)
+DATABASE_URL = os.getenv('DATABASE_URL')
 
 if DATABASE_URL and not DATABASE_URL.startswith('sqlite'):
     DATABASES = {
@@ -125,8 +126,9 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-# WhiteNoise storage engine for serving compressed static files
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# WhiteNoise configuration for Vercel serverless environment
+WHITENOISE_USE_FINDERS = True
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
