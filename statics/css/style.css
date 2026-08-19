@@ -190,17 +190,15 @@ a {
 .nav-island-container {
   max-width: 1320px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(226, 232, 240, 0.9);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: var(--radius-full);
   padding: 0.5rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
-  transition: all 0.3s var(--ease-spring);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+  transition: box-shadow 0.2s ease;
 }
 
 .futuristic-header.scrolled .nav-island-container {
@@ -303,13 +301,11 @@ a {
 .mobile-drawer-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(15, 23, 42, 0.65);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: rgba(15, 23, 42, 0.5);
   z-index: 1099;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
 .mobile-drawer-backdrop.show {
@@ -470,13 +466,6 @@ a {
   background-color: var(--emerald-500);
   border-radius: 50%;
   box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
-  animation: pulseDot 2s infinite;
-}
-
-@keyframes pulseDot {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.45); }
-  70% { transform: scale(1); box-shadow: 0 0 0 7px rgba(16, 185, 129, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
 }
 
 .gradient-title-ocean {
@@ -791,28 +780,26 @@ a {
 /* Floating Clean Pill Badges */
 .hero-floating-pill {
   position: absolute;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(226, 232, 240, 0.9);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 12px;
   padding: 0.45rem 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
   font-family: var(--font-heading);
   font-size: 0.88rem;
   font-weight: 600;
   color: #334155;
   z-index: 5;
-  transition: all 0.25s var(--ease-spring);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   white-space: nowrap;
 }
 
 .hero-floating-pill:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 14px 30px rgba(2, 132, 199, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.12);
 }
 
 .hero-floating-pill.pill-top-left {
@@ -1737,16 +1724,14 @@ a {
 .futuristic-modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(15, 23, 42, 0.65);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(15, 23, 42, 0.7);
   z-index: 2000;
   display: none;
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.2s ease;
 }
 
 .futuristic-modal-backdrop.active {
@@ -2542,18 +2527,16 @@ html, body {
   max-width: 440px;
   margin: 0 auto;
   z-index: 1100;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(2, 132, 199, 0.2);
+  background: #ffffff;
+  border: 1px solid rgba(2, 132, 199, 0.25);
   border-radius: 18px;
   padding: 0.75rem 0.9rem;
-  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.16), 0 2px 6px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
-  animation: slideDownIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: slideDownIn 0.3s ease-out;
 }
 
 .pwa-banner-left {
@@ -2954,16 +2937,14 @@ html, body {
   .hero-floating-pill {
     display: flex !important;
     position: absolute !important;
-    background: rgba(255, 255, 255, 0.96) !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
-    border: 1px solid rgba(226, 232, 240, 0.95) !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
     border-radius: 10px !important;
     padding: 0.3rem 0.65rem !important;
     font-size: 0.76rem !important;
     font-weight: 600 !important;
     gap: 0.35rem !important;
-    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08) !important;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08) !important;
     z-index: 5 !important;
     white-space: nowrap !important;
   }

@@ -179,18 +179,6 @@
       </div>
 
       <div class="mobile-drawer-body">
-        <!-- Prominent Apply CTA inside Mobile Drawer -->
-        <a
-          href="https://www.oass.sskru.ac.th/std.sskru/s1.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="mobile-apply-highlight-btn"
-        >
-          <i class="bi bi-mortarboard-fill"></i>
-          <span>สมัครเรียนออนไลน์ (TCAS)</span>
-          <i class="bi bi-arrow-right-short ms-auto" style="font-size: 1.2rem;"></i>
-        </a>
-
         <a
           href="{% url 'home' %}"
           class="mobile-nav-link {% if active_page == 'home' %}active{% endif %}"
@@ -212,7 +200,8 @@
         </a>
         <a href="{% url 'home' %}#schedule" class="mobile-nav-link">
           <span
-            ><i class="bi bi-diagram-3 me-2 text-warning"></i>แผนการเรียน 4 ปี</span
+            ><i class="bi bi-diagram-3 me-2 text-warning"></i>แผนการเรียน 4
+            ปี</span
           >
           <i class="bi bi-chevron-right small opacity-50"></i>
         </a>
@@ -220,10 +209,7 @@
           <span><i class="bi bi-people me-2 text-danger"></i>คณาจารย์</span>
           <i class="bi bi-chevron-right small opacity-50"></i>
         </a>
-        <a
-          href="{% url 'home' %}#news"
-          class="mobile-nav-link"
-        >
+        <a href="{% url 'home' %}#news" class="mobile-nav-link">
           <span
             ><i class="bi bi-newspaper me-2 text-primary"></i
             >ข่าวสารและกิจกรรม</span
@@ -580,15 +566,13 @@
         </div>
         <div class="pwa-text-box">
           <div class="pwa-title">CS SSKRU Mobile App</div>
-          <div class="pwa-subtitle">เพิ่มแอปลงหน้าจอมือถือเพื่อการเข้าถึงที่รวดเร็ว</div>
+          <div class="pwa-subtitle">
+            เพิ่มแอปลงหน้าจอมือถือเพื่อการเข้าถึงที่รวดเร็ว
+          </div>
         </div>
       </div>
       <div class="pwa-banner-actions">
-        <button
-          type="button"
-          class="pwa-btn-install"
-          id="btnPwaInstall"
-        >
+        <button type="button" class="pwa-btn-install" id="btnPwaInstall">
           ติดตั้งแอป
         </button>
         <button
