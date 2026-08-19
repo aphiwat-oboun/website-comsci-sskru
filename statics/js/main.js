@@ -493,8 +493,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // PWA Install Banner Configuration
   // ==========================================
   const PWA_CONFIG = {
-    DELAY_BEFORE_SHOW_MS: 2000,   // เวลาหน่วงก่อนแสดงแบนเนอร์ (เช่น 2000 = 2 วินาที)
-    DISPLAY_DURATION_MS: 10000,   // เวลาที่แสดงค้างไว้ก่อนซ่อนอัตโนมัติ (เช่น 10000 = 10 วินาที)
+    DELAY_BEFORE_SHOW_MS: 1000,   // เวลาหน่วงก่อนแสดงแบนเนอร์ (เช่น 2000 = 2 วินาที)
+    DISPLAY_DURATION_MS: 20000,   // เวลาที่แสดงค้างไว้ก่อนซ่อนอัตโนมัติ (เช่น 10000 = 10 วินาที)
     ANIMATION_DURATION_MS: 400,   // เวลาแอนิเมชันตอนเลื่อนเก็บ (0.4 วินาที)
   };
 
