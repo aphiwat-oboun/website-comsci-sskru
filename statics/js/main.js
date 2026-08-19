@@ -489,34 +489,74 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ==========================================
+  // PWA Install Banner Configuration
+  // ==========================================
+  const PWA_CONFIG = {
+    DELAY_BEFORE_SHOW_MS: 2000,   // เวลาหน่วงก่อนแสดงแบนเนอร์ (เช่น 2000 = 2 วินาที)
+    DISPLAY_DURATION_MS: 10000,   // เวลาที่แสดงค้างไว้ก่อนซ่อนอัตโนมัติ (เช่น 10000 = 10 วินาที)
+    ANIMATION_DURATION_MS: 400,   // เวลาแอนิเมชันตอนเลื่อนเก็บ (0.4 วินาที)
+  };
+
   let deferredPrompt = null;
+  let pwaAutoHideTimer = null;
   const pwaInstallBanner = document.getElementById('pwaInstallBanner');
   const btnPwaInstall = document.getElementById('btnPwaInstall');
   const btnPwaDismiss = document.getElementById('btnPwaDismiss');
 
+  const hidePwaBanner = () => {
+    if (pwaAutoHideTimer) clearTimeout(pwaAutoHideTimer);
+    if (pwaInstallBanner) {
+      pwaInstallBanner.classList.add('hide-anim');
+      setTimeout(() => {
+        pwaInstallBanner.style.display = 'none';
+        pwaInstallBanner.classList.remove('hide-anim');
+      }, PWA_CONFIG.ANIMATION_DURATION_MS);
+    }
+  };
+
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
+
     if (pwaInstallBanner && !sessionStorage.getItem('pwa_dismissed')) {
-      pwaInstallBanner.style.display = 'flex';
+      // 1. รอตามเวลาใน Config ก่อนแสดง Banner
+      setTimeout(() => {
+        pwaInstallBanner.classList.remove('hide-anim');
+        pwaInstallBanner.style.display = 'flex';
+
+        // 2. แสดงค้างไว้ตามเวลาใน Config แล้วค่อยซ่อนอัตโนมัติ
+        pwaAutoHideTimer = setTimeout(() => {
+          hidePwaBanner();
+        }, PWA_CONFIG.DISPLAY_DURATION_MS);
+      }, PWA_CONFIG.DELAY_BEFORE_SHOW_MS);
     }
   });
 
   if (btnPwaInstall) {
     btnPwaInstall.addEventListener('click', async () => {
+      hidePwaBanner();
       if (deferredPrompt) {
         deferredPrompt.prompt();
         const { outcome } = await deferredPrompt.userChoice;
         deferredPrompt = null;
       }
-      if (pwaInstallBanner) pwaInstallBanner.style.display = 'none';
     });
   }
 
   if (btnPwaDismiss) {
     btnPwaDismiss.addEventListener('click', () => {
-      if (pwaInstallBanner) pwaInstallBanner.style.display = 'none';
+      hidePwaBanner();
       sessionStorage.setItem('pwa_dismissed', 'true');
+    });
+  }
+
+  // Service Worker Registration for PWA
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/static/sw.js').catch((err) => {
+        console.log('SW registration note:', err);
+      });
     });
   }
 });

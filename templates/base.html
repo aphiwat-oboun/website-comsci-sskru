@@ -18,11 +18,11 @@
   <!-- Web App Manifest -->
   <link rel="manifest" href="{% static 'manifest.json' %}">
 
-  <!-- Favicon & App Icon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/icon.png' %}">
+  <!-- Favicon & App Icon (Single logo.png) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/logo.png' %}">
   <link rel="icon" type="image/png" sizes="192x192" href="{% static 'images/logo.png' %}">
-  <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
-  <link rel="apple-touch-icon" href="{% static 'images/icon.png' %}">
+  <link rel="shortcut icon" type="image/png" href="{% static 'images/logo.png' %}">
+  <link rel="apple-touch-icon" href="{% static 'images/logo.png' %}">
 
   <!-- Google Fonts: Plus Jakarta Sans, Prompt & Sarabun -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -155,18 +155,22 @@
   <!-- ==========================================
        MINIMALIST DARK-SLATE FOOTER
        ========================================== -->
+  <!-- ==========================================
+       MINIMALIST DARK-SLATE FOOTER
+       ========================================== -->
   <footer class="site-footer-modern">
     <div class="container">
       <div class="row g-4 justify-content-between">
-        <div class="col-12 col-lg-5">
+        <!-- Col 1: Brand Info -->
+        <div class="col-12 col-lg-4">
           <div class="d-flex align-items-center gap-3 mb-3">
-            <img src="{% static 'images/logo.png' %}" alt="โลโก้สาขาวิทยาการคอมพิวเตอร์" style="height: 44px; width: auto; border-radius: 50%;">
+            <img src="{% static 'images/logo.png' %}" alt="โลโก้สาขาวิทยาการคอมพิวเตอร์" style="height: 48px; width: auto; border-radius: 50%;">
             <div>
               <h5 class="fw-bold mb-0 text-white" style="font-size: 1.2rem;">สาขาวิชาวิทยาการคอมพิวเตอร์</h5>
-              <small style="color: var(--sapphire-500); font-weight: 600;">มหาวิทยาลัยราชภัฏศรีสะเกษ</small>
+              <small style="color: var(--sapphire-400); font-weight: 600;">มหาวิทยาลัยราชภัฏศรีสะเกษ</small>
             </div>
           </div>
-          <p style="color: rgba(255, 255, 255, 0.75); font-size: 0.98rem; line-height: 1.75; max-width: 420px;">
+          <p style="color: rgba(255, 255, 255, 0.75); font-size: 0.95rem; line-height: 1.75; max-width: 380px;">
             หลักสูตรวิทยาศาสตรบัณฑิต (วท.บ.) มุ่งเน้นการสร้างสรรค์นวัตกรรมซอฟต์แวร์ ปัญญาประดิษฐ์ และระบบข้อมูลขนาดใหญ่ เพื่อขับเคลื่อนสังคมดิจิทัลแห่งอนาคต
           </p>
           <div class="d-flex gap-2 mt-3">
@@ -182,48 +186,61 @@
           </div>
         </div>
 
-        <div class="col-6 col-md-3 col-lg-2">
-          <h6 class="footer-col-title">การนำทาง</h6>
-          <ul class="footer-nav-list">
+        <!-- Col 2: ลิงก์ที่ใช้งานบ่อย -->
+        <div class="col-6 col-md-4 col-lg-2">
+          <h6 class="footer-col-title fw-bold text-white mb-3">ลิงก์ที่ใช้งานบ่อย</h6>
+          <ul class="footer-nav-list list-unstyled d-flex flex-column gap-2">
             <li><a href="{% url 'home' %}">หน้าแรก</a></li>
-            <li><a href="{% url 'home' %}#about">เกี่ยวกับหลักสูตร</a></li>
-            <li><a href="{% url 'home' %}#features">วิชาเรียนเฉพาะทาง</a></li>
-            <li><a href="{% url 'home' %}#schedule">แผนการศึกษา 4 ปี</a></li>
-            <li><a href="{% url 'home' %}#lecturers">คณาจารย์ประจำสาขา</a></li>
-            <li><a href="{% url 'news' %}">ข่าวสารและกิจกรรม</a></li>
+            <li><a href="{% url 'home' %}#about">เกี่ยวกับสาขาฯ</a></li>
+            <li><a href="{% url 'home' %}#features">วิชาในหลักสูตร</a></li>
+            <li><a href="{% url 'home' %}#schedule">แผนการเรียนรายภาค</a></li>
+            <li><a href="https://drive.google.com/file/d/1VjG1c3__p96kEBRSGuFNJtZXXD9A3SjB/view?usp=sharing" target="_blank" rel="noopener noreferrer">ดาวน์โหลดคู่มือ</a></li>
           </ul>
         </div>
 
-        <div class="col-6 col-md-3 col-lg-2">
-          <h6 class="footer-col-title">เอกสาร &amp; ระบบ</h6>
-          <ul class="footer-nav-list">
-            <li><a href="https://drive.google.com/file/d/1VjG1c3__p96kEBRSGuFNJtZXXD9A3SjB/view?usp=sharing" target="_blank" rel="noopener noreferrer">เล่ม มคอ.2 (PDF)</a></li>
-            <li><a href="https://www.oass.sskru.ac.th/std.sskru/s17.html" target="_blank" rel="noopener noreferrer">คู่มือขึ้นทะเบียน</a></li>
-            <li><a href="https://admission.sskru.ac.th" target="_blank" rel="noopener noreferrer">ระบบรับสมัคร TCAS</a></li>
-            <li><a href="https://www.ssk-robotics.com/" target="_blank" rel="noopener noreferrer">ศรีสะเกษโรโบติกส์</a></li>
+        <!-- Col 3: ความเชี่ยวชาญพิเศษ -->
+        <div class="col-6 col-md-4 col-lg-2">
+          <h6 class="footer-col-title fw-bold text-white mb-3">ความเชี่ยวชาญพิเศษ</h6>
+          <ul class="footer-nav-list list-unstyled d-flex flex-column gap-2" style="color: rgba(255, 255, 255, 0.75); font-size: 0.95rem;">
+            <li>ทฤษฎีวิทยาการคอม</li>
+            <li>การวิศวกรรมซอฟต์แวร์</li>
+            <li>ปัญญาประดิษฐ์และ Big Data</li>
           </ul>
         </div>
 
-        <div class="col-12 col-md-6 col-lg-3">
-          <h6 class="footer-col-title">ที่อยู่สาขาวิชาฯ</h6>
-          <p style="color: rgba(255, 255, 255, 0.75); font-size: 0.95rem; line-height: 1.7; margin-bottom: 0.75rem;">
-            ชั้น 5 อาคารสำนักงานคณบดี คณะศิลปศาสตร์และวิทยาศาสตร์ (LASC) มรภ.ศรีสะเกษ ถ.ไทยพันทา อ.เมือง จ.ศรีสะเกษ 33000
-          </p>
-          <div style="color: var(--sapphire-500); font-weight: 700; font-size: 0.98rem;">
-            <i class="bi bi-telephone-fill me-2"></i> 043-009700 ต่อ 50528
-          </div>
+        <!-- Col 4: ข้อมูลติดต่อหลักสูตร -->
+        <div class="col-12 col-md-4 col-lg-3">
+          <h6 class="footer-col-title fw-bold text-white mb-3">ข้อมูลติดต่อหลักสูตร</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2" style="color: rgba(255, 255, 255, 0.8); font-size: 0.92rem; line-height: 1.6;">
+            <li class="d-flex align-items-start gap-2">
+              <i class="bi bi-geo-alt text-teal mt-1"></i>
+              <span>ชั้น 5 อาคาร LASC สวนเฉลิมพระเกียรติฯ (เกาะห้วยน้ำคำ) อ.เมือง จ.ศรีสะเกษ 33000</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-telephone text-teal"></i>
+              <span>043-009700 ต่อ 50528</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-envelope text-teal"></i>
+              <span>phisan.s@sskru.ac.th</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-clock text-teal"></i>
+              <span>วันจันทร์ - ศุกร์: 8:30 AM - 4:30 PM</span>
+            </li>
+          </ul>
         </div>
       </div>
 
-      <div class="footer-bottom-strip d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 text-center text-md-start">
+      <div class="footer-bottom-strip d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 text-center text-md-start pt-4 mt-4 border-top" style="border-color: rgba(255, 255, 255, 0.1) !important;">
         <div>
           <div>หัวหน้าสาขาวิชาฯ: ผู้ช่วยศาสตราจารย์ ดร.กนิษฐา อินธิชิต</div>
-          <div class="mt-1">© 2026 <strong>สาขาวิชาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยราชภัฏศรีสะเกษ</strong>. All rights reserved.</div>
+          <div class="mt-1" style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6);">© 2026 <strong>สาขาวิชาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยราชภัฏศรีสะเกษ</strong>. All rights reserved.</div>
         </div>
-        <div>
-          <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--sapphire-500); background: rgba(14, 165, 233, 0.12); padding: 0.35rem 0.85rem; border-radius: 50px; border: 1px solid rgba(14, 165, 233, 0.25);">
-            Computer Science · SSKRU
-          </span>
+        <div class="text-md-end">
+          <div style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.75); font-weight: 500;">
+            Developed &amp; Cloned by Computer Science SSKRU
+          </div>
         </div>
       </div>
     </div>
@@ -278,7 +295,7 @@
         <i class="bi bi-telephone-fill"></i>
         <span>สายด่วนสาขาฯ</span>
       </a>
-      <a href="https://www.oass.sskru.ac.th/std.sskru/s1.html" target="_blank" rel="noopener noreferrer" class="mobile-fab-opt-item fab-apply" title="สมัครเรียน TCAS">
+      <a href="https://www.oass.sskru.ac.th/std.sskru/s1.html" target="_blank" rel="noopener noreferrer" class="mobile-fab-opt-item fab-apply" title="สมัครเรียนออนไลน์">
         <i class="bi bi-mortarboard-fill"></i>
         <span>สมัครเรียนออนไลน์</span>
       </a>
@@ -291,7 +308,7 @@
   <!-- PWA Install Popup Banner -->
   <div class="pwa-install-banner" id="pwaInstallBanner" style="display: none;">
     <div class="d-flex align-items-center gap-3">
-      <img src="{% static 'images/icon.png' %}" alt="CS SSKRU Icon" class="pwa-app-icon">
+      <img src="{% static 'images/logo.png' %}" alt="CS SSKRU Icon" class="pwa-app-icon">
       <div>
         <div class="fw-bold text-dark" style="font-size: 0.92rem;">CS SSKRU Mobile App</div>
         <small class="text-muted" style="font-size: 0.78rem;">เพิ่มแอปลงบนหน้าจอมือถือเพื่อการเข้าถึงที่รวดเร็ว</small>

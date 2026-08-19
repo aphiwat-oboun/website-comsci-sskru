@@ -1,12 +1,9 @@
-// CS SSKRU Service Worker for PWA
 const CACHE_NAME = 'cs-sskru-v1';
 const ASSETS_TO_CACHE = [
   '/',
   '/static/css/style.css',
   '/static/js/main.js',
-  '/static/images/logo.png',
-  '/static/images/hero-logo.png',
-  '/static/images/favicon.ico'
+  '/static/images/logo.png'
 ];
 
 self.addEventListener('install', (event) => {
