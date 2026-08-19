@@ -99,7 +99,7 @@
         <!-- Desktop Nav Menu Pills -->
         <div class="nav-menu-pills">
           <a
-            href="{% url 'home' %}"
+            href="{% url 'home' %}#hero"
             class="nav-pill-item {% if active_page == 'home' %}active{% endif %}"
             >หน้าแรก</a
           >
@@ -180,7 +180,7 @@
 
       <div class="mobile-drawer-body">
         <a
-          href="{% url 'home' %}"
+          href="{% url 'home' %}#hero"
           class="mobile-nav-link {% if active_page == 'home' %}active{% endif %}"
         >
           <span><i class="bi bi-house-door me-2 text-primary"></i>หน้าแรก</span>
@@ -463,7 +463,7 @@
       aria-label="แถบเมนูด้านล่างสำหรับมือถือ"
     >
       <a
-        href="{% url 'home' %}"
+        href="{% url 'home' %}#hero"
         class="mobile-tab-item {% if active_page == 'home' %}active{% endif %}"
         data-tab="hero"
       >

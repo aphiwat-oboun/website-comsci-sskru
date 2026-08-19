@@ -84,6 +84,45 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Instant 0ms Smooth Scroll for all in-page anchors on Home page
+  document.querySelectorAll('a[href*="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (!href) return;
+
+      try {
+        const url = new URL(href, window.location.origin);
+        const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
+        const targetPath = url.pathname.replace(/\/$/, '') || '/';
+
+        if (currentPath === targetPath && url.hash) {
+          const targetId = url.hash.substring(1);
+          if (targetId === 'hero' || targetId === '') {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if (history.pushState) history.pushState(null, null, ' ');
+            return;
+          }
+
+          const targetEl = document.getElementById(targetId);
+          if (targetEl) {
+            e.preventDefault();
+            const headerHeight = 70;
+            const elementPosition = targetEl.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+
+            window.scrollTo({
+              top: Math.max(0, offsetPosition),
+              behavior: 'smooth'
+            });
+
+            if (history.pushState) history.pushState(null, null, url.hash);
+          }
+        }
+      } catch (err) {}
+    });
+  });
+
   // 2. Mobile Side Offcanvas Drawer Toggle
   const navToggleBtn = document.getElementById('navToggleBtn');
   const mobileNavDrawer = document.getElementById('mobileNavDrawer');
