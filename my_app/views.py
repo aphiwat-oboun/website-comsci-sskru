@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
+from django.conf import settings
 from .models import News, Course, Gallery, Admission, ContactInformation, Lecturer
 
 _cached_contact = None
@@ -84,7 +85,44 @@ def news_detail_view(request, slug):
     return render(request, 'news_detail.html', context)
 
 def gallery_view(request):
-    gallery_items = Gallery.objects.all()
+    # ดึงรูปจากโฟลเดอร์ statics/images/activities โดยตรง
+    activities_dir = settings.BASE_DIR / 'statics' / 'images' / 'activities'
+    gallery_items = []
+    
+    # รายการชื่อหัวข้อของภาพกิจกรรม
+    activity_titles = {
+        'activity_01.jpg': 'การแข่งขันหุ่นยนต์เยาวชน ศรีสะเกษโรโบติกส์ (Sisaket Robotics)',
+        'activity_02.jpg': 'การอบรมเชิงปฏิบัติการ Generative AI & Machine Learning',
+        'activity_03.jpg': 'โครงการพัฒนาทักษะการเขียนโปรแกรมและการพัฒนาเว็บแอปพลิเคชัน',
+        'activity_04.jpg': 'นิทรรศการแสดงผลงานโครงงานนวัตกรรมซอฟต์แวร์ของนักศึกษา',
+        'activity_05.jpg': 'กิจกรรมบายศรีสู่ขวัญ ต้อนรับนักศึกษาใหม่ CS SSKRU',
+        'activity_06.jpg': 'เปิดรับสมัครนักศึกษาใหม่ สาขาวิชาวิทยาการคอมพิวเตอร์ (วท.บ.)',
+        'activity_07.jpg': 'กิจกรรมศึกษาดูงานด้านเทคโนโลยีศูนย์ดิจิทัล (Tech Field Trip)',
+        'activity_08.jpg': 'กิจกรรมบริการวิชาการถ่ายทอดทักษะโค้ดดิ้งแก่นักเรียน',
+        'activity_09.jpg': 'บรรยากาศการเรียนในห้องปฏิบัติการคอมพิวเตอร์',
+        'activity_10.jpg': 'การฝึกอบรมและสอบวัดสมรรถนะมาตรฐานวิชาชีพไอที',
+        'robotics_01.jpg': 'การแข่งขันหุ่นยนต์ Sisaket Robotics Championship',
+    }
+    
+    if activities_dir.exists():
+        valid_extensions = ('.jpg', '.jpeg', '.png', '.webp', '.gif')
+        for file_path in sorted(activities_dir.iterdir()):
+            if file_path.suffix.lower() in valid_extensions:
+                file_name = file_path.name
+                title = activity_titles.get(
+                    file_name,
+                    file_path.stem.replace('_', ' ').replace('-', ' ').title()
+                )
+                gallery_items.append({
+                    'title': title,
+                    'image': f'/static/images/activities/{file_name}',
+                    'get_category_display': 'กิจกรรมสาขาวิชา',
+                })
+    
+    # หากในโฟลเดอร์ไม่มีรูป ให้ดึงจากฐานข้อมูลสำรอง
+    if not gallery_items:
+        gallery_items = list(Gallery.objects.all())
+        
     contact = get_contact_info()
     context = {
         'gallery_items': gallery_items,
