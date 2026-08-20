@@ -126,9 +126,16 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-# WhiteNoise configuration for Vercel serverless environment
-WHITENOISE_USE_FINDERS = True
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+if DEBUG:
+    # Development mode: Realtime static files directly from statics folder (No caching)
+    WHITENOISE_AUTOREFRESH = True
+    WHITENOISE_USE_FINDERS = True
+    WHITENOISE_MAX_AGE = 0
+    STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+else:
+    # Production mode: Compressed & cached static files for Vercel / Serverless
+    WHITENOISE_USE_FINDERS = True
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

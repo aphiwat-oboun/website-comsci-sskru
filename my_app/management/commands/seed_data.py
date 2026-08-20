@@ -203,14 +203,17 @@ class Command(BaseCommand):
 
         # 5. Gallery
         gallery_data = [
-            {'title': 'บรรยากาศกิจกรรม Coding BootCamp', 'image': 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80', 'category': 'coding'},
-            {'title': 'อบรมเชิงปฏิบัติการ AI & Machine Learning', 'image': 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&q=80', 'category': 'ai'},
-            {'title': 'การแข่งขัน Hackathon SSKRU Tech 2026', 'image': 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80', 'category': 'hackathon'},
-            {'title': 'บรรยากาศการเรียนในห้องปฏิบัติการคอมพิวเตอร์', 'image': 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80', 'category': 'activities'},
-            {'title': 'ผลงานหุ่นยนต์และ IoT สมาร์ตฟาร์ม', 'image': 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80', 'category': 'project'},
-            {'title': 'ทีมนักศึกษาคว้ารางวัลระดับประเทศ', 'image': 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80', 'category': 'competition'},
-            {'title': 'Workshop Cybersecurity & Penetration Testing', 'image': 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80', 'category': 'workshop'},
-            {'title': 'กิจกรรมต้อนรับน้องใหม่ CS Freshy Day', 'image': 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80', 'category': 'activities'},
+            {'title': 'การแข่งขันหุ่นยนต์เยาวชน ศรีสะเกษโรโบติกส์ (Sisaket Robotics)', 'image': '/static/images/activities/activity_01.jpg', 'category': 'competition'},
+            {'title': 'การอบรมเชิงปฏิบัติการ Generative AI & Machine Learning', 'image': '/static/images/activities/activity_02.jpg', 'category': 'ai'},
+            {'title': 'โครงการพัฒนาทักษะการเขียนโปรแกรมและการพัฒนาเว็บแอปพลิเคชัน', 'image': '/static/images/activities/activity_03.jpg', 'category': 'coding'},
+            {'title': 'นิทรรศการแสดงผลงานโครงงานนวัตกรรมซอฟต์แวร์ของนักศึกษา', 'image': '/static/images/activities/activity_04.jpg', 'category': 'project'},
+            {'title': 'กิจกรรมบายศรีสู่ขวัญ ต้อนรับนักศึกษาใหม่ CS SSKRU', 'image': '/static/images/activities/activity_05.jpg', 'category': 'activities'},
+            {'title': 'เปิดรับสมัครนักศึกษาใหม่ สาขาวิชาวิทยาการคอมพิวเตอร์ (วท.บ.)', 'image': '/static/images/activities/activity_06.jpg', 'category': 'activities'},
+            {'title': 'กิจกรรมศึกษาดูงานด้านเทคโนโลยีศูนย์ดิจิทัล (Tech Field Trip)', 'image': '/static/images/activities/activity_07.jpg', 'category': 'activities'},
+            {'title': 'กิจกรรมบริการวิชาการถ่ายทอดทักษะโค้ดดิ้งแก่นักเรียน', 'image': '/static/images/activities/activity_08.jpg', 'category': 'workshop'},
+            {'title': 'บรรยากาศการเรียนในห้องปฏิบัติการคอมพิวเตอร์', 'image': '/static/images/activities/activity_09.jpg', 'category': 'activities'},
+            {'title': 'การฝึกอบรมและสอบวัดสมรรถนะมาตรฐานวิชาชีพไอที', 'image': '/static/images/activities/activity_10.jpg', 'category': 'workshop'},
+            {'title': 'การแข่งขันหุ่นยนต์ Sisaket Robotics Championship', 'image': '/static/images/activities/robotics_01.jpg', 'category': 'competition'},
         ]
 
         for item in gallery_data:
