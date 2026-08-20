@@ -35,7 +35,7 @@
         <div class="mission-grid-card modern-grid-card d-flex flex-column h-100 p-2 p-md-3">
           {% if item.image %}
           <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; margin-bottom: 0.65rem;">
-            <img src="{{ item.image }}" alt="{{ item.title }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" class="hover-zoom-img">
+            <img src="{{ item.image }}?t={% now 'U' %}" alt="{{ item.title }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" class="hover-zoom-img">
           </div>
           {% endif %}
           <div class="small text-muted mb-1">
