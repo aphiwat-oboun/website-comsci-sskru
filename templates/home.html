@@ -1,6 +1,9 @@
-{% extends 'base.html' %} {% load static %} {% block
-title%}สาขาวิชาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยราชภัฏศรีสะเกษ | CS SSKRU{%
-endblock %} {% block content %}
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}สาขาวิชาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยราชภัฏศรีสะเกษ | CS SSKRU{% endblock %}
+
+{% block content %}
 <!-- ==========================================
      HERO SECTION: CLEAN MINIMALIST ACADEMIC SHOWCASE
      ========================================== -->
@@ -1020,101 +1023,89 @@ endblock %} {% block content %}
     <!-- Tuition & Estimated Expenses Card (Ultra-Premium Redesign) -->
     <div class="tuition-estimate-card-wrapper">
       <div class="tuition-estimate-card">
-        <div class="tuition-header-strip">
-          <div class="d-flex align-items-center gap-3">
-            <div class="tuition-icon-box">
-              <i class="bi bi-calculator-fill"></i>
+        <!-- Top Eyebrow Badge -->
+        <div class="text-center mb-3">
+          <span class="tuition-eyebrow-chip">
+            <i class="bi bi-wallet2 me-1"></i> TUITION &amp; FINANCIAL SUPPORT
+          </span>
+        </div>
+
+        <div class="tuition-header-strip text-center">
+          <h3 class="tuition-title">ประมาณการค่าใช้จ่ายการเรียน</h3>
+          <p class="tuition-subtitle">
+            โครงสร้างค่าธรรมเนียมการศึกษาแบบเหมาจ่าย ชัดเจน โปร่งใส ไม่มีค่าใช้จ่ายแอบแฝง พร้อมสิทธิกู้ยืม กยศ.
+          </p>
+        </div>
+
+        <!-- 2 Standout Primary Fee Cards -->
+        <div class="row g-3 tuition-cards-grid my-2">
+          <!-- Card 1: Year 1 Term 1 -->
+          <div class="col-12 col-md-6">
+            <div class="tuition-tier-card tier-entry">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <span class="tier-badge badge-entry">
+                  <i class="bi bi-stars me-1"></i> เทอมแรกเข้า
+                </span>
+                <span class="tier-term-tag">ปีที่ 1 เทอม 1</span>
+              </div>
+              <div class="tier-price-display">
+                <span class="currency-symbol">฿</span>
+                <span class="price-val">12,280</span>
+                <span class="price-unit">บาท</span>
+              </div>
+              <div class="tier-details">
+                <i class="bi bi-check2-circle text-primary me-1"></i> รวมค่าแรกเข้าและขึ้นทะเบียนนักศึกษาใหม่
+              </div>
             </div>
-            <div>
-              <h3 class="tuition-title">ประมาณการค่าใช้จ่ายการเรียน</h3>
-              <p class="tuition-subtitle mb-0">
-                ค่าธรรมเนียมการศึกษาของ มรภ.ศรีสะเกษ เป็นมิตร ชัดเจน
-                มีทุนการศึกษา และ กยศ. รองรับ
-              </p>
+          </div>
+
+          <!-- Card 2: Subsequent Semesters -->
+          <div class="col-12 col-md-6">
+            <div class="tuition-tier-card tier-regular">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <span class="tier-badge badge-regular">
+                  <i class="bi bi-calendar2-check-fill me-1"></i> ทุกภาคเรียนถัดไป
+                </span>
+                <span class="tier-term-tag">เทอม 2 - ปี 4</span>
+              </div>
+              <div class="tier-price-display">
+                <span class="currency-symbol">฿</span>
+                <span class="price-val text-sapphire">9,000</span>
+                <span class="price-unit">บาท / เทอม</span>
+              </div>
+              <div class="tier-details">
+                <i class="bi bi-check2-circle text-success me-1"></i> อัตราเหมาจ่ายปกติคงที่ตลอดหลักสูตร
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="tuition-table-box">
-          <!-- Row 1: Year 1 Semester 1 -->
-          <div class="tuition-row-item">
-            <div class="tuition-row-left">
-              <div class="d-flex align-items-center gap-2">
-                <span class="tuition-tag-icon star"
-                  ><i class="bi bi-star-fill"></i
-                ></span>
-                <span class="tuition-item-title"
-                  >ปี 1 เทอมแรกเข้า (เทอม 1)</span
-                >
-              </div>
-              <div class="tuition-item-desc">
-                รวมค่าแรกเข้าและขึ้นทะเบียนนักศึกษาใหม่
-              </div>
-            </div>
-            <div class="tuition-row-right">
-              <span class="tuition-price highlight-pink">12,280</span>
-              <span class="tuition-unit">บาท</span>
+        <!-- Perks & Benefits Strip -->
+        <div class="tuition-perks-box">
+          <div class="tuition-perk-item">
+            <div class="perk-icon-wrap hour"><i class="bi bi-hourglass-split"></i></div>
+            <div class="perk-text-wrap">
+              <div class="perk-label">ระยะเวลาเรียน</div>
+              <div class="perk-val">4 ปี (8 ภาคเรียน)</div>
             </div>
           </div>
-
-          <!-- Row 2: Subsequent Semesters -->
-          <div class="tuition-row-item">
-            <div class="tuition-row-left">
-              <div class="d-flex align-items-center gap-2">
-                <span class="tuition-tag-icon calendar"
-                  ><i class="bi bi-calendar-check-fill"></i
-                ></span>
-                <span class="tuition-item-title"
-                  >เทอมถัดไปทุกชั้นปี (เทอม 2 - ปี 4)</span
-                >
-              </div>
-              <div class="tuition-item-desc">
-                ค่าธรรมเนียมการศึกษาปกติทุกเทอม
-              </div>
-            </div>
-            <div class="tuition-row-right">
-              <span class="tuition-price highlight-blue">9,000</span>
-              <span class="tuition-unit">บาท/เทอม</span>
+          <div class="tuition-perk-item">
+            <div class="perk-icon-wrap loan"><i class="bi bi-shield-fill-check"></i></div>
+            <div class="perk-text-wrap">
+              <div class="perk-label">สิทธิประโยชน์ กยศ.</div>
+              <div class="perk-val text-success">กู้เรียนได้ 100% (ค่าเทอม + ครองชีพ)</div>
             </div>
           </div>
-
-          <!-- Row 3: Total Duration -->
-          <div class="tuition-row-item">
-            <div class="tuition-row-left">
-              <div class="d-flex align-items-center gap-2">
-                <span class="tuition-tag-icon hourglass"
-                  ><i class="bi bi-hourglass-split"></i
-                ></span>
-                <span class="tuition-item-title text-muted"
-                  >ระยะเวลาเรียนตลอดหลักสูตร</span
-                >
-              </div>
-            </div>
-            <div class="tuition-row-right">
-              <span class="tuition-info-val">4 ปี (8 ภาคเรียน)</span>
-            </div>
-          </div>
-
-          <!-- Row 4: Student Loan Support -->
-          <div class="tuition-row-item border-0">
-            <div class="tuition-row-left">
-              <div class="d-flex align-items-center gap-2">
-                <span class="tuition-tag-icon shield"
-                  ><i class="bi bi-shield-fill-check"></i
-                ></span>
-                <span class="tuition-item-title text-muted"
-                  >สิทธิประโยชน์ กยศ.</span
-                >
-              </div>
-            </div>
-            <div class="tuition-row-right">
-              <span class="tuition-badge-green">
-                <i class="bi bi-check-circle-fill me-1"></i> กู้เรียนได้ 100%
-              </span>
+          <div class="tuition-perk-item">
+            <div class="perk-icon-wrap grant"><i class="bi bi-mortarboard-fill"></i></div>
+            <div class="perk-text-wrap">
+              <div class="perk-label">ทุนการศึกษา</div>
+              <div class="perk-val">มีทุนเรียนดี &amp; ทุนสนับสนุน</div>
             </div>
           </div>
         </div>
 
+        <!-- Action Footer Button -->
         <div class="tuition-footer-action">
           <a
             href="https://www.oass.sskru.ac.th/std.sskru/s1.html"
@@ -1122,7 +1113,8 @@ endblock %} {% block content %}
             rel="noopener noreferrer"
             class="tuition-btn-apply"
           >
-            <i class="bi bi-mortarboard-fill me-2"></i> ตรวจสอบโควตาและสมัครเลย
+            <span>ตรวจสอบโควตา &amp; สมัครเรียน</span>
+            <i class="bi bi-arrow-right-circle-fill ms-2"></i>
           </a>
         </div>
       </div>
@@ -1781,81 +1773,49 @@ endblock %} {% block content %}
       </p>
     </div>
 
-    <div class="row g-4 justify-content-center">
+    <div class="row g-3 justify-content-center">
       <!-- Doc 1: มคอ.2 -->
       <div class="col-12 col-lg-6">
-        <div class="course-quest-item p-4">
-          <div class="d-flex align-items-center gap-3">
-            <div
-              class="mission-icon-box mb-0"
-              style="
-                background: #fee2e2;
-                color: #ef4444;
-                width: 50px;
-                height: 50px;
-              "
-            >
-              <i
-                class="bi bi-file-earmark-pdf-fill"
-                style="font-size: 1.5rem"
-              ></i>
+        <div class="doc-download-card">
+          <div class="d-flex align-items-center gap-3 doc-card-left">
+            <div class="doc-icon-box pdf">
+              <i class="bi bi-file-earmark-pdf-fill"></i>
             </div>
-            <div>
-              <h5 class="fw-bold text-dark mb-1" style="font-size: 1.15rem">
-                เล่มหลักสูตร วท.บ. (มคอ.2)
-              </h5>
-              <p class="text-muted small mb-0">
-                หลักสูตรปรับปรุง พ.ศ. 2568 ฉบับสมบูรณ์
-              </p>
+            <div class="doc-text-box">
+              <h5 class="doc-title mb-1">เล่มหลักสูตร วท.บ. (มคอ.2)</h5>
+              <p class="doc-desc mb-0">หลักสูตรปรับปรุง พ.ศ. 2568 ฉบับสมบูรณ์</p>
             </div>
           </div>
           <a
             href="https://drive.google.com/file/d/1VjG1c3__p96kEBRSGuFNJtZXXD9A3SjB/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            class="btn-cyber-primary"
-            style="padding: 0.55rem 1.25rem; font-size: 0.88rem"
+            class="btn-doc-action btn-doc-primary"
           >
-            <i class="bi bi-download"></i> ดาวน์โหลด
+            <i class="bi bi-download me-1"></i> ดาวน์โหลด
           </a>
         </div>
       </div>
 
       <!-- Doc 2: Student Handbook -->
       <div class="col-12 col-lg-6">
-        <div class="course-quest-item p-4">
-          <div class="d-flex align-items-center gap-3">
-            <div
-              class="mission-icon-box mb-0"
-              style="
-                background: var(--sapphire-100);
-                color: var(--sapphire-700);
-                width: 50px;
-                height: 50px;
-              "
-            >
-              <i
-                class="bi bi-journal-bookmark-fill"
-                style="font-size: 1.5rem"
-              ></i>
+        <div class="doc-download-card">
+          <div class="d-flex align-items-center gap-3 doc-card-left">
+            <div class="doc-icon-box handbook">
+              <i class="bi bi-journal-bookmark-fill"></i>
             </div>
-            <div>
-              <h5 class="fw-bold text-dark mb-1" style="font-size: 1.15rem">
-                คู่มือการขึ้นทะเบียนนักศึกษาใหม่
-              </h5>
-              <p class="text-muted small mb-0">
-                ระบบสำนักส่งเสริมวิชาการและงานทะเบียน (OASS)
-              </p>
+            <div class="doc-text-box">
+              <h5 class="doc-title mb-1">คู่มือการขึ้นทะเบียนนักศึกษาใหม่</h5>
+              <p class="doc-desc mb-0">ระบบสำนักส่งเสริมวิชาการและงานทะเบียน (OASS)</p>
             </div>
           </div>
           <a
             href="https://www.oass.sskru.ac.th/std.sskru/s17.html"
             target="_blank"
             rel="noopener noreferrer"
-            class="btn-cyber-ghost"
-            style="padding: 0.55rem 1.25rem; font-size: 0.88rem"
+            class="btn-doc-action btn-doc-outline"
           >
-            <i class="bi bi-box-arrow-up-right"></i> เปิดดูคู่มือ
+            <i class="bi bi-box-arrow-up-right me-1"></i> เปิดดูคู่มือ
           </a>
         </div>
       </div>
@@ -1881,88 +1841,74 @@ endblock %} {% block content %}
       </p>
     </div>
 
-    <!-- Social Action Panels -->
-    <div class="row g-4 mb-5">
-      <!-- LINE Card -->
+    <!-- Compact Social Action Panels (Ultra-Premium Grid) -->
+    <div class="row g-3 mb-4">
+      <!-- LINE Card (Compact Horizontal Banner) -->
       <div class="col-12">
-        <div class="community-action-card panel-gemini-line">
-          <div class="d-flex align-items-center gap-3">
-            <i class="bi bi-line" style="font-size: 3rem; color: #fff"></i>
-            <div>
-              <h4 class="fw-bold mb-1 text-white" style="font-size: 1.4rem">
-                LINE AI Chatbot (Gemini Assistant)
-              </h4>
-              <p
-                class="mb-0"
-                style="color: rgba(255, 255, 255, 0.9); font-size: 0.95rem"
-              >
-                ระบบตอบรับอัจฉริยะ 24 ชม. ถามข้อมูลหลักสูตร ทุนการศึกษา
-                และรอบการรับสมัครได้ทันที
-              </p>
+        <a
+          href="https://line.me/R/ti/p/@793ozxpi?oat_content=url&ts=05271601"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="compact-social-card line-card"
+        >
+          <div class="d-flex align-items-center gap-3 min-w-0">
+            <div class="social-icon-box line">
+              <i class="bi bi-line"></i>
+            </div>
+            <div class="social-text-box min-w-0">
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <h5 class="social-title mb-0">LINE AI Chatbot</h5>
+                <span class="social-pill-badge line-badge">24 ชม.</span>
+              </div>
+              <p class="social-desc mb-0">ถามข้อมูลหลักสูตร ทุนการศึกษา และรอบรับสมัคร</p>
             </div>
           </div>
-          <a
-            href="https://line.me/R/ti/p/@793ozxpi?oat_content=url&ts=05271601"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-cyber-ghost text-dark"
-          >
-            <i class="bi bi-plus-circle-fill text-success"></i> เพิ่มเพื่อนใน
-            LINE
-          </a>
-        </div>
+          <span class="social-btn-pill line-btn">
+            <i class="bi bi-plus-lg me-1"></i>เพิ่มเพื่อน
+          </span>
+        </a>
       </div>
 
-      <!-- Facebook Card -->
-      <div class="col-12 col-lg-6">
-        <div class="community-action-card panel-cyber-fb">
-          <div class="d-flex align-items-center gap-3">
-            <i
-              class="bi bi-facebook"
-              style="font-size: 2.5rem; color: #fff"
-            ></i>
-            <div>
-              <h5 class="fw-bold mb-1 text-white">Facebook Fanpage</h5>
-              <p class="mb-0 small" style="color: rgba(255, 255, 255, 0.85)">
-                ติดตามข่าวสาร กิจกรรมสาขาฯ และผลงานนักศึกษา
-              </p>
+      <!-- Facebook Card (Compact Tile) -->
+      <div class="col-6">
+        <a
+          href="https://www.facebook.com/comsci.sskru"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="compact-social-card fb-card"
+        >
+          <div class="d-flex align-items-center justify-content-between w-100 mb-2">
+            <div class="social-icon-box fb">
+              <i class="bi bi-facebook"></i>
             </div>
+            <i class="bi bi-arrow-up-right social-arrow-icon"></i>
           </div>
-          <a
-            href="https://www.facebook.com/comsci.sskru"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-cyber-ghost text-dark"
-          >
-            <i class="bi bi-hand-thumbs-up-fill text-primary"></i> ติดตามแฟนเพจ
-          </a>
-        </div>
+          <div>
+            <h5 class="social-title mb-1">Facebook</h5>
+            <p class="social-desc mb-0">ข่าวสาร &amp; กิจกรรม</p>
+          </div>
+        </a>
       </div>
 
-      <!-- TikTok Card -->
-      <div class="col-12 col-lg-6">
-        <div class="community-action-card panel-cyber-tiktok">
-          <div class="d-flex align-items-center gap-3">
-            <i
-              class="bi bi-tiktok"
-              style="font-size: 2.5rem; color: #fe2c55"
-            ></i>
-            <div>
-              <h5 class="fw-bold mb-1 text-white">TikTok Official</h5>
-              <p class="mb-0 small" style="color: rgba(255, 255, 255, 0.85)">
-                ชมคลิปสั้น แนะนำบรรยากาศและไลฟ์สไตล์เด็กวิทย์คอม
-              </p>
+      <!-- TikTok Card (Compact Tile) -->
+      <div class="col-6">
+        <a
+          href="https://www.tiktok.com/@comsciencesskru"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="compact-social-card tiktok-card"
+        >
+          <div class="d-flex align-items-center justify-content-between w-100 mb-2">
+            <div class="social-icon-box tiktok">
+              <i class="bi bi-tiktok"></i>
             </div>
+            <i class="bi bi-arrow-up-right social-arrow-icon"></i>
           </div>
-          <a
-            href="https://www.tiktok.com/@comsciencesskru"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-cyber-ghost text-dark"
-          >
-            <i class="bi bi-play-fill text-danger"></i> ชมวิดีโอบน TikTok
-          </a>
-        </div>
+          <div>
+            <h5 class="social-title mb-1">TikTok</h5>
+            <p class="social-desc mb-0">คลิปสั้นนักศึกษา</p>
+          </div>
+        </a>
       </div>
     </div>
 
