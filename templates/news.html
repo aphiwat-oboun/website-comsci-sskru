@@ -50,11 +50,17 @@
               overflow: hidden;
               aspect-ratio: 16/9;
               margin-bottom: 0.75rem;
+              cursor: pointer;
             "
+            data-lightbox-src="{{ news.image }}"
+            data-lightbox-title="{{ news.title }}"
+            data-lightbox-cat="{{ news.get_category_display|default:'ข่าวสาร' }}"
           >
             <img
-              src="{{ news.image }}?t={% now 'U' %}"
+              src="{{ news.image }}"
               alt="{{ news.title }}"
+              loading="lazy"
+              decoding="async"
               style="
                 width: 100%;
                 height: 100%;

@@ -25,11 +25,57 @@ def get_contact_info():
         _cached_contact = info
     return _cached_contact
 
+def get_gallery_items():
+    activities_dir = settings.BASE_DIR / 'statics' / 'images' / 'activities'
+    gallery_items = []
+    
+    activity_meta = {
+        'activity_01.jpg': {'title': 'การแข่งขันหุ่นยนต์เยาวชน ศรีสะเกษโรโบติกส์ (Sisaket Robotics)', 'category': 'robotics', 'category_label': 'การแข่งขันหุ่นยนต์'},
+        'activity_02.jpg': {'title': 'การอบรมเชิงปฏิบัติการ Generative AI & Machine Learning', 'category': 'workshop', 'category_label': 'AI & เวิร์กช็อป'},
+        'activity_03.jpg': {'title': 'โครงการพัฒนาทักษะการเขียนโปรแกรมและการพัฒนาเว็บแอปพลิเคชัน', 'category': 'workshop', 'category_label': 'อบรมโค้ดดิ้ง'},
+        'activity_04.jpg': {'title': 'นิทรรศการแสดงผลงานโครงงานนวัตกรรมซอฟต์แวร์ของนักศึกษา', 'category': 'academic', 'category_label': 'โครงงานนวัตกรรม'},
+        'activity_05.jpg': {'title': 'กิจกรรมบายศรีสู่ขวัญ ต้อนรับนักศึกษาใหม่ CS SSKRU', 'category': 'campus', 'category_label': 'บรรยากาศนักศึกษา'},
+        'activity_06.jpg': {'title': 'เปิดรับสมัครนักศึกษาใหม่ สาขาวิชาวิทยาการคอมพิวเตอร์ (วท.บ.)', 'category': 'admission', 'category_label': 'รับสมัครนักศึกษา'},
+        'activity_07.jpg': {'title': 'กิจกรรมศึกษาดูงานด้านเทคโนโลยีศูนย์ดิจิทัล (Tech Field Trip)', 'category': 'campus', 'category_label': 'ศึกษาดูงาน'},
+        'activity_08.jpg': {'title': 'กิจกรรมบริการวิชาการถ่ายทอดทักษะโค้ดดิ้งแก่นักเรียน', 'category': 'academic', 'category_label': 'บริการวิชาการ'},
+        'activity_09.jpg': {'title': 'บรรยากาศการเรียนในห้องปฏิบัติการคอมพิวเตอร์และเน็ตเวิร์ก', 'category': 'campus', 'category_label': 'ห้องปฏิบัติการ'},
+        'activity_10.jpg': {'title': 'การฝึกอบรมและสอบวัดสมรรถนะมาตรฐานวิชาชีพไอที', 'category': 'workshop', 'category_label': 'มาตรฐานไอที'},
+        'robotics_01.jpg': {'title': 'การแข่งขันหุ่นยนต์ Sisaket Robotics Championship', 'category': 'robotics', 'category_label': 'การแข่งขันหุ่นยนต์'},
+    }
+    
+    if activities_dir.exists():
+        valid_extensions = ('.jpg', '.jpeg', '.png', '.webp', '.gif')
+        for file_path in sorted(activities_dir.iterdir()):
+            if file_path.suffix.lower() in valid_extensions:
+                file_name = file_path.name
+                meta = activity_meta.get(file_name, {
+                    'title': file_path.stem.replace('_', ' ').replace('-', ' ').title(),
+                    'category': 'campus',
+                    'category_label': 'กิจกรรมสาขา'
+                })
+                gallery_items.append({
+                    'title': meta['title'],
+                    'image': f'/static/images/activities/{file_name}',
+                    'category': meta['category'],
+                    'get_category_display': meta['category_label'],
+                })
+    
+    if not gallery_items:
+        for item in Gallery.objects.all():
+            gallery_items.append({
+                'title': item.title,
+                'image': item.image.url if item.image else '',
+                'category': item.category if hasattr(item, 'category') else 'campus',
+                'get_category_display': item.get_category_display() if hasattr(item, 'get_category_display') else 'กิจกรรมสาขา',
+            })
+            
+    return gallery_items
+
 def home_view(request):
     latest_news = News.objects.filter(is_published=True).order_by('-published_at')[:4]
     courses = Course.objects.filter(is_active=True)
     active_admissions = Admission.objects.filter(is_active=True)
-    gallery_preview = Gallery.objects.all()[:6]
+    gallery_items = get_gallery_items()
     lecturers = Lecturer.objects.filter(is_active=True).order_by('order', 'last_name')
     contact = get_contact_info()
 
@@ -37,7 +83,7 @@ def home_view(request):
         'latest_news': latest_news,
         'courses': courses,
         'active_admissions': active_admissions,
-        'gallery_preview': gallery_preview,
+        'gallery_items': gallery_items,
         'lecturers': lecturers,
         'contact': contact,
         'active_page': 'home',
@@ -85,44 +131,7 @@ def news_detail_view(request, slug):
     return render(request, 'news_detail.html', context)
 
 def gallery_view(request):
-    # ดึงรูปจากโฟลเดอร์ statics/images/activities โดยตรง
-    activities_dir = settings.BASE_DIR / 'statics' / 'images' / 'activities'
-    gallery_items = []
-    
-    # รายการชื่อหัวข้อของภาพกิจกรรม
-    activity_titles = {
-        'activity_01.jpg': 'การแข่งขันหุ่นยนต์เยาวชน ศรีสะเกษโรโบติกส์ (Sisaket Robotics)',
-        'activity_02.jpg': 'การอบรมเชิงปฏิบัติการ Generative AI & Machine Learning',
-        'activity_03.jpg': 'โครงการพัฒนาทักษะการเขียนโปรแกรมและการพัฒนาเว็บแอปพลิเคชัน',
-        'activity_04.jpg': 'นิทรรศการแสดงผลงานโครงงานนวัตกรรมซอฟต์แวร์ของนักศึกษา',
-        'activity_05.jpg': 'กิจกรรมบายศรีสู่ขวัญ ต้อนรับนักศึกษาใหม่ CS SSKRU',
-        'activity_06.jpg': 'เปิดรับสมัครนักศึกษาใหม่ สาขาวิชาวิทยาการคอมพิวเตอร์ (วท.บ.)',
-        'activity_07.jpg': 'กิจกรรมศึกษาดูงานด้านเทคโนโลยีศูนย์ดิจิทัล (Tech Field Trip)',
-        'activity_08.jpg': 'กิจกรรมบริการวิชาการถ่ายทอดทักษะโค้ดดิ้งแก่นักเรียน',
-        'activity_09.jpg': 'บรรยากาศการเรียนในห้องปฏิบัติการคอมพิวเตอร์',
-        'activity_10.jpg': 'การฝึกอบรมและสอบวัดสมรรถนะมาตรฐานวิชาชีพไอที',
-        'robotics_01.jpg': 'การแข่งขันหุ่นยนต์ Sisaket Robotics Championship',
-    }
-    
-    if activities_dir.exists():
-        valid_extensions = ('.jpg', '.jpeg', '.png', '.webp', '.gif')
-        for file_path in sorted(activities_dir.iterdir()):
-            if file_path.suffix.lower() in valid_extensions:
-                file_name = file_path.name
-                title = activity_titles.get(
-                    file_name,
-                    file_path.stem.replace('_', ' ').replace('-', ' ').title()
-                )
-                gallery_items.append({
-                    'title': title,
-                    'image': f'/static/images/activities/{file_name}',
-                    'get_category_display': 'กิจกรรมสาขาวิชา',
-                })
-    
-    # หากในโฟลเดอร์ไม่มีรูป ให้ดึงจากฐานข้อมูลสำรอง
-    if not gallery_items:
-        gallery_items = list(Gallery.objects.all())
-        
+    gallery_items = get_gallery_items()
     contact = get_contact_info()
     context = {
         'gallery_items': gallery_items,

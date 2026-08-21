@@ -1506,6 +1506,76 @@
 </section>
 
 <!-- ==========================================
+     PHOTO & ACTIVITY GALLERY SHOWCASE (ANCHOR #gallery)
+     ========================================== -->
+<section id="gallery" class="futuristic-section" style="background-color: var(--canvas-subtle);">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-eyebrow-tag">
+        <i class="bi bi-images"></i> Photo &amp; Activity Gallery
+      </span>
+      <h2 class="section-hero-title">ภาพกิจกรรม &amp; บรรยากาศการเรียนรู้</h2>
+      <p class="section-sub-desc mx-auto">
+        ประมวลภาพกิจกรรมการแข่งขันหุ่นยนต์ อบรม AI เวิร์กช็อป และชีวิตนักศึกษา CS SSKRU (คลิกรูปเพื่อเปิดดูภาพขนาดใหญ่)
+      </p>
+    </div>
+
+    <!-- Category Filter Segmented Pills -->
+    <div class="gallery-filter-nav mb-4 text-center">
+      <div class="d-inline-flex flex-wrap justify-content-center gap-2 p-1 rounded-pill" style="background: #ffffff; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-subtle);">
+        <button type="button" class="gallery-filter-btn active" data-filter="all">
+          <i class="bi bi-grid-fill me-1"></i> ทั้งหมด
+        </button>
+        <button type="button" class="gallery-filter-btn" data-filter="robotics">
+          <i class="bi bi-robot me-1"></i> แข่งขันหุ่นยนต์
+        </button>
+        <button type="button" class="gallery-filter-btn" data-filter="workshop">
+          <i class="bi bi-cpu me-1"></i> AI &amp; เวิร์กช็อป
+        </button>
+        <button type="button" class="gallery-filter-btn" data-filter="campus">
+          <i class="bi bi-mortarboard me-1"></i> บรรยากาศนักศึกษา
+        </button>
+        <button type="button" class="gallery-filter-btn" data-filter="academic">
+          <i class="bi bi-award me-1"></i> โครงงาน &amp; บริการวิชาการ
+        </button>
+      </div>
+    </div>
+
+    <!-- Gallery Grid with Fast Lightbox triggers -->
+    <div class="row g-3 g-md-4 mb-4" id="homeGalleryGrid">
+      {% for item in gallery_items %}
+      <div class="col-6 col-md-4 col-lg-3 gallery-grid-item" data-category="{{ item.category|default:'campus' }}">
+        <div class="gallery-card-modern" data-lightbox-src="{{ item.image }}" data-lightbox-title="{{ item.title }}" data-lightbox-cat="{{ item.get_category_display }}">
+          <div class="gallery-img-container">
+            <img src="{{ item.image }}" alt="{{ item.title }}" loading="lazy" decoding="async" class="gallery-thumb-img" />
+            <div class="gallery-hover-overlay">
+              <span class="gallery-zoom-icon"><i class="bi bi-zoom-in"></i></span>
+              <span class="gallery-view-text">คลิกเพื่อดูรูป</span>
+            </div>
+            <span class="gallery-badge-floating">{{ item.get_category_display|default:"กิจกรรม" }}</span>
+          </div>
+          <div class="gallery-card-body">
+            <h5 class="gallery-card-title">{{ item.title }}</h5>
+          </div>
+        </div>
+      </div>
+      {% empty %}
+      <div class="col-12 text-center py-4">
+        <i class="bi bi-images text-muted" style="font-size: 2.5rem"></i>
+        <p class="text-muted mt-2 small">ยังไม่มีภาพกิจกรรมในขณะนี้</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="text-center">
+      <a href="{% url 'gallery' %}" class="btn-clean-outline" style="padding: 0.6rem 1.6rem; font-size: 0.92rem;">
+        <i class="bi bi-images me-2"></i> เปิดดูคลังภาพทั้งหมด
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
      NEWS & ACTIVITIES SECTION (ANCHOR #news)
      ========================================== -->
 <section id="news" class="futuristic-section">
@@ -1535,11 +1605,17 @@
               overflow: hidden;
               aspect-ratio: 16/9;
               margin-bottom: 0.75rem;
+              cursor: pointer;
             "
+            data-lightbox-src="{{ news.image }}"
+            data-lightbox-title="{{ news.title }}"
+            data-lightbox-cat="{{ news.get_category_display|default:'ข่าวสาร' }}"
           >
             <img
-              src="{{ news.image }}?t={% now 'U' %}"
+              src="{{ news.image }}"
               alt="{{ news.title }}"
+              loading="lazy"
+              decoding="async"
               style="
                 width: 100%;
                 height: 100%;
