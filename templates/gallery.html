@@ -18,32 +18,53 @@
       </a>
     </div>
 
-    <div class="text-center mb-5">
+    <div class="text-center mb-4">
       <span class="section-eyebrow-tag">
         <i class="bi bi-images"></i> Photo Gallery
       </span>
       <h1 class="section-hero-title">ภาพกิจกรรมและบรรยากาศการเรียนรู้</h1>
       <p class="section-sub-desc mx-auto">
-        ประมวลภาพกิจกรรมการแข่งขันหุ่นยนต์ ศรีสะเกษโรโบติกส์ การอบรมค่ายโค้ดดิ้ง และชีวิตนักศึกษา CS SSKRU
+        ประมวลภาพกิจกรรมการแข่งขันหุ่นยนต์ ศรีสะเกษโรโบติกส์ การอบรมค่ายโค้ดดิ้ง และชีวิตนักศึกษา CS SSKRU (คลิกเพื่อดูรูปภาพขนาดใหญ่)
       </p>
     </div>
 
-    <!-- Gallery Grid (2-Column Grid Cards on Mobile) -->
-    <div class="row g-3 g-md-4 mb-5">
+    <!-- Category Filter Segmented Pills -->
+    <div class="gallery-filter-nav mb-4 text-center">
+      <div class="d-inline-flex flex-wrap justify-content-center gap-2 p-1 rounded-pill" style="background: #ffffff; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-subtle);">
+        <button type="button" class="gallery-filter-btn active" data-filter="all">
+          <i class="bi bi-grid-fill me-1"></i> ทั้งหมด
+        </button>
+        <button type="button" class="gallery-filter-btn" data-filter="robotics">
+          <i class="bi bi-robot me-1"></i> แข่งขันหุ่นยนต์
+        </button>
+        <button type="button" class="gallery-filter-btn" data-filter="workshop">
+          <i class="bi bi-cpu me-1"></i> AI &amp; เวิร์กช็อป
+        </button>
+        <button type="button" class="gallery-filter-btn" data-filter="campus">
+          <i class="bi bi-mortarboard me-1"></i> บรรยากาศนักศึกษา
+        </button>
+        <button type="button" class="gallery-filter-btn" data-filter="academic">
+          <i class="bi bi-award me-1"></i> โครงงาน &amp; บริการวิชาการ
+        </button>
+      </div>
+    </div>
+
+    <!-- Gallery Grid (2-Column Grid Cards on Mobile, 4-Col on Desktop) -->
+    <div class="row g-3 g-md-4 mb-5" id="galleryPageGrid">
       {% for item in gallery_items %}
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="mission-grid-card modern-grid-card d-flex flex-column h-100 p-2 p-md-3">
-          {% if item.image %}
-          <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; margin-bottom: 0.65rem;">
-            <img src="{{ item.image }}?t={% now 'U' %}" alt="{{ item.title }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" class="hover-zoom-img">
+      <div class="col-6 col-md-4 col-lg-3 gallery-grid-item" data-category="{{ item.category|default:'campus' }}">
+        <div class="gallery-card-modern h-100" data-lightbox-src="{{ item.image }}" data-lightbox-title="{{ item.title }}" data-lightbox-cat="{{ item.get_category_display }}">
+          <div class="gallery-img-container">
+            <img src="{{ item.image }}" alt="{{ item.title }}" loading="lazy" decoding="async" class="gallery-thumb-img" />
+            <div class="gallery-hover-overlay">
+              <span class="gallery-zoom-icon"><i class="bi bi-zoom-in"></i></span>
+              <span class="gallery-view-text">คลิกเพื่อดูรูป</span>
+            </div>
+            <span class="gallery-badge-floating">{{ item.get_category_display|default:"กิจกรรม" }}</span>
           </div>
-          {% endif %}
-          <div class="small text-muted mb-1">
-            <span class="badge" style="background: var(--sapphire-50); color: var(--sapphire-700); border: 1px solid var(--border-sapphire); font-size: 0.72rem;">
-              {{ item.get_category_display|default:"กิจกรรม" }}
-            </span>
+          <div class="gallery-card-body p-2 p-md-3">
+            <h5 class="gallery-card-title mb-0" style="font-size: 0.88rem; line-height: 1.4;">{{ item.title }}</h5>
           </div>
-          <h5 class="fw-bold text-dark mb-0" style="font-size: 0.88rem; line-height: 1.35;">{{ item.title }}</h5>
         </div>
       </div>
       {% empty %}

@@ -37,8 +37,19 @@
       </h1>
 
       {% if news_item.image %}
-      <div style="border-radius: 16px; overflow: hidden; margin-bottom: 2.25rem; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);">
-        <img src="{{ news_item.image }}?t={% now 'U' %}" alt="{{ news_item.title }}" style="width: 100%; max-height: 480px; object-fit: cover; display: block;">
+      <div
+        style="border-radius: 16px; overflow: hidden; margin-bottom: 2.25rem; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08); cursor: pointer;"
+        data-lightbox-src="{{ news_item.image }}"
+        data-lightbox-title="{{ news_item.title }}"
+        data-lightbox-cat="{{ news_item.get_category_display|default:'ข่าวสารและกิจกรรม' }}"
+      >
+        <img
+          src="{{ news_item.image }}"
+          alt="{{ news_item.title }}"
+          loading="lazy"
+          decoding="async"
+          style="width: 100%; max-height: 480px; object-fit: cover; display: block;"
+        />
       </div>
       {% endif %}
 

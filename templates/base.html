@@ -98,24 +98,14 @@
 
         <!-- Desktop Nav Menu Pills -->
         <div class="nav-menu-pills">
-          <a
-            href="{% url 'home' %}#hero"
-            class="nav-pill-item {% if active_page == 'home' %}active{% endif %}"
-            >หน้าแรก</a
-          >
-          <a href="{% url 'home' %}#about" class="nav-pill-item">หลักสูตร</a>
-          <a href="{% url 'home' %}#schedule" class="nav-pill-item"
-            >แผนการเรียน 4 ปี</a
-          >
-          <a href="{% url 'home' %}#lecturers" class="nav-pill-item"
-            >คณาจารย์</a
-          >
-          <a
-            href="{% url 'news' %}"
-            class="nav-pill-item {% if active_page == 'news' %}active{% endif %}"
-            >ข่าวสาร &amp; กิจกรรม</a
-          >
-          <a href="{% url 'home' %}#contact" class="nav-pill-item">ติดต่อเรา</a>
+          <a href="{% url 'home' %}#hero" class="nav-pill-item" data-section="hero">หน้าแรก</a>
+          <a href="{% url 'home' %}#about" class="nav-pill-item" data-section="about">เกี่ยวกับสาขา</a>
+          <a href="{% url 'home' %}#schedule" class="nav-pill-item" data-section="schedule">แผน 4 ปี</a>
+          <a href="{% url 'home' %}#features" class="nav-pill-item" data-section="features">3 เสาหลัก</a>
+          <a href="{% url 'home' %}#lecturers" class="nav-pill-item" data-section="lecturers">คณาจารย์</a>
+          <a href="{% url 'home' %}#gallery" class="nav-pill-item" data-section="gallery">ภาพกิจกรรม</a>
+          <a href="{% url 'home' %}#news" class="nav-pill-item" data-section="news">ข่าวสาร</a>
+          <a href="{% url 'home' %}#contact" class="nav-pill-item" data-section="contact">ติดต่อเรา</a>
         </div>
 
         <!-- Action Apply CTA -->
@@ -194,62 +184,40 @@
           ></i>
         </a>
 
-        <a
-          href="{% url 'home' %}#hero"
-          class="mobile-nav-link {% if active_page == 'home' %}active{% endif %}"
-        >
+        <a href="{% url 'home' %}#hero" class="mobile-nav-link" data-section="hero">
           <span><i class="bi bi-house-door me-2 text-primary"></i>หน้าแรก</span>
           <i class="bi bi-chevron-right small opacity-50"></i>
         </a>
-        <a href="{% url 'home' %}#about" class="mobile-nav-link">
-          <span
-            ><i class="bi bi-info-circle me-2 text-info"></i>เกี่ยวกับเรา</span
-          >
+        <a href="{% url 'home' %}#about" class="mobile-nav-link" data-section="about">
+          <span><i class="bi bi-info-circle me-2 text-info"></i>ปรัชญา &amp; ยุทธศาสตร์</span>
           <i class="bi bi-chevron-right small opacity-50"></i>
         </a>
-        <a href="{% url 'home' %}#features" class="mobile-nav-link">
-          <span
-            ><i class="bi bi-journal-code me-2 text-success"></i>หลักสูตร</span
-          >
+        <a href="{% url 'home' %}#schedule" class="mobile-nav-link" data-section="schedule">
+          <span><i class="bi bi-diagram-3 me-2 text-warning"></i>แผนการเรียน 4 ปี</span>
           <i class="bi bi-chevron-right small opacity-50"></i>
         </a>
-        <a href="{% url 'home' %}#schedule" class="mobile-nav-link">
-          <span
-            ><i class="bi bi-diagram-3 me-2 text-warning"></i>แผนการเรียน 4
-            ปี</span
-          >
+        <a href="{% url 'home' %}#features" class="mobile-nav-link" data-section="features">
+          <span><i class="bi bi-journal-code me-2 text-success"></i>3 เสาหลักความเชี่ยวชาญ</span>
           <i class="bi bi-chevron-right small opacity-50"></i>
         </a>
-        <a href="{% url 'home' %}#lecturers" class="mobile-nav-link">
-          <span><i class="bi bi-people me-2 text-danger"></i>คณาจารย์</span>
+        <a href="{% url 'home' %}#lecturers" class="mobile-nav-link" data-section="lecturers">
+          <span><i class="bi bi-people me-2 text-danger"></i>คณาจารย์ประจำสาขา</span>
           <i class="bi bi-chevron-right small opacity-50"></i>
         </a>
-        <a href="{% url 'home' %}#news" class="mobile-nav-link">
-          <span
-            ><i class="bi bi-newspaper me-2 text-primary"></i
-            >ข่าวสารและกิจกรรม</span
-          >
+        <a href="{% url 'home' %}#gallery" class="mobile-nav-link" data-section="gallery">
+          <span><i class="bi bi-images me-2 text-info"></i>ภาพกิจกรรม &amp; บรรยากาศ</span>
           <i class="bi bi-chevron-right small opacity-50"></i>
         </a>
-        <a
-          href="{% url 'gallery' %}"
-          class="mobile-nav-link {% if active_page == 'gallery' %}active{% endif %}"
-        >
-          <span
-            ><i class="bi bi-images me-2 text-info"></i>ภาพกิจกรรม &amp;
-            รีวิว</span
-          >
+        <a href="{% url 'home' %}#news" class="mobile-nav-link" data-section="news">
+          <span><i class="bi bi-newspaper me-2 text-primary"></i>ข่าวสาร &amp; กิจกรรม</span>
           <i class="bi bi-chevron-right small opacity-50"></i>
         </a>
-        <a href="{% url 'home' %}#download" class="mobile-nav-link">
-          <span
-            ><i class="bi bi-file-earmark-arrow-down me-2 text-secondary"></i
-            >ดาวน์โหลดคู่มือ</span
-          >
+        <a href="{% url 'home' %}#download" class="mobile-nav-link" data-section="download">
+          <span><i class="bi bi-file-earmark-arrow-down me-2 text-secondary"></i>ดาวน์โหลดคู่มือ &amp; มคอ.2</span>
           <i class="bi bi-chevron-right small opacity-50"></i>
         </a>
-        <a href="{% url 'home' %}#contact" class="mobile-nav-link">
-          <span><i class="bi bi-geo-alt me-2 text-danger"></i>ติดต่อเรา</span>
+        <a href="{% url 'home' %}#contact" class="mobile-nav-link" data-section="contact">
+          <span><i class="bi bi-geo-alt me-2 text-danger"></i>ติดต่อเรา &amp; แผนที่</span>
           <i class="bi bi-chevron-right small opacity-50"></i>
         </a>
       </div>
@@ -257,6 +225,30 @@
 
     <!-- Content Block -->
     <main>{% block content %}{% endblock %}</main>
+
+    <!-- ==========================================
+       ULTRA-FAST IMAGE LIGHTBOX VIEWER MODAL
+       ========================================== -->
+    <div class="fast-lightbox-backdrop" id="fastLightboxModal" aria-hidden="true">
+      <div class="lightbox-dialog">
+        <button type="button" class="lightbox-btn-close" id="lightboxBtnClose" aria-label="ปิดรูปภาพ">
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <button type="button" class="lightbox-nav-btn btn-prev" id="lightboxBtnPrev" aria-label="รูปก่อนหน้า">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+        <button type="button" class="lightbox-nav-btn btn-next" id="lightboxBtnNext" aria-label="รูปถัดไป">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+        <div class="lightbox-media-wrap">
+          <img src="" alt="" id="lightboxImg" class="lightbox-image" />
+        </div>
+        <div class="lightbox-caption-bar">
+          <span class="lightbox-counter" id="lightboxCounter">1 / 1</span>
+          <span class="lightbox-caption-title" id="lightboxCaption"></span>
+        </div>
+      </div>
+    </div>
 
     <!-- ==========================================
        GOLDEN 2-COLUMN ACADEMIC DOSSIER MODAL
@@ -468,7 +460,7 @@
     >
       <a
         href="{% url 'home' %}#hero"
-        class="mobile-tab-item {% if active_page == 'home' %}active{% endif %}"
+        class="mobile-tab-item"
         data-tab="hero"
       >
         <div class="mobile-tab-icon-wrap">
@@ -493,8 +485,18 @@
         <span class="mobile-tab-label">แผน 4 ปี</span>
       </a>
       <a
+        href="{% url 'home' %}#gallery"
+        class="mobile-tab-item"
+        data-tab="gallery"
+      >
+        <div class="mobile-tab-icon-wrap">
+          <i class="bi bi-images"></i>
+        </div>
+        <span class="mobile-tab-label">กิจกรรม</span>
+      </a>
+      <a
         href="{% url 'home' %}#news"
-        class="mobile-tab-item {% if active_page == 'news' %}active{% endif %}"
+        class="mobile-tab-item"
         data-tab="news"
       >
         <div class="mobile-tab-icon-wrap">
